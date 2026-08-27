@@ -125,9 +125,10 @@ Outcome: version the agent’s model, prompt, skills, tools, retrieval, policy, 
 **Question:** Who has authority, what can fail, and when should the model itself be adapted?
 
 1. [[06 Reliability and Security/Security and Jailbreaking|Security and jailbreak resistance]]
-2. [[06 Reliability and Security/Defensive Red-Team Labs|Defensive red-team labs]]
-3. [[06 Reliability and Security/Human Oversight and Trust Engineering|Autonomy, approvals, and trust calibration]]
-4. [[01 Foundations/Fine-Tuning Decision Framework|Prompting vs RAG vs tools vs fine-tuning]]
+2. [[06 Reliability and Security/AI Fingerprints and Detection|AI fingerprints and generated-text detection]]
+3. [[06 Reliability and Security/Defensive Red-Team Labs|Defensive red-team labs]]
+4. [[06 Reliability and Security/Human Oversight and Trust Engineering|Autonomy, approvals, and trust calibration]]
+5. [[01 Foundations/Fine-Tuning Decision Framework|Prompting vs RAG vs tools vs fine-tuning]]
 
 Outcome: place approvals where errors are consequential and choose fine-tuning only for stable behavioral gaps.
 

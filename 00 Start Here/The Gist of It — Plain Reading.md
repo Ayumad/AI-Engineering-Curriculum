@@ -100,11 +100,13 @@ Before an AI system ships, it has to be checked for quality and for harm. This i
 ## Unit 9 — Security, oversight, and adaptation (~10–12h)
 1. Security and jailbreak resistance
 Jailbreaking is lock-picking for AI. Attackers try to make models ignore their rules through fake personas, hidden instructions in documents, encoded payloads, or slow trust-building across turns. No single defense holds. This note catalogs the main attack families and the layered countermeasures: input scanning, output filtering, tool allowlists, sandboxing, and taint-aware context assembly.
-2. Defensive red-team labs
+2. AI fingerprints and generated-text detection
+Generated text has detectable habits: models pick predictable words, so machine prose reads flatter than human writing. Detection splits into two schools — statistical fingerprints (perplexity, burstiness) and watermarks (signals added at generation). Both are fragile: rewriting erodes them, and detectors badly misfire on careful or non-native human writing. Signed provenance metadata is the more honest lever.
+3. Defensive red-team labs
 Defensive red-team labs are fire drills for AI security. You build a harmless test agent with fake tools, then run realistic attacks against it in a sandbox. This note provides seven lab cases: authority confusion, tool-output injection, memory poisoning, confused deputy, replay attacks, multimodal boundary testing, and cross-agent trust. Only test against toy harnesses or explicitly authorized systems.
-3. Autonomy, approvals, and trust calibration
+4. Autonomy, approvals, and trust calibration
 AI agents need an autonomy ladder, like self-driving cars. The real question is what the agent may decide and execute without a person. Authority depends on error cost and evidence quality. This note covers the seven-level autonomy scale, how to separate proposal from execution, and how to build interfaces that keep human judgment at consequential boundaries.
-4. Prompting vs RAG vs tools vs fine-tuning
+5. Prompting vs RAG vs tools vs fine-tuning
 When a model gives weak answers, the instinct is to retrain—but training is expensive and often unnecessary. Better prompts, retrieval, or a tool call usually solve it. This note walks through lighter options first, then fine-tuning as a last resort.
 ## Unit 10 — Capstone and continuing reference (~12–15h)
 1. Learning projects and capstone

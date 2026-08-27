@@ -106,6 +106,11 @@ The source conversation is titled “Explain AI Engineering” and has conversat
 - [x] Derived notes re-synced: the Coding Agent Profiles gist line updated in The Gist of It and The Gist of It — Plain Reading. Regenerating the Plain Reading note surfaced a latent generator bug — the 5 appendix gists were missing entirely (two-space `  > ` indent was never handled). Regenerated: 44/44 entries carry paragraphs, zero wikilinks, no nav residue.
 - [x] ayumad.me/ai publishing: PAUSED per Ayush (destination still in the works). Standing rule recorded: curriculum updates will also flow to ayumad.me/ai once it exists.
 
+## AI Fingerprints and Detection note — 2026-08-27
+
+- [x] New content note `06 Reliability and Security/AI Fingerprints and Detection.md` (type concept, current-snapshot, last_verified today): statistical fingerprints (GLTR: top-k/rank/perplexity cues, human detection 54%→72%), watermarking mechanics (Kirchenbauer green/red-list + z-test; SynthID in Gemini/Veo), fragility (distribution shift, paraphrase evasion, ~61% TOEFL false positives on non-native writers, vendor hedging), and provenance-over-forensics as the durable answer. 6 sources, all link-verified today; OpenAI C2PA URL dropped (404s).
+- [x] Full wiring: `add_nav.py` CHAIN 65 → 66 (inserted after Security and Jailbreaking), nav regenerated + verified against disk (only the by-design nav-less Plain Reading copy is excluded); ToC Unit 9 renumbered 2–5 with the new note at slot 2; The Gist of It + Plain Reading gained the entry (45 gists in the collection now, 45 Plain Reading items); gist passes the voice spec. Validator: 478 / 3 / 2 / 0 — zero new issues.
+
 ---
 
 > **← [[00 Start Here/How to Use This Vault|How to Use This Vault]]** · **[[AI_Home|Home]]** · **[[01 Foundations/Foundations Hub|Foundations Hub]] →**
