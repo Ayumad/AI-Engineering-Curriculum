@@ -1,0 +1,752 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<title>Ayumad Vault</title>
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🔒</text></svg>">
+<script>
+/* marked v12.0.2 (MIT) — inlined at build so the app works from any host path */
+/**
+ * marked v12.0.2 - a markdown parser
+ * Copyright (c) 2011-2024, Christopher Jeffrey. (MIT Licensed)
+ * https://github.com/markedjs/marked
+ */
+!function(e,t){"object"==typeof exports&&"undefined"!=typeof module?t(exports):"function"==typeof define&&define.amd?define(["exports"],t):t((e="undefined"!=typeof globalThis?globalThis:e||self).marked={})}(this,(function(e){"use strict";function t(){return{async:!1,breaks:!1,extensions:null,gfm:!0,hooks:null,pedantic:!1,renderer:null,silent:!1,tokenizer:null,walkTokens:null}}function n(t){e.defaults=t}e.defaults={async:!1,breaks:!1,extensions:null,gfm:!0,hooks:null,pedantic:!1,renderer:null,silent:!1,tokenizer:null,walkTokens:null};const s=/[&<>"']/,r=new RegExp(s.source,"g"),i=/[<>"']|&(?!(#\d{1,7}|#[Xx][a-fA-F0-9]{1,6}|\w+);)/,l=new RegExp(i.source,"g"),o={"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"},a=e=>o[e];function c(e,t){if(t){if(s.test(e))return e.replace(r,a)}else if(i.test(e))return e.replace(l,a);return e}const h=/&(#(?:\d+)|(?:#x[0-9A-Fa-f]+)|(?:\w+));?/gi;function p(e){return e.replace(h,((e,t)=>"colon"===(t=t.toLowerCase())?":":"#"===t.charAt(0)?"x"===t.charAt(1)?String.fromCharCode(parseInt(t.substring(2),16)):String.fromCharCode(+t.substring(1)):""))}const u=/(^|[^\[])\^/g;function k(e,t){let n="string"==typeof e?e:e.source;t=t||"";const s={replace:(e,t)=>{let r="string"==typeof t?t:t.source;return r=r.replace(u,"$1"),n=n.replace(e,r),s},getRegex:()=>new RegExp(n,t)};return s}function g(e){try{e=encodeURI(e).replace(/%25/g,"%")}catch(e){return null}return e}const f={exec:()=>null};function d(e,t){const n=e.replace(/\|/g,((e,t,n)=>{let s=!1,r=t;for(;--r>=0&&"\\"===n[r];)s=!s;return s?"|":" |"})).split(/ \|/);let s=0;if(n[0].trim()||n.shift(),n.length>0&&!n[n.length-1].trim()&&n.pop(),t)if(n.length>t)n.splice(t);else for(;n.length<t;)n.push("");for(;s<n.length;s++)n[s]=n[s].trim().replace(/\\\|/g,"|");return n}function x(e,t,n){const s=e.length;if(0===s)return"";let r=0;for(;r<s;){const i=e.charAt(s-r-1);if(i!==t||n){if(i===t||!n)break;r++}else r++}return e.slice(0,s-r)}function b(e,t,n,s){const r=t.href,i=t.title?c(t.title):null,l=e[1].replace(/\\([\[\]])/g,"$1");if("!"!==e[0].charAt(0)){s.state.inLink=!0;const e={type:"link",raw:n,href:r,title:i,text:l,tokens:s.inlineTokens(l)};return s.state.inLink=!1,e}return{type:"image",raw:n,href:r,title:i,text:c(l)}}class w{options;rules;lexer;constructor(t){this.options=t||e.defaults}space(e){const t=this.rules.block.newline.exec(e);if(t&&t[0].length>0)return{type:"space",raw:t[0]}}code(e){const t=this.rules.block.code.exec(e);if(t){const e=t[0].replace(/^ {1,4}/gm,"");return{type:"code",raw:t[0],codeBlockStyle:"indented",text:this.options.pedantic?e:x(e,"\n")}}}fences(e){const t=this.rules.block.fences.exec(e);if(t){const e=t[0],n=function(e,t){const n=e.match(/^(\s+)(?:```)/);if(null===n)return t;const s=n[1];return t.split("\n").map((e=>{const t=e.match(/^\s+/);if(null===t)return e;const[n]=t;return n.length>=s.length?e.slice(s.length):e})).join("\n")}(e,t[3]||"");return{type:"code",raw:e,lang:t[2]?t[2].trim().replace(this.rules.inline.anyPunctuation,"$1"):t[2],text:n}}}heading(e){const t=this.rules.block.heading.exec(e);if(t){let e=t[2].trim();if(/#$/.test(e)){const t=x(e,"#");this.options.pedantic?e=t.trim():t&&!/ $/.test(t)||(e=t.trim())}return{type:"heading",raw:t[0],depth:t[1].length,text:e,tokens:this.lexer.inline(e)}}}hr(e){const t=this.rules.block.hr.exec(e);if(t)return{type:"hr",raw:t[0]}}blockquote(e){const t=this.rules.block.blockquote.exec(e);if(t){let e=t[0].replace(/\n {0,3}((?:=+|-+) *)(?=\n|$)/g,"\n    $1");e=x(e.replace(/^ *>[ \t]?/gm,""),"\n");const n=this.lexer.state.top;this.lexer.state.top=!0;const s=this.lexer.blockTokens(e);return this.lexer.state.top=n,{type:"blockquote",raw:t[0],tokens:s,text:e}}}list(e){let t=this.rules.block.list.exec(e);if(t){let n=t[1].trim();const s=n.length>1,r={type:"list",raw:"",ordered:s,start:s?+n.slice(0,-1):"",loose:!1,items:[]};n=s?`\\d{1,9}\\${n.slice(-1)}`:`\\${n}`,this.options.pedantic&&(n=s?n:"[*+-]");const i=new RegExp(`^( {0,3}${n})((?:[\t ][^\\n]*)?(?:\\n|$))`);let l="",o="",a=!1;for(;e;){let n=!1;if(!(t=i.exec(e)))break;if(this.rules.block.hr.test(e))break;l=t[0],e=e.substring(l.length);let s=t[2].split("\n",1)[0].replace(/^\t+/,(e=>" ".repeat(3*e.length))),c=e.split("\n",1)[0],h=0;this.options.pedantic?(h=2,o=s.trimStart()):(h=t[2].search(/[^ ]/),h=h>4?1:h,o=s.slice(h),h+=t[1].length);let p=!1;if(!s&&/^ *$/.test(c)&&(l+=c+"\n",e=e.substring(c.length+1),n=!0),!n){const t=new RegExp(`^ {0,${Math.min(3,h-1)}}(?:[*+-]|\\d{1,9}[.)])((?:[ \t][^\\n]*)?(?:\\n|$))`),n=new RegExp(`^ {0,${Math.min(3,h-1)}}((?:- *){3,}|(?:_ *){3,}|(?:\\* *){3,})(?:\\n+|$)`),r=new RegExp(`^ {0,${Math.min(3,h-1)}}(?:\`\`\`|~~~)`),i=new RegExp(`^ {0,${Math.min(3,h-1)}}#`);for(;e;){const a=e.split("\n",1)[0];if(c=a,this.options.pedantic&&(c=c.replace(/^ {1,4}(?=( {4})*[^ ])/g,"  ")),r.test(c))break;if(i.test(c))break;if(t.test(c))break;if(n.test(e))break;if(c.search(/[^ ]/)>=h||!c.trim())o+="\n"+c.slice(h);else{if(p)break;if(s.search(/[^ ]/)>=4)break;if(r.test(s))break;if(i.test(s))break;if(n.test(s))break;o+="\n"+c}p||c.trim()||(p=!0),l+=a+"\n",e=e.substring(a.length+1),s=c.slice(h)}}r.loose||(a?r.loose=!0:/\n *\n *$/.test(l)&&(a=!0));let u,k=null;this.options.gfm&&(k=/^\[[ xX]\] /.exec(o),k&&(u="[ ] "!==k[0],o=o.replace(/^\[[ xX]\] +/,""))),r.items.push({type:"list_item",raw:l,task:!!k,checked:u,loose:!1,text:o,tokens:[]}),r.raw+=l}r.items[r.items.length-1].raw=l.trimEnd(),r.items[r.items.length-1].text=o.trimEnd(),r.raw=r.raw.trimEnd();for(let e=0;e<r.items.length;e++)if(this.lexer.state.top=!1,r.items[e].tokens=this.lexer.blockTokens(r.items[e].text,[]),!r.loose){const t=r.items[e].tokens.filter((e=>"space"===e.type)),n=t.length>0&&t.some((e=>/\n.*\n/.test(e.raw)));r.loose=n}if(r.loose)for(let e=0;e<r.items.length;e++)r.items[e].loose=!0;return r}}html(e){const t=this.rules.block.html.exec(e);if(t){return{type:"html",block:!0,raw:t[0],pre:"pre"===t[1]||"script"===t[1]||"style"===t[1],text:t[0]}}}def(e){const t=this.rules.block.def.exec(e);if(t){const e=t[1].toLowerCase().replace(/\s+/g," "),n=t[2]?t[2].replace(/^<(.*)>$/,"$1").replace(this.rules.inline.anyPunctuation,"$1"):"",s=t[3]?t[3].substring(1,t[3].length-1).replace(this.rules.inline.anyPunctuation,"$1"):t[3];return{type:"def",tag:e,raw:t[0],href:n,title:s}}}table(e){const t=this.rules.block.table.exec(e);if(!t)return;if(!/[:|]/.test(t[2]))return;const n=d(t[1]),s=t[2].replace(/^\||\| *$/g,"").split("|"),r=t[3]&&t[3].trim()?t[3].replace(/\n[ \t]*$/,"").split("\n"):[],i={type:"table",raw:t[0],header:[],align:[],rows:[]};if(n.length===s.length){for(const e of s)/^ *-+: *$/.test(e)?i.align.push("right"):/^ *:-+: *$/.test(e)?i.align.push("center"):/^ *:-+ *$/.test(e)?i.align.push("left"):i.align.push(null);for(const e of n)i.header.push({text:e,tokens:this.lexer.inline(e)});for(const e of r)i.rows.push(d(e,i.header.length).map((e=>({text:e,tokens:this.lexer.inline(e)}))));return i}}lheading(e){const t=this.rules.block.lheading.exec(e);if(t)return{type:"heading",raw:t[0],depth:"="===t[2].charAt(0)?1:2,text:t[1],tokens:this.lexer.inline(t[1])}}paragraph(e){const t=this.rules.block.paragraph.exec(e);if(t){const e="\n"===t[1].charAt(t[1].length-1)?t[1].slice(0,-1):t[1];return{type:"paragraph",raw:t[0],text:e,tokens:this.lexer.inline(e)}}}text(e){const t=this.rules.block.text.exec(e);if(t)return{type:"text",raw:t[0],text:t[0],tokens:this.lexer.inline(t[0])}}escape(e){const t=this.rules.inline.escape.exec(e);if(t)return{type:"escape",raw:t[0],text:c(t[1])}}tag(e){const t=this.rules.inline.tag.exec(e);if(t)return!this.lexer.state.inLink&&/^<a /i.test(t[0])?this.lexer.state.inLink=!0:this.lexer.state.inLink&&/^<\/a>/i.test(t[0])&&(this.lexer.state.inLink=!1),!this.lexer.state.inRawBlock&&/^<(pre|code|kbd|script)(\s|>)/i.test(t[0])?this.lexer.state.inRawBlock=!0:this.lexer.state.inRawBlock&&/^<\/(pre|code|kbd|script)(\s|>)/i.test(t[0])&&(this.lexer.state.inRawBlock=!1),{type:"html",raw:t[0],inLink:this.lexer.state.inLink,inRawBlock:this.lexer.state.inRawBlock,block:!1,text:t[0]}}link(e){const t=this.rules.inline.link.exec(e);if(t){const e=t[2].trim();if(!this.options.pedantic&&/^</.test(e)){if(!/>$/.test(e))return;const t=x(e.slice(0,-1),"\\");if((e.length-t.length)%2==0)return}else{const e=function(e,t){if(-1===e.indexOf(t[1]))return-1;let n=0;for(let s=0;s<e.length;s++)if("\\"===e[s])s++;else if(e[s]===t[0])n++;else if(e[s]===t[1]&&(n--,n<0))return s;return-1}(t[2],"()");if(e>-1){const n=(0===t[0].indexOf("!")?5:4)+t[1].length+e;t[2]=t[2].substring(0,e),t[0]=t[0].substring(0,n).trim(),t[3]=""}}let n=t[2],s="";if(this.options.pedantic){const e=/^([^'"]*[^\s])\s+(['"])(.*)\2/.exec(n);e&&(n=e[1],s=e[3])}else s=t[3]?t[3].slice(1,-1):"";return n=n.trim(),/^</.test(n)&&(n=this.options.pedantic&&!/>$/.test(e)?n.slice(1):n.slice(1,-1)),b(t,{href:n?n.replace(this.rules.inline.anyPunctuation,"$1"):n,title:s?s.replace(this.rules.inline.anyPunctuation,"$1"):s},t[0],this.lexer)}}reflink(e,t){let n;if((n=this.rules.inline.reflink.exec(e))||(n=this.rules.inline.nolink.exec(e))){const e=t[(n[2]||n[1]).replace(/\s+/g," ").toLowerCase()];if(!e){const e=n[0].charAt(0);return{type:"text",raw:e,text:e}}return b(n,e,n[0],this.lexer)}}emStrong(e,t,n=""){let s=this.rules.inline.emStrongLDelim.exec(e);if(!s)return;if(s[3]&&n.match(/[\p{L}\p{N}]/u))return;if(!(s[1]||s[2]||"")||!n||this.rules.inline.punctuation.exec(n)){const n=[...s[0]].length-1;let r,i,l=n,o=0;const a="*"===s[0][0]?this.rules.inline.emStrongRDelimAst:this.rules.inline.emStrongRDelimUnd;for(a.lastIndex=0,t=t.slice(-1*e.length+n);null!=(s=a.exec(t));){if(r=s[1]||s[2]||s[3]||s[4]||s[5]||s[6],!r)continue;if(i=[...r].length,s[3]||s[4]){l+=i;continue}if((s[5]||s[6])&&n%3&&!((n+i)%3)){o+=i;continue}if(l-=i,l>0)continue;i=Math.min(i,i+l+o);const t=[...s[0]][0].length,a=e.slice(0,n+s.index+t+i);if(Math.min(n,i)%2){const e=a.slice(1,-1);return{type:"em",raw:a,text:e,tokens:this.lexer.inlineTokens(e)}}const c=a.slice(2,-2);return{type:"strong",raw:a,text:c,tokens:this.lexer.inlineTokens(c)}}}}codespan(e){const t=this.rules.inline.code.exec(e);if(t){let e=t[2].replace(/\n/g," ");const n=/[^ ]/.test(e),s=/^ /.test(e)&&/ $/.test(e);return n&&s&&(e=e.substring(1,e.length-1)),e=c(e,!0),{type:"codespan",raw:t[0],text:e}}}br(e){const t=this.rules.inline.br.exec(e);if(t)return{type:"br",raw:t[0]}}del(e){const t=this.rules.inline.del.exec(e);if(t)return{type:"del",raw:t[0],text:t[2],tokens:this.lexer.inlineTokens(t[2])}}autolink(e){const t=this.rules.inline.autolink.exec(e);if(t){let e,n;return"@"===t[2]?(e=c(t[1]),n="mailto:"+e):(e=c(t[1]),n=e),{type:"link",raw:t[0],text:e,href:n,tokens:[{type:"text",raw:e,text:e}]}}}url(e){let t;if(t=this.rules.inline.url.exec(e)){let e,n;if("@"===t[2])e=c(t[0]),n="mailto:"+e;else{let s;do{s=t[0],t[0]=this.rules.inline._backpedal.exec(t[0])?.[0]??""}while(s!==t[0]);e=c(t[0]),n="www."===t[1]?"http://"+t[0]:t[0]}return{type:"link",raw:t[0],text:e,href:n,tokens:[{type:"text",raw:e,text:e}]}}}inlineText(e){const t=this.rules.inline.text.exec(e);if(t){let e;return e=this.lexer.state.inRawBlock?t[0]:c(t[0]),{type:"text",raw:t[0],text:e}}}}const m=/^ {0,3}((?:-[\t ]*){3,}|(?:_[ \t]*){3,}|(?:\*[ \t]*){3,})(?:\n+|$)/,y=/(?:[*+-]|\d{1,9}[.)])/,$=k(/^(?!bull |blockCode|fences|blockquote|heading|html)((?:.|\n(?!\s*?\n|bull |blockCode|fences|blockquote|heading|html))+?)\n {0,3}(=+|-+) *(?:\n+|$)/).replace(/bull/g,y).replace(/blockCode/g,/ {4}/).replace(/fences/g,/ {0,3}(?:`{3,}|~{3,})/).replace(/blockquote/g,/ {0,3}>/).replace(/heading/g,/ {0,3}#{1,6}/).replace(/html/g,/ {0,3}<[^\n>]+>\n/).getRegex(),z=/^([^\n]+(?:\n(?!hr|heading|lheading|blockquote|fences|list|html|table| +\n)[^\n]+)*)/,T=/(?!\s*\])(?:\\.|[^\[\]\\])+/,R=k(/^ {0,3}\[(label)\]: *(?:\n *)?([^<\s][^\s]*|<.*?>)(?:(?: +(?:\n *)?| *\n *)(title))? *(?:\n+|$)/).replace("label",T).replace("title",/(?:"(?:\\"?|[^"\\])*"|'[^'\n]*(?:\n[^'\n]+)*\n?'|\([^()]*\))/).getRegex(),_=k(/^( {0,3}bull)([ \t][^\n]+?)?(?:\n|$)/).replace(/bull/g,y).getRegex(),A="address|article|aside|base|basefont|blockquote|body|caption|center|col|colgroup|dd|details|dialog|dir|div|dl|dt|fieldset|figcaption|figure|footer|form|frame|frameset|h[1-6]|head|header|hr|html|iframe|legend|li|link|main|menu|menuitem|meta|nav|noframes|ol|optgroup|option|p|param|search|section|summary|table|tbody|td|tfoot|th|thead|title|tr|track|ul",S=/<!--(?:-?>|[\s\S]*?(?:-->|$))/,I=k("^ {0,3}(?:<(script|pre|style|textarea)[\\s>][\\s\\S]*?(?:</\\1>[^\\n]*\\n+|$)|comment[^\\n]*(\\n+|$)|<\\?[\\s\\S]*?(?:\\?>\\n*|$)|<![A-Z][\\s\\S]*?(?:>\\n*|$)|<!\\[CDATA\\[[\\s\\S]*?(?:\\]\\]>\\n*|$)|</?(tag)(?: +|\\n|/?>)[\\s\\S]*?(?:(?:\\n *)+\\n|$)|<(?!script|pre|style|textarea)([a-z][\\w-]*)(?:attribute)*? */?>(?=[ \\t]*(?:\\n|$))[\\s\\S]*?(?:(?:\\n *)+\\n|$)|</(?!script|pre|style|textarea)[a-z][\\w-]*\\s*>(?=[ \\t]*(?:\\n|$))[\\s\\S]*?(?:(?:\\n *)+\\n|$))","i").replace("comment",S).replace("tag",A).replace("attribute",/ +[a-zA-Z:_][\w.:-]*(?: *= *"[^"\n]*"| *= *'[^'\n]*'| *= *[^\s"'=<>`]+)?/).getRegex(),E=k(z).replace("hr",m).replace("heading"," {0,3}#{1,6}(?:\\s|$)").replace("|lheading","").replace("|table","").replace("blockquote"," {0,3}>").replace("fences"," {0,3}(?:`{3,}(?=[^`\\n]*\\n)|~{3,})[^\\n]*\\n").replace("list"," {0,3}(?:[*+-]|1[.)]) ").replace("html","</?(?:tag)(?: +|\\n|/?>)|<(?:script|pre|style|textarea|!--)").replace("tag",A).getRegex(),q={blockquote:k(/^( {0,3}> ?(paragraph|[^\n]*)(?:\n|$))+/).replace("paragraph",E).getRegex(),code:/^( {4}[^\n]+(?:\n(?: *(?:\n|$))*)?)+/,def:R,fences:/^ {0,3}(`{3,}(?=[^`\n]*(?:\n|$))|~{3,})([^\n]*)(?:\n|$)(?:|([\s\S]*?)(?:\n|$))(?: {0,3}\1[~`]* *(?=\n|$)|$)/,heading:/^ {0,3}(#{1,6})(?=\s|$)(.*)(?:\n+|$)/,hr:m,html:I,lheading:$,list:_,newline:/^(?: *(?:\n|$))+/,paragraph:E,table:f,text:/^[^\n]+/},Z=k("^ *([^\\n ].*)\\n {0,3}((?:\\| *)?:?-+:? *(?:\\| *:?-+:? *)*(?:\\| *)?)(?:\\n((?:(?! *\\n|hr|heading|blockquote|code|fences|list|html).*(?:\\n|$))*)\\n*|$)").replace("hr",m).replace("heading"," {0,3}#{1,6}(?:\\s|$)").replace("blockquote"," {0,3}>").replace("code"," {4}[^\\n]").replace("fences"," {0,3}(?:`{3,}(?=[^`\\n]*\\n)|~{3,})[^\\n]*\\n").replace("list"," {0,3}(?:[*+-]|1[.)]) ").replace("html","</?(?:tag)(?: +|\\n|/?>)|<(?:script|pre|style|textarea|!--)").replace("tag",A).getRegex(),L={...q,table:Z,paragraph:k(z).replace("hr",m).replace("heading"," {0,3}#{1,6}(?:\\s|$)").replace("|lheading","").replace("table",Z).replace("blockquote"," {0,3}>").replace("fences"," {0,3}(?:`{3,}(?=[^`\\n]*\\n)|~{3,})[^\\n]*\\n").replace("list"," {0,3}(?:[*+-]|1[.)]) ").replace("html","</?(?:tag)(?: +|\\n|/?>)|<(?:script|pre|style|textarea|!--)").replace("tag",A).getRegex()},P={...q,html:k("^ *(?:comment *(?:\\n|\\s*$)|<(tag)[\\s\\S]+?</\\1> *(?:\\n{2,}|\\s*$)|<tag(?:\"[^\"]*\"|'[^']*'|\\s[^'\"/>\\s]*)*?/?> *(?:\\n{2,}|\\s*$))").replace("comment",S).replace(/tag/g,"(?!(?:a|em|strong|small|s|cite|q|dfn|abbr|data|time|code|var|samp|kbd|sub|sup|i|b|u|mark|ruby|rt|rp|bdi|bdo|span|br|wbr|ins|del|img)\\b)\\w+(?!:|[^\\w\\s@]*@)\\b").getRegex(),def:/^ *\[([^\]]+)\]: *<?([^\s>]+)>?(?: +(["(][^\n]+[")]))? *(?:\n+|$)/,heading:/^(#{1,6})(.*)(?:\n+|$)/,fences:f,lheading:/^(.+?)\n {0,3}(=+|-+) *(?:\n+|$)/,paragraph:k(z).replace("hr",m).replace("heading"," *#{1,6} *[^\n]").replace("lheading",$).replace("|table","").replace("blockquote"," {0,3}>").replace("|fences","").replace("|list","").replace("|html","").replace("|tag","").getRegex()},Q=/^\\([!"#$%&'()*+,\-./:;<=>?@\[\]\\^_`{|}~])/,v=/^( {2,}|\\)\n(?!\s*$)/,B="\\p{P}\\p{S}",C=k(/^((?![*_])[\spunctuation])/,"u").replace(/punctuation/g,B).getRegex(),M=k(/^(?:\*+(?:((?!\*)[punct])|[^\s*]))|^_+(?:((?!_)[punct])|([^\s_]))/,"u").replace(/punct/g,B).getRegex(),O=k("^[^_*]*?__[^_*]*?\\*[^_*]*?(?=__)|[^*]+(?=[^*])|(?!\\*)[punct](\\*+)(?=[\\s]|$)|[^punct\\s](\\*+)(?!\\*)(?=[punct\\s]|$)|(?!\\*)[punct\\s](\\*+)(?=[^punct\\s])|[\\s](\\*+)(?!\\*)(?=[punct])|(?!\\*)[punct](\\*+)(?!\\*)(?=[punct])|[^punct\\s](\\*+)(?=[^punct\\s])","gu").replace(/punct/g,B).getRegex(),D=k("^[^_*]*?\\*\\*[^_*]*?_[^_*]*?(?=\\*\\*)|[^_]+(?=[^_])|(?!_)[punct](_+)(?=[\\s]|$)|[^punct\\s](_+)(?!_)(?=[punct\\s]|$)|(?!_)[punct\\s](_+)(?=[^punct\\s])|[\\s](_+)(?!_)(?=[punct])|(?!_)[punct](_+)(?!_)(?=[punct])","gu").replace(/punct/g,B).getRegex(),j=k(/\\([punct])/,"gu").replace(/punct/g,B).getRegex(),H=k(/^<(scheme:[^\s\x00-\x1f<>]*|email)>/).replace("scheme",/[a-zA-Z][a-zA-Z0-9+.-]{1,31}/).replace("email",/[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+(@)[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?(?:\.[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?)+(?![-_])/).getRegex(),U=k(S).replace("(?:--\x3e|$)","--\x3e").getRegex(),X=k("^comment|^</[a-zA-Z][\\w:-]*\\s*>|^<[a-zA-Z][\\w-]*(?:attribute)*?\\s*/?>|^<\\?[\\s\\S]*?\\?>|^<![a-zA-Z]+\\s[\\s\\S]*?>|^<!\\[CDATA\\[[\\s\\S]*?\\]\\]>").replace("comment",U).replace("attribute",/\s+[a-zA-Z:_][\w.:-]*(?:\s*=\s*"[^"]*"|\s*=\s*'[^']*'|\s*=\s*[^\s"'=<>`]+)?/).getRegex(),F=/(?:\[(?:\\.|[^\[\]\\])*\]|\\.|`[^`]*`|[^\[\]\\`])*?/,N=k(/^!?\[(label)\]\(\s*(href)(?:\s+(title))?\s*\)/).replace("label",F).replace("href",/<(?:\\.|[^\n<>\\])+>|[^\s\x00-\x1f]*/).replace("title",/"(?:\\"?|[^"\\])*"|'(?:\\'?|[^'\\])*'|\((?:\\\)?|[^)\\])*\)/).getRegex(),G=k(/^!?\[(label)\]\[(ref)\]/).replace("label",F).replace("ref",T).getRegex(),J=k(/^!?\[(ref)\](?:\[\])?/).replace("ref",T).getRegex(),K={_backpedal:f,anyPunctuation:j,autolink:H,blockSkip:/\[[^[\]]*?\]\([^\(\)]*?\)|`[^`]*?`|<[^<>]*?>/g,br:v,code:/^(`+)([^`]|[^`][\s\S]*?[^`])\1(?!`)/,del:f,emStrongLDelim:M,emStrongRDelimAst:O,emStrongRDelimUnd:D,escape:Q,link:N,nolink:J,punctuation:C,reflink:G,reflinkSearch:k("reflink|nolink(?!\\()","g").replace("reflink",G).replace("nolink",J).getRegex(),tag:X,text:/^(`+|[^`])(?:(?= {2,}\n)|[\s\S]*?(?:(?=[\\<!\[`*_]|\b_|$)|[^ ](?= {2,}\n)))/,url:f},V={...K,link:k(/^!?\[(label)\]\((.*?)\)/).replace("label",F).getRegex(),reflink:k(/^!?\[(label)\]\s*\[([^\]]*)\]/).replace("label",F).getRegex()},W={...K,escape:k(Q).replace("])","~|])").getRegex(),url:k(/^((?:ftp|https?):\/\/|www\.)(?:[a-zA-Z0-9\-]+\.?)+[^\s<]*|^email/,"i").replace("email",/[A-Za-z0-9._+-]+(@)[a-zA-Z0-9-_]+(?:\.[a-zA-Z0-9-_]*[a-zA-Z0-9])+(?![-_])/).getRegex(),_backpedal:/(?:[^?!.,:;*_'"~()&]+|\([^)]*\)|&(?![a-zA-Z0-9]+;$)|[?!.,:;*_'"~)]+(?!$))+/,del:/^(~~?)(?=[^\s~])([\s\S]*?[^\s~])\1(?=[^~]|$)/,text:/^([`~]+|[^`~])(?:(?= {2,}\n)|(?=[a-zA-Z0-9.!#$%&'*+\/=?_`{\|}~-]+@)|[\s\S]*?(?:(?=[\\<!\[`*~_]|\b_|https?:\/\/|ftp:\/\/|www\.|$)|[^ ](?= {2,}\n)|[^a-zA-Z0-9.!#$%&'*+\/=?_`{\|}~-](?=[a-zA-Z0-9.!#$%&'*+\/=?_`{\|}~-]+@)))/},Y={...W,br:k(v).replace("{2,}","*").getRegex(),text:k(W.text).replace("\\b_","\\b_| {2,}\\n").replace(/\{2,\}/g,"*").getRegex()},ee={normal:q,gfm:L,pedantic:P},te={normal:K,gfm:W,breaks:Y,pedantic:V};class ne{tokens;options;state;tokenizer;inlineQueue;constructor(t){this.tokens=[],this.tokens.links=Object.create(null),this.options=t||e.defaults,this.options.tokenizer=this.options.tokenizer||new w,this.tokenizer=this.options.tokenizer,this.tokenizer.options=this.options,this.tokenizer.lexer=this,this.inlineQueue=[],this.state={inLink:!1,inRawBlock:!1,top:!0};const n={block:ee.normal,inline:te.normal};this.options.pedantic?(n.block=ee.pedantic,n.inline=te.pedantic):this.options.gfm&&(n.block=ee.gfm,this.options.breaks?n.inline=te.breaks:n.inline=te.gfm),this.tokenizer.rules=n}static get rules(){return{block:ee,inline:te}}static lex(e,t){return new ne(t).lex(e)}static lexInline(e,t){return new ne(t).inlineTokens(e)}lex(e){e=e.replace(/\r\n|\r/g,"\n"),this.blockTokens(e,this.tokens);for(let e=0;e<this.inlineQueue.length;e++){const t=this.inlineQueue[e];this.inlineTokens(t.src,t.tokens)}return this.inlineQueue=[],this.tokens}blockTokens(e,t=[]){let n,s,r,i;for(e=this.options.pedantic?e.replace(/\t/g,"    ").replace(/^ +$/gm,""):e.replace(/^( *)(\t+)/gm,((e,t,n)=>t+"    ".repeat(n.length)));e;)if(!(this.options.extensions&&this.options.extensions.block&&this.options.extensions.block.some((s=>!!(n=s.call({lexer:this},e,t))&&(e=e.substring(n.raw.length),t.push(n),!0)))))if(n=this.tokenizer.space(e))e=e.substring(n.raw.length),1===n.raw.length&&t.length>0?t[t.length-1].raw+="\n":t.push(n);else if(n=this.tokenizer.code(e))e=e.substring(n.raw.length),s=t[t.length-1],!s||"paragraph"!==s.type&&"text"!==s.type?t.push(n):(s.raw+="\n"+n.raw,s.text+="\n"+n.text,this.inlineQueue[this.inlineQueue.length-1].src=s.text);else if(n=this.tokenizer.fences(e))e=e.substring(n.raw.length),t.push(n);else if(n=this.tokenizer.heading(e))e=e.substring(n.raw.length),t.push(n);else if(n=this.tokenizer.hr(e))e=e.substring(n.raw.length),t.push(n);else if(n=this.tokenizer.blockquote(e))e=e.substring(n.raw.length),t.push(n);else if(n=this.tokenizer.list(e))e=e.substring(n.raw.length),t.push(n);else if(n=this.tokenizer.html(e))e=e.substring(n.raw.length),t.push(n);else if(n=this.tokenizer.def(e))e=e.substring(n.raw.length),s=t[t.length-1],!s||"paragraph"!==s.type&&"text"!==s.type?this.tokens.links[n.tag]||(this.tokens.links[n.tag]={href:n.href,title:n.title}):(s.raw+="\n"+n.raw,s.text+="\n"+n.raw,this.inlineQueue[this.inlineQueue.length-1].src=s.text);else if(n=this.tokenizer.table(e))e=e.substring(n.raw.length),t.push(n);else if(n=this.tokenizer.lheading(e))e=e.substring(n.raw.length),t.push(n);else{if(r=e,this.options.extensions&&this.options.extensions.startBlock){let t=1/0;const n=e.slice(1);let s;this.options.extensions.startBlock.forEach((e=>{s=e.call({lexer:this},n),"number"==typeof s&&s>=0&&(t=Math.min(t,s))})),t<1/0&&t>=0&&(r=e.substring(0,t+1))}if(this.state.top&&(n=this.tokenizer.paragraph(r)))s=t[t.length-1],i&&"paragraph"===s.type?(s.raw+="\n"+n.raw,s.text+="\n"+n.text,this.inlineQueue.pop(),this.inlineQueue[this.inlineQueue.length-1].src=s.text):t.push(n),i=r.length!==e.length,e=e.substring(n.raw.length);else if(n=this.tokenizer.text(e))e=e.substring(n.raw.length),s=t[t.length-1],s&&"text"===s.type?(s.raw+="\n"+n.raw,s.text+="\n"+n.text,this.inlineQueue.pop(),this.inlineQueue[this.inlineQueue.length-1].src=s.text):t.push(n);else if(e){const t="Infinite loop on byte: "+e.charCodeAt(0);if(this.options.silent){console.error(t);break}throw new Error(t)}}return this.state.top=!0,t}inline(e,t=[]){return this.inlineQueue.push({src:e,tokens:t}),t}inlineTokens(e,t=[]){let n,s,r,i,l,o,a=e;if(this.tokens.links){const e=Object.keys(this.tokens.links);if(e.length>0)for(;null!=(i=this.tokenizer.rules.inline.reflinkSearch.exec(a));)e.includes(i[0].slice(i[0].lastIndexOf("[")+1,-1))&&(a=a.slice(0,i.index)+"["+"a".repeat(i[0].length-2)+"]"+a.slice(this.tokenizer.rules.inline.reflinkSearch.lastIndex))}for(;null!=(i=this.tokenizer.rules.inline.blockSkip.exec(a));)a=a.slice(0,i.index)+"["+"a".repeat(i[0].length-2)+"]"+a.slice(this.tokenizer.rules.inline.blockSkip.lastIndex);for(;null!=(i=this.tokenizer.rules.inline.anyPunctuation.exec(a));)a=a.slice(0,i.index)+"++"+a.slice(this.tokenizer.rules.inline.anyPunctuation.lastIndex);for(;e;)if(l||(o=""),l=!1,!(this.options.extensions&&this.options.extensions.inline&&this.options.extensions.inline.some((s=>!!(n=s.call({lexer:this},e,t))&&(e=e.substring(n.raw.length),t.push(n),!0)))))if(n=this.tokenizer.escape(e))e=e.substring(n.raw.length),t.push(n);else if(n=this.tokenizer.tag(e))e=e.substring(n.raw.length),s=t[t.length-1],s&&"text"===n.type&&"text"===s.type?(s.raw+=n.raw,s.text+=n.text):t.push(n);else if(n=this.tokenizer.link(e))e=e.substring(n.raw.length),t.push(n);else if(n=this.tokenizer.reflink(e,this.tokens.links))e=e.substring(n.raw.length),s=t[t.length-1],s&&"text"===n.type&&"text"===s.type?(s.raw+=n.raw,s.text+=n.text):t.push(n);else if(n=this.tokenizer.emStrong(e,a,o))e=e.substring(n.raw.length),t.push(n);else if(n=this.tokenizer.codespan(e))e=e.substring(n.raw.length),t.push(n);else if(n=this.tokenizer.br(e))e=e.substring(n.raw.length),t.push(n);else if(n=this.tokenizer.del(e))e=e.substring(n.raw.length),t.push(n);else if(n=this.tokenizer.autolink(e))e=e.substring(n.raw.length),t.push(n);else if(this.state.inLink||!(n=this.tokenizer.url(e))){if(r=e,this.options.extensions&&this.options.extensions.startInline){let t=1/0;const n=e.slice(1);let s;this.options.extensions.startInline.forEach((e=>{s=e.call({lexer:this},n),"number"==typeof s&&s>=0&&(t=Math.min(t,s))})),t<1/0&&t>=0&&(r=e.substring(0,t+1))}if(n=this.tokenizer.inlineText(r))e=e.substring(n.raw.length),"_"!==n.raw.slice(-1)&&(o=n.raw.slice(-1)),l=!0,s=t[t.length-1],s&&"text"===s.type?(s.raw+=n.raw,s.text+=n.text):t.push(n);else if(e){const t="Infinite loop on byte: "+e.charCodeAt(0);if(this.options.silent){console.error(t);break}throw new Error(t)}}else e=e.substring(n.raw.length),t.push(n);return t}}class se{options;constructor(t){this.options=t||e.defaults}code(e,t,n){const s=(t||"").match(/^\S*/)?.[0];return e=e.replace(/\n$/,"")+"\n",s?'<pre><code class="language-'+c(s)+'">'+(n?e:c(e,!0))+"</code></pre>\n":"<pre><code>"+(n?e:c(e,!0))+"</code></pre>\n"}blockquote(e){return`<blockquote>\n${e}</blockquote>\n`}html(e,t){return e}heading(e,t,n){return`<h${t}>${e}</h${t}>\n`}hr(){return"<hr>\n"}list(e,t,n){const s=t?"ol":"ul";return"<"+s+(t&&1!==n?' start="'+n+'"':"")+">\n"+e+"</"+s+">\n"}listitem(e,t,n){return`<li>${e}</li>\n`}checkbox(e){return"<input "+(e?'checked="" ':"")+'disabled="" type="checkbox">'}paragraph(e){return`<p>${e}</p>\n`}table(e,t){return t&&(t=`<tbody>${t}</tbody>`),"<table>\n<thead>\n"+e+"</thead>\n"+t+"</table>\n"}tablerow(e){return`<tr>\n${e}</tr>\n`}tablecell(e,t){const n=t.header?"th":"td";return(t.align?`<${n} align="${t.align}">`:`<${n}>`)+e+`</${n}>\n`}strong(e){return`<strong>${e}</strong>`}em(e){return`<em>${e}</em>`}codespan(e){return`<code>${e}</code>`}br(){return"<br>"}del(e){return`<del>${e}</del>`}link(e,t,n){const s=g(e);if(null===s)return n;let r='<a href="'+(e=s)+'"';return t&&(r+=' title="'+t+'"'),r+=">"+n+"</a>",r}image(e,t,n){const s=g(e);if(null===s)return n;let r=`<img src="${e=s}" alt="${n}"`;return t&&(r+=` title="${t}"`),r+=">",r}text(e){return e}}class re{strong(e){return e}em(e){return e}codespan(e){return e}del(e){return e}html(e){return e}text(e){return e}link(e,t,n){return""+n}image(e,t,n){return""+n}br(){return""}}class ie{options;renderer;textRenderer;constructor(t){this.options=t||e.defaults,this.options.renderer=this.options.renderer||new se,this.renderer=this.options.renderer,this.renderer.options=this.options,this.textRenderer=new re}static parse(e,t){return new ie(t).parse(e)}static parseInline(e,t){return new ie(t).parseInline(e)}parse(e,t=!0){let n="";for(let s=0;s<e.length;s++){const r=e[s];if(this.options.extensions&&this.options.extensions.renderers&&this.options.extensions.renderers[r.type]){const e=r,t=this.options.extensions.renderers[e.type].call({parser:this},e);if(!1!==t||!["space","hr","heading","code","table","blockquote","list","html","paragraph","text"].includes(e.type)){n+=t||"";continue}}switch(r.type){case"space":continue;case"hr":n+=this.renderer.hr();continue;case"heading":{const e=r;n+=this.renderer.heading(this.parseInline(e.tokens),e.depth,p(this.parseInline(e.tokens,this.textRenderer)));continue}case"code":{const e=r;n+=this.renderer.code(e.text,e.lang,!!e.escaped);continue}case"table":{const e=r;let t="",s="";for(let t=0;t<e.header.length;t++)s+=this.renderer.tablecell(this.parseInline(e.header[t].tokens),{header:!0,align:e.align[t]});t+=this.renderer.tablerow(s);let i="";for(let t=0;t<e.rows.length;t++){const n=e.rows[t];s="";for(let t=0;t<n.length;t++)s+=this.renderer.tablecell(this.parseInline(n[t].tokens),{header:!1,align:e.align[t]});i+=this.renderer.tablerow(s)}n+=this.renderer.table(t,i);continue}case"blockquote":{const e=r,t=this.parse(e.tokens);n+=this.renderer.blockquote(t);continue}case"list":{const e=r,t=e.ordered,s=e.start,i=e.loose;let l="";for(let t=0;t<e.items.length;t++){const n=e.items[t],s=n.checked,r=n.task;let o="";if(n.task){const e=this.renderer.checkbox(!!s);i?n.tokens.length>0&&"paragraph"===n.tokens[0].type?(n.tokens[0].text=e+" "+n.tokens[0].text,n.tokens[0].tokens&&n.tokens[0].tokens.length>0&&"text"===n.tokens[0].tokens[0].type&&(n.tokens[0].tokens[0].text=e+" "+n.tokens[0].tokens[0].text)):n.tokens.unshift({type:"text",text:e+" "}):o+=e+" "}o+=this.parse(n.tokens,i),l+=this.renderer.listitem(o,r,!!s)}n+=this.renderer.list(l,t,s);continue}case"html":{const e=r;n+=this.renderer.html(e.text,e.block);continue}case"paragraph":{const e=r;n+=this.renderer.paragraph(this.parseInline(e.tokens));continue}case"text":{let i=r,l=i.tokens?this.parseInline(i.tokens):i.text;for(;s+1<e.length&&"text"===e[s+1].type;)i=e[++s],l+="\n"+(i.tokens?this.parseInline(i.tokens):i.text);n+=t?this.renderer.paragraph(l):l;continue}default:{const e='Token with "'+r.type+'" type was not found.';if(this.options.silent)return console.error(e),"";throw new Error(e)}}}return n}parseInline(e,t){t=t||this.renderer;let n="";for(let s=0;s<e.length;s++){const r=e[s];if(this.options.extensions&&this.options.extensions.renderers&&this.options.extensions.renderers[r.type]){const e=this.options.extensions.renderers[r.type].call({parser:this},r);if(!1!==e||!["escape","html","link","image","strong","em","codespan","br","del","text"].includes(r.type)){n+=e||"";continue}}switch(r.type){case"escape":{const e=r;n+=t.text(e.text);break}case"html":{const e=r;n+=t.html(e.text);break}case"link":{const e=r;n+=t.link(e.href,e.title,this.parseInline(e.tokens,t));break}case"image":{const e=r;n+=t.image(e.href,e.title,e.text);break}case"strong":{const e=r;n+=t.strong(this.parseInline(e.tokens,t));break}case"em":{const e=r;n+=t.em(this.parseInline(e.tokens,t));break}case"codespan":{const e=r;n+=t.codespan(e.text);break}case"br":n+=t.br();break;case"del":{const e=r;n+=t.del(this.parseInline(e.tokens,t));break}case"text":{const e=r;n+=t.text(e.text);break}default:{const e='Token with "'+r.type+'" type was not found.';if(this.options.silent)return console.error(e),"";throw new Error(e)}}}return n}}class le{options;constructor(t){this.options=t||e.defaults}static passThroughHooks=new Set(["preprocess","postprocess","processAllTokens"]);preprocess(e){return e}postprocess(e){return e}processAllTokens(e){return e}}class oe{defaults={async:!1,breaks:!1,extensions:null,gfm:!0,hooks:null,pedantic:!1,renderer:null,silent:!1,tokenizer:null,walkTokens:null};options=this.setOptions;parse=this.#e(ne.lex,ie.parse);parseInline=this.#e(ne.lexInline,ie.parseInline);Parser=ie;Renderer=se;TextRenderer=re;Lexer=ne;Tokenizer=w;Hooks=le;constructor(...e){this.use(...e)}walkTokens(e,t){let n=[];for(const s of e)switch(n=n.concat(t.call(this,s)),s.type){case"table":{const e=s;for(const s of e.header)n=n.concat(this.walkTokens(s.tokens,t));for(const s of e.rows)for(const e of s)n=n.concat(this.walkTokens(e.tokens,t));break}case"list":{const e=s;n=n.concat(this.walkTokens(e.items,t));break}default:{const e=s;this.defaults.extensions?.childTokens?.[e.type]?this.defaults.extensions.childTokens[e.type].forEach((s=>{const r=e[s].flat(1/0);n=n.concat(this.walkTokens(r,t))})):e.tokens&&(n=n.concat(this.walkTokens(e.tokens,t)))}}return n}use(...e){const t=this.defaults.extensions||{renderers:{},childTokens:{}};return e.forEach((e=>{const n={...e};if(n.async=this.defaults.async||n.async||!1,e.extensions&&(e.extensions.forEach((e=>{if(!e.name)throw new Error("extension name required");if("renderer"in e){const n=t.renderers[e.name];t.renderers[e.name]=n?function(...t){let s=e.renderer.apply(this,t);return!1===s&&(s=n.apply(this,t)),s}:e.renderer}if("tokenizer"in e){if(!e.level||"block"!==e.level&&"inline"!==e.level)throw new Error("extension level must be 'block' or 'inline'");const n=t[e.level];n?n.unshift(e.tokenizer):t[e.level]=[e.tokenizer],e.start&&("block"===e.level?t.startBlock?t.startBlock.push(e.start):t.startBlock=[e.start]:"inline"===e.level&&(t.startInline?t.startInline.push(e.start):t.startInline=[e.start]))}"childTokens"in e&&e.childTokens&&(t.childTokens[e.name]=e.childTokens)})),n.extensions=t),e.renderer){const t=this.defaults.renderer||new se(this.defaults);for(const n in e.renderer){if(!(n in t))throw new Error(`renderer '${n}' does not exist`);if("options"===n)continue;const s=n,r=e.renderer[s],i=t[s];t[s]=(...e)=>{let n=r.apply(t,e);return!1===n&&(n=i.apply(t,e)),n||""}}n.renderer=t}if(e.tokenizer){const t=this.defaults.tokenizer||new w(this.defaults);for(const n in e.tokenizer){if(!(n in t))throw new Error(`tokenizer '${n}' does not exist`);if(["options","rules","lexer"].includes(n))continue;const s=n,r=e.tokenizer[s],i=t[s];t[s]=(...e)=>{let n=r.apply(t,e);return!1===n&&(n=i.apply(t,e)),n}}n.tokenizer=t}if(e.hooks){const t=this.defaults.hooks||new le;for(const n in e.hooks){if(!(n in t))throw new Error(`hook '${n}' does not exist`);if("options"===n)continue;const s=n,r=e.hooks[s],i=t[s];le.passThroughHooks.has(n)?t[s]=e=>{if(this.defaults.async)return Promise.resolve(r.call(t,e)).then((e=>i.call(t,e)));const n=r.call(t,e);return i.call(t,n)}:t[s]=(...e)=>{let n=r.apply(t,e);return!1===n&&(n=i.apply(t,e)),n}}n.hooks=t}if(e.walkTokens){const t=this.defaults.walkTokens,s=e.walkTokens;n.walkTokens=function(e){let n=[];return n.push(s.call(this,e)),t&&(n=n.concat(t.call(this,e))),n}}this.defaults={...this.defaults,...n}})),this}setOptions(e){return this.defaults={...this.defaults,...e},this}lexer(e,t){return ne.lex(e,t??this.defaults)}parser(e,t){return ie.parse(e,t??this.defaults)}#e(e,t){return(n,s)=>{const r={...s},i={...this.defaults,...r};!0===this.defaults.async&&!1===r.async&&(i.silent||console.warn("marked(): The async option was set to true by an extension. The async: false option sent to parse will be ignored."),i.async=!0);const l=this.#t(!!i.silent,!!i.async);if(null==n)return l(new Error("marked(): input parameter is undefined or null"));if("string"!=typeof n)return l(new Error("marked(): input parameter is of type "+Object.prototype.toString.call(n)+", string expected"));if(i.hooks&&(i.hooks.options=i),i.async)return Promise.resolve(i.hooks?i.hooks.preprocess(n):n).then((t=>e(t,i))).then((e=>i.hooks?i.hooks.processAllTokens(e):e)).then((e=>i.walkTokens?Promise.all(this.walkTokens(e,i.walkTokens)).then((()=>e)):e)).then((e=>t(e,i))).then((e=>i.hooks?i.hooks.postprocess(e):e)).catch(l);try{i.hooks&&(n=i.hooks.preprocess(n));let s=e(n,i);i.hooks&&(s=i.hooks.processAllTokens(s)),i.walkTokens&&this.walkTokens(s,i.walkTokens);let r=t(s,i);return i.hooks&&(r=i.hooks.postprocess(r)),r}catch(e){return l(e)}}}#t(e,t){return n=>{if(n.message+="\nPlease report this to https://github.com/markedjs/marked.",e){const e="<p>An error occurred:</p><pre>"+c(n.message+"",!0)+"</pre>";return t?Promise.resolve(e):e}if(t)return Promise.reject(n);throw n}}}const ae=new oe;function ce(e,t){return ae.parse(e,t)}ce.options=ce.setOptions=function(e){return ae.setOptions(e),ce.defaults=ae.defaults,n(ce.defaults),ce},ce.getDefaults=t,ce.defaults=e.defaults,ce.use=function(...e){return ae.use(...e),ce.defaults=ae.defaults,n(ce.defaults),ce},ce.walkTokens=function(e,t){return ae.walkTokens(e,t)},ce.parseInline=ae.parseInline,ce.Parser=ie,ce.parser=ie.parse,ce.Renderer=se,ce.TextRenderer=re,ce.Lexer=ne,ce.lexer=ne.lex,ce.Tokenizer=w,ce.Hooks=le,ce.parse=ce;const he=ce.options,pe=ce.setOptions,ue=ce.use,ke=ce.walkTokens,ge=ce.parseInline,fe=ce,de=ie.parse,xe=ne.lex;e.Hooks=le,e.Lexer=ne,e.Marked=oe,e.Parser=ie,e.Renderer=se,e.TextRenderer=re,e.Tokenizer=w,e.getDefaults=t,e.lexer=xe,e.marked=ce,e.options=he,e.parse=fe,e.parseInline=ge,e.parser=de,e.setOptions=pe,e.use=ue,e.walkTokens=ke}));
+
+</script>
+<style>
+:root{
+  --bg:#000000;--surface:#0a0a0a;--raised:#101014;--hover:#16161c;
+  --border:#1e1e26;--border-strong:#2e2e3a;
+  --text:#d8d6c8;--muted:#8a8878;--faint:#55534a;
+  --accent:#c4b5fd;--accent-strong:#e0d7ff;--accent-dim:rgba(196,181,253,.10);
+  --phos:#7ef0b2;--cyan:#67e8f9;--amber:#fcd34d;--red:#ff6b81;
+  --glow-r:rgba(255,0,60,.35);--glow-c:rgba(0,255,240,.30);
+  --mono:'3270 Nerd Font','IBM Plex Mono','SF Mono',ui-monospace,Menlo,monospace;
+  --sidebar:264px;--rightbar:288px;--radius:4px;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html,body{height:100%}
+body{background:var(--bg);color:var(--text);font-family:var(--mono);font-size:13.5px;
+  line-height:1.62;overflow:hidden;text-rendering:optimizeLegibility}
+::selection{background:rgba(126,240,178,.25);color:#fff}
+::-webkit-scrollbar{width:10px;height:10px}
+::-webkit-scrollbar-thumb{background:var(--border-strong);border-radius:5px;border:2px solid var(--bg)}
+::-webkit-scrollbar-track{background:transparent}
+
+/* ---------- CRT atmosphere ---------- */
+body::before{content:"";position:fixed;inset:0;z-index:999;pointer-events:none;
+  background:repeating-linear-gradient(0deg,rgba(0,0,0,.22) 0px,rgba(0,0,0,.22) 1px,transparent 1px,transparent 3px);
+  animation:scanlines 12s linear infinite;mix-blend-mode:multiply}
+body::after{content:"";position:fixed;inset:-100%;z-index:998;pointer-events:none;opacity:.05;
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='240' height='240'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='2'/%3E%3C/filter%3E%3Crect width='240' height='240' filter='url(%23n)' opacity='0.55'/%3E%3C/svg%3E");
+  animation:grain 7s steps(10) infinite}
+@keyframes scanlines{from{background-position:0 0}to{background-position:0 100%}}
+@keyframes grain{0%,100%{transform:translate(0)}10%{transform:translate(-5%,-5%)}20%{transform:translate(-10%,5%)}30%{transform:translate(5%,-10%)}40%{transform:translate(-5%,15%)}50%{transform:translate(-10%,5%)}60%{transform:translate(15%)}70%{transform:translateY(10%)}80%{transform:translate(-15%)}90%{transform:translate(10%,5%)}}
+@keyframes flicker{0%,100%{opacity:1}48%{opacity:.985}50%{opacity:.96}52%{opacity:.99}}
+@keyframes glitch{0%,91%,94%,100%{text-shadow:none;transform:none}
+  92%{text-shadow:-3px 0 var(--glow-r),3px 0 var(--glow-c);transform:translate(2px,-1px)}
+  93%{text-shadow:3px 0 var(--glow-r),-3px 0 var(--glow-c);transform:translate(-2px,1px)}
+  95%{text-shadow:1px 0 var(--glow-r),-1px 0 var(--glow-c)}}
+.crt-title{animation:flicker 4s infinite,glitch 9s infinite}
+@media (prefers-reduced-motion: reduce){
+  body::before,body::after,.crt-title{animation:none}
+  *{transition:none!important}
+}
+
+/* ---------- lock screen (terminal boot) ---------- */
+#lock{position:fixed;inset:0;z-index:100;display:flex;align-items:center;justify-content:center;background:
+  radial-gradient(ellipse 70% 50% at 50% -10%,rgba(126,240,178,.06),transparent),var(--bg)}
+.lock-card{width:min(520px,92vw);text-align:left;padding:0;border:none;background:none;box-shadow:none}
+#boot{font-size:13px;color:var(--muted);white-space:pre-wrap;line-height:1.75;margin-bottom:22px;min-height:96px}
+#boot .ok{color:var(--phos)}#boot .dim{color:var(--faint)}
+.bootline{opacity:0;animation:bline .05s forwards}
+@keyframes bline{to{opacity:1}}
+.prompt-row{display:flex;align-items:center;gap:10px;border:1px solid var(--border-strong);
+  background:var(--surface);padding:12px 16px;border-radius:var(--radius)}
+.prompt-row:focus-within{border-color:var(--phos);box-shadow:0 0 0 1px rgba(126,240,178,.25),0 0 24px rgba(126,240,178,.08)}
+.prompt-row .ps{color:var(--phos);font-weight:600}
+#pw{flex:1;background:none;border:none;outline:none;color:var(--text);
+  font-family:var(--mono);font-size:14px;letter-spacing:.06em}
+#pw::placeholder{color:var(--faint)}
+#unlock{margin-top:14px;width:100%;padding:11px;border:1px solid var(--border-strong);border-radius:var(--radius);
+  background:var(--raised);color:var(--phos);font-family:var(--mono);font-size:13px;letter-spacing:.04em;
+  cursor:pointer;transition:border-color .15s,box-shadow .15s,background .15s}
+#unlock:hover{border-color:var(--phos);background:#0d1512;box-shadow:0 0 18px rgba(126,240,178,.10)}
+#lock-err{color:var(--red);font-size:12.5px;margin-top:14px;min-height:18px}
+.lock-foot{margin-top:26px;color:var(--faint);font-size:11px;font-family:var(--mono);letter-spacing:.02em}
+
+/* ---------- shell (single-column terminal) ---------- */
+#app{display:none;height:100vh}
+#app.on{display:flex;flex-direction:column}
+aside,#rbars{display:none}
+.topbar{height:34px;display:flex;align-items:center;gap:12px;padding:0 16px;flex-shrink:0;
+  border-bottom:1px solid var(--border);background:#050506}
+.crumbs{font-size:11.5px;color:var(--faint);overflow:hidden;white-space:nowrap;text-overflow:ellipsis}
+.crumbs b{color:var(--phos);font-weight:550}
+#status{margin-left:auto;font-family:var(--mono);font-size:10.5px;color:var(--faint)}
+.tb-btn{background:none;border:none;color:var(--faint);
+  font-family:var(--mono);font-size:11.5px;cursor:pointer;padding:2px 6px;letter-spacing:.04em}
+.tb-btn:hover{color:var(--phos)}
+#view{flex:1;overflow-y:auto}
+.page{max-width:900px;margin:0 auto;padding:28px 40px 40px}
+
+/* ---------- persistent command line ---------- */
+.cmdline{position:sticky;bottom:0;z-index:40;display:flex;align-items:center;gap:10px;
+  padding:11px 18px;background:#030304;border-top:1px solid var(--border-strong)}
+.cmdline .ps{color:var(--phos);font-weight:600;font-size:13px;white-space:nowrap}
+#cmd{flex:1;background:none;border:none;outline:none;color:var(--text);
+  font-family:var(--mono);font-size:13.5px;caret-color:var(--phos)}
+#cmd::placeholder{color:var(--faint)}
+.cmd-sug{position:absolute;bottom:100%;left:0;right:0;display:none;flex-direction:column;
+  background:#08080a;border:1px solid var(--border-strong);border-bottom:none;
+  max-height:300px;overflow-y:auto;box-shadow:0 -10px 40px rgba(0,0,0,.7)}
+.cmdline{position:relative}
+.cmd-sug.on{display:flex}
+.sug-item{padding:6px 14px;font-size:12.5px;cursor:pointer;color:var(--muted);
+  display:flex;justify-content:space-between;gap:12px}
+.sug-item.sel,.sug-item:hover{background:rgba(126,240,178,.08);color:var(--text)}
+.sug-item .path{color:var(--faint);font-size:11px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+aside{background:var(--surface);border-right:1px solid var(--border);display:flex;flex-direction:column;min-width:0}
+#rbars{background:var(--surface);border-left:1px solid var(--border);display:flex;flex-direction:column;min-width:0}
+.side-head{padding:14px 14px 10px;border-bottom:1px solid var(--border)}
+.brand{display:flex;align-items:center;gap:8px;font-weight:600;font-size:13px;letter-spacing:.03em;color:var(--phos)}
+.brand-dot{width:7px;height:7px;border-radius:50%;background:var(--phos);box-shadow:0 0 8px rgba(126,240,178,.8);animation:modernPulse 2.4s infinite}
+@keyframes modernPulse{0%,100%{opacity:1}50%{opacity:.45}}
+.search-btn{margin-top:12px;width:100%;display:flex;align-items:center;gap:8px;padding:6px 11px;
+  background:var(--bg);border:1px solid var(--border-strong);border-radius:var(--radius);color:var(--muted);
+  font-size:12px;font-family:var(--mono);cursor:pointer;text-align:left}
+.search-btn:hover{border-color:var(--phos);color:var(--text)}
+kbd{margin-left:auto;font-family:var(--mono);font-size:10.5px;color:var(--faint);
+  border:1px solid var(--border-strong);border-radius:4px;padding:1px 5px;background:var(--surface)}
+#tree{flex:1;overflow-y:auto;padding:10px 8px 24px}
+.tw-head{display:flex;align-items:center;gap:6px;padding:4px 8px;color:var(--muted);cursor:pointer;
+  font-size:12px;font-weight:600;text-transform:uppercase;letter-spacing:.06em;border-radius:6px;user-select:none}
+.tw-head:hover{color:var(--text);background:var(--hover)}
+.tw-caret{transition:transform .12s;font-size:9px;width:10px}
+.tw.closed .tw-caret{transform:rotate(-90deg)}
+.tw.closed .tw-kids{display:none}
+.tw-kids{margin-left:13px;border-left:1px solid var(--border);padding-left:4px}
+.nav-note{display:block;padding:3.5px 8px;color:var(--muted);text-decoration:none;font-size:13.5px;
+  border-radius:6px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.nav-note:hover{color:var(--text);background:var(--hover)}
+.nav-note.active{color:var(--accent-strong);background:var(--accent-dim);font-weight:550}
+
+main{display:flex;flex-direction:column;min-width:0}
+.topbar{height:42px;display:flex;align-items:center;gap:14px;padding:0 18px;
+  border-bottom:1px solid var(--border);background:var(--surface)}
+.crumbs{font-size:12px;color:var(--faint);overflow:hidden;white-space:nowrap;text-overflow:ellipsis}
+.crumbs b{color:var(--phos);font-weight:550}
+#status{margin-left:auto;font-family:var(--mono);font-size:11px;color:var(--faint)}
+#status b{color:var(--muted);font-weight:500}
+.tb-btn{background:none;border:1px solid transparent;border-radius:var(--radius);color:var(--muted);
+  font-family:var(--mono);font-size:13px;cursor:pointer;padding:3px 8px}
+.tb-btn:hover{color:var(--phos);border-color:var(--border-strong)}
+#view{flex:1;overflow-y:auto;scroll-behavior:smooth}
+.page{max-width:880px;margin:0 auto;padding:34px 44px 120px}
+
+/* ---------- NOW view ---------- */
+.now-head{border:1px solid var(--border-strong);border-radius:var(--radius);background:
+  linear-gradient(180deg,var(--raised),var(--surface));padding:26px 30px;margin-bottom:30px;position:relative;overflow:hidden}
+.now-head::after{content:"";position:absolute;inset:0;pointer-events:none;
+  background:repeating-linear-gradient(0deg,rgba(126,240,178,.025) 0 1px,transparent 1px 3px)}
+.now-kicker{font-size:11px;letter-spacing:.22em;color:var(--phos);text-transform:uppercase;margin-bottom:10px}
+.now-head h1{font-size:26px;font-weight:600;color:var(--text);letter-spacing:-.01em;margin-bottom:10px}
+.now-head p{color:var(--muted);font-size:12.5px;max-width:60ch}
+.now-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-bottom:30px}
+.now-card{border:1px solid var(--border);border-radius:var(--radius);background:var(--surface);padding:16px 18px}
+.now-card h3{font-size:10.5px;letter-spacing:.18em;text-transform:uppercase;color:var(--faint);margin-bottom:12px}
+.now-card h3 b{color:var(--phos);font-weight:600}
+.now-row{display:flex;justify-content:space-between;align-items:baseline;gap:12px;padding:5px 0;font-size:12.5px}
+.now-row a{color:var(--text);text-decoration:none;overflow:hidden;white-space:nowrap;text-overflow:ellipsis}
+.now-row a:hover{color:var(--phos)}
+.now-row .d{color:var(--faint);font-size:11px;flex-shrink:0}
+.now-bar{height:4px;background:var(--raised);border-radius:2px;overflow:hidden;margin:6px 0 2px}
+.now-bar i{display:block;height:100%;background:linear-gradient(90deg,var(--phos),var(--cyan));border-radius:2px}
+.now-foot{color:var(--faint);font-size:11px;border-top:1px solid var(--border);padding-top:14px}
+
+/* ---------- markdown (terminal document) ---------- */
+.md h1{font-size:22px;font-weight:600;letter-spacing:.01em;margin:0 0 20px;line-height:1.3;color:var(--text)}
+.md h1::before{content:"█ ";color:var(--phos);font-size:16px}
+.md h2{font-size:16.5px;font-weight:600;margin:36px 0 12px;padding-bottom:6px;border-bottom:1px solid var(--border)}
+.md h2::before{content:"## ";color:var(--faint)}
+.md h3{font-size:14px;font-weight:600;margin:26px 0 8px}
+.md h3::before{content:"### ";color:var(--faint)}
+.md h4{font-size:13px;font-weight:600;margin:20px 0 6px;color:var(--cyan)}
+.md p{margin:10px 0}.md ul,.md ol{margin:10px 0;padding-left:26px}
+.md li{margin:3.5px 0}.md li::marker{color:var(--phos)}
+.md a{color:var(--cyan);text-decoration:none}
+.md a:hover{text-decoration:underline;text-shadow:0 0 8px rgba(103,232,249,.4)}
+.md a.wl{border-bottom:1px dashed rgba(126,240,178,.35);color:var(--phos)}
+.md span.wl-x{color:var(--faint);cursor:default}
+.md code{font-family:var(--mono);font-size:.9em;background:var(--raised);border:1px solid var(--border);
+  border-radius:3px;padding:1px 6px;color:var(--amber)}
+.md pre{background:#050507;border:1px solid var(--border);border-radius:var(--radius);
+  padding:14px 16px;overflow-x:auto;margin:16px 0}
+.md pre code{background:none;border:none;padding:0;color:var(--phos);font-size:12.3px;line-height:1.55;text-shadow:0 0 6px rgba(126,240,178,.25)}
+.md blockquote{border-left:2px solid var(--phos);background:rgba(126,240,178,.05);
+  padding:10px 18px;border-radius:0 3px 3px 0;margin:16px 0;color:var(--muted)}
+.md blockquote p{margin:4px 0}
+.md hr{border:none;border-top:1px dashed var(--border-strong);margin:30px 0}
+.md table{border-collapse:collapse;margin:16px 0;width:100%;font-size:12.5px}
+.md th{background:var(--raised);font-weight:600;text-align:left;color:var(--cyan)}
+.md th,.md td{border:1px solid var(--border);padding:6px 11px}
+.md tr:hover td{background:var(--hover)}
+.md img{max-width:100%;border-radius:var(--radius);border:1px solid var(--border)}
+.md input[type=checkbox]{accent-color:var(--phos);margin-right:7px;transform:translateY(1px)}
+.md .task-done{text-decoration:line-through;color:var(--faint)}
+.fm{display:flex;flex-wrap:wrap;gap:7px;margin:0 0 26px}
+.fm span{font-family:var(--mono);font-size:10.5px;color:var(--muted);background:var(--raised);
+  border:1px solid var(--border);border-radius:3px;padding:2px 9px}
+.fm span b{color:var(--faint);font-weight:500}
+
+/* ---------- backlinks ---------- */
+.backlinks{margin-top:64px;padding-top:22px;border-top:1px solid var(--border)}
+.backlinks h3{font-size:10.5px;text-transform:uppercase;letter-spacing:.18em;color:var(--faint);margin-bottom:12px}
+.bl-item{display:block;padding:8px 14px;border:1px solid var(--border);border-radius:var(--radius);margin-bottom:8px;
+  color:var(--muted);text-decoration:none;font-size:12.5px;background:var(--surface)}
+.bl-item:hover{border-color:var(--phos);color:var(--text)}
+.bl-item b{color:var(--accent-strong);font-weight:550}
+
+/* ---------- tree drawer ---------- */
+#tree-drawer{position:fixed;top:0;left:0;bottom:0;width:300px;z-index:70;background:#060608;
+  border-right:1px solid var(--border-strong);transform:translateX(-102%);transition:transform .18s ease;
+  display:flex;flex-direction:column}
+#tree-drawer.on{transform:translateX(0);box-shadow:20px 0 60px rgba(0,0,0,.7)}
+#tree-drawer .td-head{display:flex;align-items:center;justify-content:space-between;
+  padding:12px 14px;border-bottom:1px solid var(--border)}
+#tree-drawer .td-head b{font-size:11px;letter-spacing:.18em;color:var(--phos)}
+#tree{flex:1;overflow-y:auto;padding:10px 8px 24px;font-size:12.5px}
+.tw-head{display:flex;align-items:center;gap:6px;padding:3px 6px;color:var(--muted);cursor:pointer;
+  font-size:11px;font-weight:600;text-transform:uppercase;letter-spacing:.08em;border-radius:3px;user-select:none}
+.tw-head:hover{color:var(--text);background:var(--hover)}
+.tw-caret{transition:transform .12s;font-size:9px;width:10px;color:var(--faint)}
+.tw.closed .tw-caret{transform:rotate(-90deg)}
+.tw.closed .tw-kids{display:none}
+.tw-kids{margin-left:12px;border-left:1px solid var(--border);padding-left:4px}
+.nav-note{display:block;padding:2.5px 8px;color:var(--muted);text-decoration:none;font-size:12.5px;
+  border-radius:3px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.nav-note:hover{color:var(--text);background:var(--hover)}
+.nav-note.active{color:var(--phos);background:rgba(126,240,178,.07)}
+
+@media(max-width:900px){
+  #tree-drawer{width:86vw}
+}
+@media(max-width:900px){
+  .page{padding:20px 18px 40px}
+  .cmdline{padding:10px 12px}
+  .now-grid{grid-template-columns:1fr}
+}
+}
+#menu-btn{display:none;margin-right:4px;background:none;border:none;color:var(--muted);font-size:17px;cursor:pointer}
+</style>
+</head>
+<body>
+
+<div id="lock">
+  <div class="lock-card">
+    <div id="boot"></div>
+    <div class="prompt-row"><span class="ps">vault ❯</span>
+      <input id="pw" type="password" placeholder="enter passphrase" autocomplete="off" autofocus></div>
+    <button id="unlock">[ decrypt vault ]</button>
+    <div id="lock-err"></div>
+    <div class="lock-foot">AES-256-GCM · PBKDF2-SHA256 310k · key never leaves this machine</div>
+  </div>
+</div>
+
+<div id="app">
+  <div class="topbar">
+    <button class="tb-btn" onclick="focusCmd()" title="command line">❯</button>
+    <div class="crumbs" id="crumbs"></div>
+    <div id="status"></div>
+    <button class="tb-btn" onclick="go('Home.md')">⌂ home</button>
+    <button class="tb-btn" onclick="toggleTree()" title="browse all notes">▤ index</button>
+    <button class="tb-btn" onclick="go('__now__')" title="status page">● now</button>
+  </div>
+  <div id="view">
+    <div class="page md" id="content"></div>
+    <div class="page" id="nowview" style="display:none"></div>
+  </div>
+  <div id="tree-drawer">
+    <div class="td-head"><b>▤ vault index</b><button class="tb-btn" onclick="toggleTree()">✕</button></div>
+    <nav id="tree"></nav>
+  </div>
+  <div class="cmdline">
+    <span class="ps">vault ❯</span>
+    <input id="cmd" placeholder="type a command — help" autocomplete="off" spellcheck="false">
+  </div>
+  <div class="cmd-sug" id="cmd-sug"></div>
+</div>
+
+
+</div>
+
+<script>
+"use strict";
+/* ================= state ================= */
+let KEY = null, INDEX = null, CURRENT = null;
+const $ = (s) => document.querySelector(s);
+const byId = new Map();          // id -> record
+const byPath = new Map();        // path -> record
+const inbound = new Map();       // path -> [paths linking here]
+
+/* ================= content base resolution ================= */
+// Works on github.io project pages, custom-domain proxies (/vault, /vault/), anywhere.
+const BASES = ["", "../", "https://ayumad.github.io/ayumad.vault/"];
+let CB = ""; // resolved working base
+async function fetchIdx(url) {
+  const r = await fetch(url, { cache: "no-store" });
+  if (!r.ok) throw new Error("http " + r.status);
+  const j = await r.json();
+  if (!j || !j.kdf || !Array.isArray(j.notes)) throw new Error("not a vault index");
+  return j;
+}
+async function loadIndex(bust) {
+  const q = bust ? "?t=" + Date.now() : "";
+  let lastErr;
+  for (const b of BASES) {
+    try { const idx = await fetchIdx(`${b}content/index.json${q}`); CB = b; return idx; }
+    catch (e) { lastErr = e; }
+  }
+  throw lastErr;
+}
+
+/* ================= crypto ================= */
+async function deriveKey(pw, kdf) {
+  const enc = new TextEncoder();
+  const km = await crypto.subtle.importKey("raw", enc.encode(pw), "PBKDF2", false, ["deriveKey"]);
+  return crypto.subtle.deriveKey(
+    { name: "PBKDF2", salt: Uint8Array.from(atob(kdf.salt), c => c.charCodeAt(0)),
+      iterations: kdf.iterations, hash: "SHA-256" },
+    km, { name: "AES-GCM", length: 256 }, false, ["decrypt"]);
+}
+async function decryptNote(id) {
+  const r = await fetch(`${CB}content/${id}.enc?v=${encodeURIComponent(INDEX.built || "0")}`, { cache: "no-store" });
+  if (!r.ok) throw new Error("fetch failed");
+  const { iv, tag, data } = await r.json();
+  const b64 = (s) => Uint8Array.from(atob(s), c => c.charCodeAt(0));
+  // WebCrypto expects auth tag appended after ciphertext
+  const ct = new Uint8Array(b64(data).length + b64(tag).length);
+  ct.set(b64(data)); ct.set(b64(tag), b64(data).length);
+  const dec = await crypto.subtle.decrypt(
+    { name: "AES-GCM", iv: b64(iv) }, KEY, ct);
+  return new TextDecoder().decode(dec);
+}
+
+/* ================= unlock ================= */
+async function unlock() {
+  const pw = $("#pw").value;
+  if (!pw) return;
+  $("#lock-err").textContent = "";
+  $("#unlock").textContent = "Deriving key…";
+  try {
+    const idx = await loadIndex(false);
+    const key = await deriveKey(pw, idx.kdf);
+    // verify against first note before revealing anything
+    KEY = key; INDEX = idx;
+    INDEX.notes.forEach(n => { byId.set(n.id, n); byPath.set(n.path, n);
+      n.links.forEach(l => { if (!inbound.has(l)) inbound.set(l, []); inbound.get(l).push(n.path); }); });
+    let ok = false;
+    for (let attempt = 0; attempt < 2 && !ok; attempt++) {
+      try { await decryptNote(INDEX.notes[0].id); ok = true; }   // throws on wrong password
+      catch (e) {
+        if (attempt === 0) {
+          // stale index (salt from an older build): force-refresh once and retry
+          INDEX = await loadIndex(true);
+          KEY = await deriveKey(pw, INDEX.kdf);
+          byId.clear(); byPath.clear(); inbound.clear();
+          INDEX.notes.forEach(n => { byId.set(n.id, n); byPath.set(n.path, n);
+            n.links.forEach(l => { if (!inbound.has(l)) inbound.set(l, []); inbound.get(l).push(n.path); }); });
+        } else throw e;
+      }
+    }
+    buildTree();
+    $("#lock").style.display = "none";
+    $("#app").classList.add("on");
+    $("#status").textContent = `${INDEX.notes.length} notes`;
+    const initial = location.hash && location.hash.length > 2 ? location.hash : "#/__now__";
+    history.replaceState(null, "", initial);
+    route(initial);
+  } catch (e) {
+    const net = /http|fetch|not a vault|Failed|NetworkError/i.test(String(e && e.message));
+    $("#lock-err").textContent = net
+      ? "Couldn't load vault data (network/path issue) — try ayumad.github.io/ayumad.vault"
+      : "Wrong password — decryption failed.";
+    $("#unlock").textContent = "Unlock vault";
+    KEY = null;
+  }
+}
+
+/* ================= boot sequence ================= */
+(function bootSeq() {
+  const lines = [
+    "AYUMAD VAULT TERMINAL v2.0",
+    "────────────────────────────",
+    "mounting encrypted volume ......... <span class='ok'>OK</span>",
+    "loading AES-256-GCM module ........ <span class='ok'>OK</span>",
+    "deriving key: PBKDF2-SHA256 310k .. <span class='dim'>awaiting passphrase</span>",
+  ];
+  const el = document.getElementById("boot");
+  let i = 0;
+  (function next() {
+    if (i >= lines.length) return;
+    const d = document.createElement("div");
+    d.className = "bootline"; d.innerHTML = lines[i++];
+    el.appendChild(d);
+    setTimeout(next, 140 + Math.random() * 160);
+  })();
+})();
+
+$("#unlock").addEventListener("click", unlock);
+$("#pw").addEventListener("keydown", e => { if (e.key === "Enter") unlock(); });
+
+/* ================= tree (drawer index) ================= */
+function buildTree() {
+  const folders = new Map();
+  for (const n of INDEX.notes) {
+    const parts = n.path.split("/");
+    const dir = parts.length > 1 ? parts.slice(0, -1).join("/") : "• root";
+    if (!folders.has(dir)) folders.set(dir, []);
+    folders.get(dir).push(n);
+  }
+  const order = ["Home.md", "02 Projects", "03 Areas", "04 Resources"];
+  const dirs = [...folders.keys()].sort((a, b) => {
+    const ia = order.findIndex(o => a === o || a.startsWith(o)), ib = order.findIndex(o => b === o || b.startsWith(o));
+    return (ia < 0 ? 9 : ia) - (ib < 0 ? 9 : ib) || a.localeCompare(b);
+  });
+  let html = "";
+  for (const dir of dirs) {
+    const items = folders.get(dir).sort((a, b) => a.title.localeCompare(b.title));
+    const fid = "f" + Math.abs([...dir].reduce((a, c) => a * 31 + c.charCodeAt(0) | 0, 7));
+    const open = dir === "• root" || dir === "02 Projects" ? "" : " closed";
+    html += `<div class="tw${open}" id="${fid}"><div class="tw-head" onclick="this.parentElement.classList.toggle('closed')">
+      <span class="tw-caret">▼</span>${dir.replace(/\/[^/]+$/, "/…")} <span style="color:var(--faint)">${items.length}</span></div><div class="tw-kids">` +
+      items.map(n => `<a class="nav-note" data-path="${n.path}" href="#/${n.path}" onclick="toggleTree()">${n.title}</a>`).join("") +
+      `</div></div>`;
+  }
+  $("#tree").innerHTML = html;
+}
+function toggleTree() {
+  const d = $("#tree-drawer");
+  const on = d.classList.toggle("on");
+  if (on && !d.dataset.built) { buildTree(); d.dataset.built = "1"; }
+  markActive();
+}
+window.toggleTree = toggleTree;
+function markActive() {
+  document.querySelectorAll(".nav-note").forEach(a =>
+    a.classList.toggle("active", CURRENT && a.dataset.path === CURRENT.path));
+}
+
+/* ================= routing + render ================= */
+function resolveHash() {
+  const h = decodeURIComponent(location.hash.replace(/^#\//, "")).replace(/\.md$/, "");
+  if (!h) return byPath.get("Home.md");
+  return byPath.get(h + ".md") || byId.get(h) ||
+    [...byTitleSafe().entries()].find(([t]) => t === h.toLowerCase())?.[1] && byPath.get([...byTitleSafe().get(h.toLowerCase())]) || null;
+}
+function byTitleSafe() { return window.__tt ||= new Map(); }
+
+async function route(hash) {
+  if (!INDEX) return;
+  const want = decodeURIComponent((hash || location.hash).replace(/^#\/?/, ""));
+  // ---- special terminal views ----
+  if (want === "__now__") return renderNow();
+  if (want === "__help__") return renderHelp();
+  if (want.startsWith("__ls__")) return renderLs();
+  if (want.startsWith("__tag__/")) return renderTag(decodeURIComponent(want.split("/")[1] || ""));
+  if (want.startsWith("__bl__/")) return renderBl(decodeURIComponent(want.slice(7)));
+  let rec = byPath.get(want.endsWith(".md") ? want : want + ".md");
+  if (!rec) rec = byPath.get("Home.md");
+  CURRENT = rec;
+  markActive();
+  $("#nowview").style.display = "none";
+  $("#content").style.display = "";
+  $("#crumbs").innerHTML = rec.path.split("/").map((p, i, arr) =>
+    i === arr.length - 1 ? `<b>${rec.title}</b>` : p).join(" / ");
+  const view = $("#view"); view.scrollTop = 0;
+  const el = $("#content");
+  el.innerHTML = `<p style="color:var(--faint);font-family:var(--mono);font-size:12px">decrypting…</p>`;
+  try {
+    const raw = await decryptNote(rec.id);
+    render(raw, rec);
+    $("#status").innerHTML = `${INDEX.notes.length} notes · <b>${esc(rec.title)}</b>`;
+  } catch (e) {
+    el.innerHTML = `<p style="color:var(--red)">Failed to decrypt this note.</p>`;
+  }
+}
+window.addEventListener("hashchange", () => route());
+
+/* ---------- special views ---------- */
+function esc(s){return String(s).replace(/[&<>"]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]))}
+function showSpecial(elHtml, crumb, status) {
+  CURRENT = null; markActive();
+  $("#content").style.display = "none";
+  const nv = $("#nowview");
+  nv.style.display = ""; nv.innerHTML = elHtml;
+  $("#crumbs").innerHTML = crumb;
+  $("#status").innerHTML = status || `${INDEX.notes.length} notes`;
+  $("#view").scrollTop = 0;
+}
+function fmtDate(d){ if(!d) return "—"; const p=String(d).split("-"); return p.length===3?`${p[1]}.${p[2]}.${p[0]}`:d; }
+
+function renderNow() {
+  const notes = INDEX.notes;
+  const byUpd = [...notes].filter(n=>n.updated).sort((a,b)=>String(b.updated).localeCompare(String(a.updated)));
+  const types = {};
+  notes.forEach(n => { const t=n.type||"other"; (types[t]=types[t]||[]).push(n); });
+  const topTypes = Object.entries(types).sort((a,b)=>b[1].length-a[1].length).slice(0,6);
+  const projects = notes.filter(n => n.path.startsWith("02 Projects/") && n.status==="active").slice(0,8);
+  const areas = notes.filter(n => n.path.startsWith("03 Areas/") && n.type!=="folder-index").slice(0,8);
+  const cards = [
+    {t:"recently updated", rows: byUpd.slice(0,7).map(n=>({label:n.title,path:n.path,d:fmtDate(n.updated)}))},
+    {t:"active projects", rows: projects.map(n=>({label:n.title,path:n.path,d:n.updated?fmtDate(n.updated):""}))},
+    {t:"areas", rows: areas.map(n=>({label:n.title,path:n.path,d:n.type||""}))},
+  ];
+  const typeBars = topTypes.map(([t,arr])=>{
+    const pct = Math.round(arr.length/notes.length*100);
+    return `<div class="now-row" style="display:block"><div style="display:flex;justify-content:space-between">
+      <span>${esc(t)}</span><span class="d">${arr.length}</span></div>
+      <div class="now-bar"><i style="width:${pct}%"></i></div></div>`;
+  }).join("");
+  showSpecial(`
+    <div class="now-head crt-title">
+      <div class="now-kicker">● live · vault status</div>
+      <h1>what ayumad is working on</h1>
+      <p>${notes.length} encrypted notes · built ${INDEX.built ? INDEX.built.slice(0,10) : "—"} · decrypts locally in your browser</p>
+    </div>
+    <div class="now-grid">
+      ${cards.map(c=>`<div class="now-card"><h3><b>▸</b> ${c.t}</h3>${
+        c.rows.map(r=>`<div class="now-row"><a href="#/${r.path}">${esc(r.label)}</a><span class="d">${esc(r.d)}</span></div>`).join("") || '<span style="color:var(--faint);font-size:12px">empty</span>'
+      }</div>`).join("")}
+      <div class="now-card"><h3><b>▸</b> composition</h3>${typeBars}</div>
+    </div>
+    <div class="now-foot">navigate: type in the command line below — <span style="color:var(--phos)">help</span> for commands</div>
+  `, "<b>● now</b>");
+}
+
+function renderHelp() {
+  const row = (c,d)=>`<div class="now-row"><span style="color:var(--phos)">${c}</span><span class="d" style="text-align:right">${d}</span></div>`;
+  showSpecial(`
+    <div class="now-head"><div class="now-kicker">vault ❯ help</div><h1>commands</h1></div>
+    <div class="now-card">
+      ${row("open &lt;title&gt;","jump to a note (tab-completes)")}
+      ${row("find &lt;text&gt;","search titles / tags / summaries")}
+      ${row("ls","list all notes by folder")}
+      ${row("tags [tag]","browse by tag")}
+      ${row("backlinks &lt;note&gt;","who links to a note")}
+      ${row("now","live status page")}
+      ${row("home","go home")}
+      ${row("random","random note")}
+      ${row("&lt;anything&gt;","fuzzy note lookup — just start typing")}
+    </div>
+    <div class="now-foot">↑/↓ history · tab complete · esc dismiss suggestions</div>
+  `, "<b>help</b>");
+}
+
+function renderLs() {
+  const folders = new Map();
+  INDEX.notes.forEach(n => {
+    const dir = n.path.includes("/") ? n.path.slice(0, n.path.lastIndexOf("/")) : "• root";
+    if (!folders.has(dir)) folders.set(dir, []);
+    folders.get(dir).push(n);
+  });
+  const html = [...folders.entries()].sort((a,b)=>a[0].localeCompare(b[0])).map(([dir,items]) =>
+    `<div class="now-card" style="margin-bottom:14px"><h3><b>▸</b> ${esc(dir)}/ <span class="d" style="float:right">${items.length}</span></h3>` +
+    items.sort((a,b)=>a.title.localeCompare(b.title)).map(n=>
+      `<div class="now-row"><a href="#/${n.path}">${esc(n.title)}</a><span class="d">${n.type||""}</span></div>`).join("") +
+    `</div>`).join("");
+  showSpecial(`<div class="now-head"><div class="now-kicker">vault ❯ ls</div><h1>${INDEX.notes.length} notes</h1></div>` + html,
+    "<b>ls</b>");
+}
+
+function renderTag(tag) {
+  const hits = tag ? INDEX.notes.filter(n => n.tags.some(t => t.toLowerCase().includes(tag.toLowerCase()))) : [];
+  showSpecial(`
+    <div class="now-head"><div class="now-kicker">vault ❯ tags${tag?" › "+esc(tag):""}</div>
+      <h1>${tag?`${hits.length} notes tagged “${esc(tag)}”`:`type: tags &lt;name&gt;`}</h1></div>
+    <div class="now-card">${hits.map(n=>
+      `<div class="now-row"><a href="#/${n.path}">${esc(n.title)}</a><span class="d">${esc(n.tags.join(", "))}</span></div>`).join("")
+      || `<span style="color:var(--faint);font-size:12.5px">${tag?"no matches":"popular: "+[...new Set(INDEX.notes.flatMap(n=>n.tags))].slice(0,10).map(esc).join(" · ")}</span>`}</div>
+  `, `<b>tag:</b> ${esc(tag||"…")}`);
+}
+
+function renderBl(path) {
+  const rec = byPath.get(path);
+  const bls = inbound.get(path) || [];
+  showSpecial(`
+    <div class="now-head"><div class="now-kicker">vault ❯ backlinks</div>
+      <h1>${rec?esc(rec.title):esc(path)}</h1>
+      <p>${bls.length} note${bls.length===1?"":"s"} link here</p></div>
+    <div class="now-card">${bls.map(p=>
+      `<div class="now-row"><a href="#/${p}">${esc(byPath.get(p)?.title||p)}</a><span class="d">${esc(p)}</span></div>`).join("")
+      || '<span style="color:var(--faint);font-size:12.5px">no backlinks</span>'}</div>
+  `, "<b>backlinks</b>");
+}
+
+function render(raw, rec) {
+  // strip frontmatter
+  let body = raw.replace(/^---\n[\s\S]*?\n---\n*/, "");
+  // resolve wikilinks -> hash anchors
+  body = body.replace(/\[\[([^\]|#]+)(#[^\]|]+)?(?:\|([^\]]+))?\]\]/g, (_, target, anchor, label) => {
+    let p = target.trim();
+    let resolved = null;
+    if (p.includes("/")) {
+      const cand = p.endsWith(".md") ? p : p + ".md";
+      if (byPath.has(cand)) resolved = cand;
+    }
+    if (!resolved) resolved = [...byPath.values()].find(r =>
+      r.path.toLowerCase().endsWith("/" + p.toLowerCase() + ".md") || r.title.toLowerCase() === p.toLowerCase())?.path || null;
+    const text = label || target;
+    if (resolved) return `<a class="wl" href="#/${resolved}">${text}</a>`;
+    return `<span class="wl-x" title="not part of the published vault">${text}</span>`;
+  });
+  // checkboxes -> styled
+  body = body.replace(/^(\s*)- \[x\] (.*)$/gm, '$1<li class="task-done"><input type="checkbox" checked disabled> $2</li>');
+  body = body.replace(/^(\s*)- \[ \] (.*)$/gm, '$1<li><input type="checkbox" disabled> $2</li>');
+
+  const html = marked.parse(body, { breaks: true, gfm: true });
+  const meta = rec.summary || rec.type ? `<div class="fm">` +
+    (rec.type ? `<span><b>type</b> ${rec.type}</span>` : "") +
+    (rec.status ? `<span><b>status</b> ${rec.status}</span>` : "") +
+    (rec.updated ? `<span><b>updated</b> ${rec.updated}</span>` : "") +
+    `</div>` : "";
+  const bls = (inbound.get(rec.path) || []).map(p =>
+    `<a class="bl-item" href="#/${p}"><b>${byPath.get(p).title}</b><br><span style="font-size:12px">${p}</span></a>`).join("");
+  $("#content").innerHTML = meta + `<div class="md-body md">${html}</div>` +
+    `<div class="backlinks"><h3>${(inbound.get(rec.path) || []).length} backlink${(inbound.get(rec.path)||[]).length===1?"":"s"}</h3>${bls || '<span style="color:var(--faint);font-size:13px">No other note links here yet.</span>'}</div>`;
+}
+
+/* ================= terminal command engine ================= */
+let sugItems = [], sugSel = 0;
+const hist = []; let histIdx = -1;
+
+function focusCmd() { $("#cmd").focus(); }
+window.focusCmd = focusCmd;
+
+function noteMatches(q) {
+  q = q.toLowerCase();
+  return INDEX.notes
+    .map(n => ({ n, score:
+      (n.title.toLowerCase() === q ? 100 : 0) +
+      (n.title.toLowerCase().startsWith(q) ? 50 : 0) +
+      (n.title.toLowerCase().includes(q) ? 25 : 0) +
+      (n.tags.join(" ").toLowerCase().includes(q) ? 12 : 0) +
+      ((n.summary || "").toLowerCase().includes(q) ? 8 : 0) }))
+    .filter(x => !q || x.score > 0)
+    .sort((a, b) => b.score - a.score || a.n.title.localeCompare(b.n.title))
+    .slice(0, 12);
+}
+
+function updateSug(input) {
+  const box = $("#cmd-sug");
+  const raw = input.trim();
+  if (!raw) { box.classList.remove("on"); sugItems = []; return; }
+  const [c, ...rest] = raw.split(/\s+/);
+  const argq = rest.join(" ");
+  const cmds = ["open", "find", "ls", "now", "home", "help", "random", "tags", "backlinks"];
+  if (!argq && cmds.some(k => k.startsWith(c.toLowerCase()))) {
+    sugItems = cmds.filter(k => k.startsWith(c.toLowerCase()))
+      .map(k => ({ label: k, path: "", cmd: k }));
+  } else if (["open","find","backlinks"].includes(c.toLowerCase())) {
+    sugItems = noteMatches(argq).map(x =>
+      ({ label: x.n.title, path: x.n.path, cmd: (c.toLowerCase()==="open"?"open ":"") + x.n.title }));
+  } else {
+    sugItems = noteMatches(raw).map(x => ({ label: x.n.title, path: x.n.path, cmd: x.n.title }));
+  }
+  sugSel = 0;
+  if (!sugItems.length) { box.classList.remove("on"); return; }
+  box.innerHTML = sugItems.map((x, i) =>
+    `<div class="sug-item ${i===0?"sel":""}" data-i="${i}"><span>${x.label}</span><span class="path">${x.path || "command"}</span></div>`).join("");
+  box.classList.add("on");
+}
+
+function runCmd(raw) {
+  const input = raw.trim();
+  if (!input) return;
+  hist.unshift(input); if (hist.length > 50) hist.pop(); histIdx = -1;
+  const [c, ...rest] = input.split(/\s+/);
+  const arg = rest.join(" ");
+  const cl = c.toLowerCase();
+  $("#cmd").value = ""; updateSug("");
+  if (cl === "help") {
+    route("__help__"); return;
+  }
+  if (cl === "ls" || cl === "tags" && !arg) { route("__ls__"); return; }
+  if (cl === "now") { go("__now__"); return; }
+  if (cl === "home") { go("Home.md"); return; }
+  if (cl === "random") {
+    const n = INDEX.notes[Math.floor(Math.random() * INDEX.notes.length)];
+    go(n.path); return;
+  }
+  if (cl === "tags") {
+    location.hash = "#/__tag__/" + encodeURIComponent(arg); return;
+  }
+  if (cl === "backlinks" && arg) {
+    const m = noteMatches(arg)[0];
+    if (m) { location.hash = "#/__bl__/" + encodeURIComponent(m.n.path); return; }
+  }
+  // default: treat whole input as note lookup (find/open/title)
+  let target = null;
+  if (cl === "open" || cl === "find") {
+    const m = noteMatches(arg);
+    target = m[0]?.n;
+    if (!target && m.length === 0) { flashCmd(`no match: "${arg}"`); return; }
+    if (!target) { /* show suggestions */ updateSug("open " + arg); return; }
+  } else {
+    const m = noteMatches(input);
+    target = m[0]?.n;
+    if (!target) { flashCmd(`unknown: "${input}" — try help`); return; }
+  }
+  go(target.path);
+}
+function flashCmd(msg) {
+  const ph = $("#cmd"); ph.placeholder = msg; ph.value = "";
+  setTimeout(() => { ph.placeholder = "type a command — help"; }, 2400);
+}
+
+$("#cmd").addEventListener("keydown", e => {
+  const box = $("#cmd-sug");
+  if (e.key === "Enter") { e.preventDefault(); runCmd($("#cmd").value); return; }
+  if (e.key === "ArrowDown" || e.key === "ArrowUp") {
+    if (!box.classList.contains("on")) return;
+    e.preventDefault();
+    sugSel = Math.max(0, Math.min(sugItems.length - 1, sugSel + (e.key === "ArrowDown" ? 1 : -1)));
+    [...box.children].forEach((el, i) => el.classList.toggle("sel", i === sugSel));
+    box.children[sugSel]?.scrollIntoView({ block: "nearest" });
+  } else if (e.key === "Tab") {
+    e.preventDefault();
+    if (box.classList.contains("on") && sugItems[sugSel]) {
+      $("#cmd").value = sugItems[sugSel].cmd; updateSug($("#cmd").value);
+    }
+  } else if (e.key === "Escape") { box.classList.remove("on"); }
+  else if (e.key === "ArrowUp" && !box.classList.contains("on")) {}
+});
+// history via ctrl-r style: ArrowUp when no suggestions
+$("#cmd").addEventListener("keydown", e => {
+  if (e.key === "ArrowUp" && !$("#cmd-sug").classList.contains("on") && hist.length) {
+    e.preventDefault();
+    histIdx = Math.min(hist.length - 1, histIdx + 1);
+    $("#cmd").value = hist[histIdx];
+  } else if (e.key === "ArrowDown" && histIdx >= 0 && !$("#cmd-sug").classList.contains("on")) {
+    e.preventDefault();
+    histIdx = Math.max(-1, histIdx - 1);
+    $("#cmd").value = histIdx < 0 ? "" : hist[histIdx];
+  }
+});
+$("#cmd").addEventListener("input", e => updateSug(e.target.value));
+document.addEventListener("click", e => {
+  if (!e.target.closest(".cmdline") && !e.target.closest(".cmd-sug")) $("#cmd-sug").classList.remove("on");
+});
+document.addEventListener("keydown", e => {
+  if ((e.metaKey || e.ctrlKey) && e.key.toLowerCase() === "k") { e.preventDefault(); focusCmd(); }
+});
+
+function go(path) { $("#cmd-sug").classList.remove("on"); location.hash = "#/" + path; }
+window.go = go;
+
+</script>
+</body>
+</html>
