@@ -93,6 +93,7 @@ The source conversation is titled “Explain AI Engineering” and has conversat
 - [x] All 64 tour notes gained a `## Plain-English introduction` as the first body section (right after the H1): analogy-first, ~8th-grade reading level, no jargon/URLs/wikilinks; 40–80 words on hubs/maps/glossaries/indexes, 60–180 on concepts/patterns/guides.
 - [x] Convention baked into the `ai-engineering-vault-update` skill (v1.3.0) and documented in [[00 Start Here/How to Use This Vault]].
 - [x] Verified: 64/64 intros, exactly one per note, placed after H1, nav bars intact; validator at the pre-existing baseline (476 notes / 4 invalid / 3 unresolved). AI_Home "Guided tour" count corrected 63 → 64.
+- [x] **Welcome.md removed by Ayush (2026-08-27)** — deliberate; byte-identical policy retired (skill v1.4.0). Validator baseline now 475 / 3 / 2 / 0.
 
 ---
 
