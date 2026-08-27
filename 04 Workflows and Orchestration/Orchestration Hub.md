@@ -65,6 +65,4 @@ All links verified 2026-08-27.
 
 ---
 
----
-
 > **← [[03 Context Knowledge Memory/Behavior and Communication Controls|Behavior and Communication Controls]]** · **[[AI_Home|Home]]** · **[[04 Workflows and Orchestration/Workflow Patterns|Workflow Patterns]] →**

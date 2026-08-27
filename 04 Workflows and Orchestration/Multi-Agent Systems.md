@@ -83,6 +83,4 @@ All links verified 2026-08-27.
 
 ---
 
----
-
 > **← [[04 Workflows and Orchestration/Workflow Patterns|Workflow Patterns]]** · **[[AI_Home|Home]]** · **[[04 Workflows and Orchestration/Agent Democracies|Agent Democracies]] →**

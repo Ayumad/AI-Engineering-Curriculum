@@ -39,6 +39,4 @@ For the complete cross-curriculum collection, use [[12 Templates/Template Librar
 
 ---
 
----
-
 > **← [[08 Tool Landscape/Infrastructure and Observability Tools|Infrastructure and Observability Tools]]** · **[[AI_Home|Home]]** · **[[09 Playbooks/Mode and Topology Selector|Mode and Topology Selector]] →**

@@ -97,6 +97,4 @@ All links verified 2026-08-27.
 
 ---
 
----
-
 > **← [[01 Foundations/Structured Outputs and Tool Calling|Structured Outputs and Tool Calling]]** · **[[AI_Home|Home]]** · **[[01 Foundations/Fine-Tuning Decision Framework|Fine-Tuning Decision Framework]] →**

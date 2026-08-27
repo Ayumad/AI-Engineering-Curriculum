@@ -109,6 +109,4 @@ All links verified 2026-08-27.
 
 ---
 
----
-
 > **← [[03 Context Knowledge Memory/Prompting for Agents|Prompting for Agents]]** · **[[AI_Home|Home]]** · **[[03 Context Knowledge Memory/Skills, Tools, and Capability Management|Skills, Tools, and Capability Management]] →**

@@ -17,7 +17,7 @@ summary: "AI engineering is the discipline of turning a probabilistic model into
 
 ## Start here
 
-- **Guided tour:** start at [[00 Start Here/AI Engineering Curriculum|AI Engineering Curriculum]] and follow the **← Previous · Home · Next →** bar at the end of every note — all 64 notes in reading order, nothing skipped.
+- **Guided tour:** start at [[00 Start Here/AI Engineering Curriculum|AI Engineering Curriculum]] and follow the **← Previous · Home · Next →** bar at the end of every note — all 65 notes in reading order, nothing skipped. Want the short version first? [[00 Start Here/The Gist of It|The Gist of It]] has every note's plain-English paragraph in one place.
 - [[00 Start Here/AI Engineering Curriculum|Follow the curriculum]] from first principles to production.
 - [[00 Start Here/Full Table of Contents|Browse the full course table of contents]] by Unit and section.
 - [[00 Start Here/How to Use This Vault|Use this vault]] as a course, reference wiki, or visual map.
@@ -82,8 +82,6 @@ New to AI engineering? Start here:
 5. **Min 12-15:** Try [[09 Playbooks/Learning Projects|Learning Project #1]] (Structured Assistant) — hands-on with a schema, validation, and no side effects.
 
 Product and protocol notes are dated snapshots verified on 2026-08-27. Evergreen concepts are intentionally separated from them so the vault can evolve.
-
----
 
 ---
 

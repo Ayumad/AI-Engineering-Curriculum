@@ -119,6 +119,4 @@ All links verified 2026-08-27.
 
 ---
 
----
-
 > **← [[01 Foundations/Context Windows and Inference|Context Windows and Inference]]** · **[[AI_Home|Home]]** · **[[01 Foundations/Local AI Hardware and Inference|Local AI Hardware and Inference]] →**

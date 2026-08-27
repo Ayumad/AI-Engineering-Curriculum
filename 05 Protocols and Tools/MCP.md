@@ -113,6 +113,4 @@ All links verified 2026-08-27.
 
 ---
 
----
-
 > **← [[05 Protocols and Tools/Protocols Hub|Protocols Hub]]** · **[[AI_Home|Home]]** · **[[05 Protocols and Tools/Agent Protocols|Agent Protocols]] →**

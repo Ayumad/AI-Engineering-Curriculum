@@ -56,6 +56,4 @@ For deeper context-engineering theory, see [[03 Context Knowledge Memory/Context
 
 ---
 
----
-
 > **← [[09 Playbooks/Prompt Template|Prompt Template]]** · **[[AI_Home|Home]]** · **[[09 Playbooks/RAG Design Worksheet|RAG Design Worksheet]] →**

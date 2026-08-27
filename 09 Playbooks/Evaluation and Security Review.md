@@ -62,6 +62,4 @@ See [[06 Reliability and Security/Evaluation Engineering]] for the eval framewor
 
 ---
 
----
-
 > **← [[09 Playbooks/RAG Design Worksheet|RAG Design Worksheet]]** · **[[AI_Home|Home]]** · **[[09 Playbooks/Learning Projects|Learning Projects]] →**

@@ -1626,6 +1626,4 @@ Artifacts to retain:
 
 ---
 
----
-
 > **← [[11 Glossary and Sources/Tool Comparison Index|Tool Comparison Index]]** · **[[AI_Home|Home]]** · *→ end of tour*

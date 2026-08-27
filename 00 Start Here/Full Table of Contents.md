@@ -15,11 +15,13 @@ visibility: personal
 created: 2026-08-27
 updated: 2026-08-27
 prev: "00 Start Here/AI Engineering Curriculum.md"
-next: "00 Start Here/How to Use This Vault.md"
+next: "00 Start Here/The Gist of It.md"
 summary: The course-first navigation index for the full AI Engineering vault, arranged as sequential units with linked sections and practice outcomes.
 ---
 
 # AI Engineering — full table of contents
+
+**Fast path:** [[00 Start Here/The Gist of It|The Gist of It]] collects every content note's plain-English gist in this exact order.
 
 ## Unit 1 — Models, inference, and local hardware (~8–10h)
 
@@ -145,6 +147,4 @@ The [[12 Templates/Template Library|AI Engineering template library]] collects c
 
 ---
 
----
-
-> **← [[00 Start Here/AI Engineering Curriculum|AI Engineering Curriculum]]** · **[[AI_Home|Home]]** · **[[00 Start Here/How to Use This Vault|How to Use This Vault]] →**
+> **← [[00 Start Here/AI Engineering Curriculum|AI Engineering Curriculum]]** · **[[AI_Home|Home]]** · **[[00 Start Here/The Gist of It|The Gist of It]] →**

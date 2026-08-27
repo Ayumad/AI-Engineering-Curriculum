@@ -45,6 +45,4 @@ Ask: Which layer does it occupy? What boundary does it standardize? What does it
 
 ---
 
----
-
 > **← [[07 Operations and Economics/Deployment and AgentOps|Deployment and AgentOps]]** · **[[AI_Home|Home]]** · **[[08 Tool Landscape/Coding Agent Profiles|Coding Agent Profiles]] →**

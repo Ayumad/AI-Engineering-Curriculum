@@ -111,6 +111,4 @@ All links verified 2026-08-27.
 
 ---
 
----
-
 > **← [[02 Agents and Harnesses/Computer-Use and Browser Agents|Computer-Use and Browser Agents]]** · **[[AI_Home|Home]]** · **[[03 Context Knowledge Memory/Prompting for Agents|Prompting for Agents]] →**

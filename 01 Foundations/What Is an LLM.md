@@ -153,6 +153,4 @@ All links verified 2026-08-27.
 
 ---
 
----
-
 > **← [[01 Foundations/Foundations Hub|Foundations Hub]]** · **[[AI_Home|Home]]** · **[[01 Foundations/Context Windows and Inference|Context Windows and Inference]] →**

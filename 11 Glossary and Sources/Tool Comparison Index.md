@@ -49,6 +49,4 @@ Detailed profiles: [[08 Tool Landscape/Coding Agent Profiles]], [[08 Tool Landsc
 
 ---
 
----
-
 > **← [[11 Glossary and Sources/Acronyms|Acronyms]]** · **[[AI_Home|Home]]** · **[[12 Templates/Template Library|Template Library]] →**

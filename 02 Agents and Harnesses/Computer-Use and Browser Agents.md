@@ -93,6 +93,4 @@ All links verified 2026-08-27.
 
 ---
 
----
-
 > **← [[02 Agents and Harnesses/Voice and Audio Agents|Voice and Audio Agents]]** · **[[AI_Home|Home]]** · **[[03 Context Knowledge Memory/Context Engineering|Context Engineering]] →**

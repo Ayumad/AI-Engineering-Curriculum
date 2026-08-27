@@ -106,6 +106,4 @@ All links verified 2026-08-27.
 
 ---
 
----
-
 > **← [[02 Agents and Harnesses/Planning State and Persistence|Planning State and Persistence]]** · **[[AI_Home|Home]]** · **[[02 Agents and Harnesses/Voice and Audio Agents|Voice and Audio Agents]] →**

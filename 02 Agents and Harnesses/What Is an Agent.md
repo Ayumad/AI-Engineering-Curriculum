@@ -104,6 +104,4 @@ All links verified 2026-08-27.
 
 ---
 
----
-
 > **← [[02 Agents and Harnesses/Agents and Harnesses Hub|Agents and Harnesses Hub]]** · **[[AI_Home|Home]]** · **[[02 Agents and Harnesses/Agent Harness|Agent Harness]] →**

@@ -96,6 +96,4 @@ All links verified 2026-08-27.
 
 ---
 
----
-
 > **← [[02 Agents and Harnesses/Sandboxes and Execution Planes|Sandboxes and Execution Planes]]** · **[[AI_Home|Home]]** · **[[02 Agents and Harnesses/Planning State and Persistence|Planning State and Persistence]] →**

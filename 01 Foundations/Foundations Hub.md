@@ -50,6 +50,4 @@ Once the foundations are solid, move to the layer that composes models into syst
 
 ---
 
----
-
 > **← [[00 Start Here/Conversation Coverage|Conversation Coverage]]** · **[[AI_Home|Home]]** · **[[01 Foundations/What Is an LLM|What Is an LLM]] →**

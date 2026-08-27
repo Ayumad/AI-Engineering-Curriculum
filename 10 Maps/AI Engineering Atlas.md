@@ -44,6 +44,4 @@ Visual version: [full atlas](10 Maps/AI Engineering Atlas.canvas).
 
 ---
 
----
-
 > **← [[09 Playbooks/Learning Projects|Learning Projects]]** · **[[AI_Home|Home]]** · **[[11 Glossary and Sources/Sources|Sources]] →**

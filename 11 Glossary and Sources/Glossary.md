@@ -77,6 +77,4 @@ See [[11 Glossary and Sources/Acronyms]] and [[11 Glossary and Sources/Pattern C
 
 ---
 
----
-
 > **← [[11 Glossary and Sources/Sources|Sources]]** · **[[AI_Home|Home]]** · **[[11 Glossary and Sources/Pattern Catalog|Pattern Catalog]] →**

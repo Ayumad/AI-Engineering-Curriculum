@@ -73,6 +73,4 @@ All links verified 2026-08-27.
 
 ---
 
----
-
 > **← [[11 Glossary and Sources/Glossary|Glossary]]** · **[[AI_Home|Home]]** · **[[11 Glossary and Sources/Acronyms|Acronyms]] →**

@@ -84,6 +84,4 @@ All links verified 2026-08-27.
 
 ---
 
----
-
 > **← [[01 Foundations/Local AI Hardware and Inference|Local AI Hardware and Inference]]** · **[[AI_Home|Home]]** · **[[02 Agents and Harnesses/Agents and Harnesses Hub|Agents and Harnesses Hub]] →**

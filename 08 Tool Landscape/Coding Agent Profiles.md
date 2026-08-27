@@ -126,6 +126,4 @@ All links verified 2026-08-27.
 
 ---
 
----
-
 > **← [[08 Tool Landscape/Tool Landscape Hub|Tool Landscape Hub]]** · **[[AI_Home|Home]]** · **[[08 Tool Landscape/Agent Runtimes and Frameworks|Agent Runtimes and Frameworks]] →**

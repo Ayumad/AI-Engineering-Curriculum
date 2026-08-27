@@ -65,6 +65,4 @@ For deeper agent harness and topology guidance, see [[04 Workflows and Orchestra
 
 ---
 
----
-
 > **← [[09 Playbooks/Playbooks Hub|Playbooks Hub]]** · **[[AI_Home|Home]]** · **[[09 Playbooks/Prompt Template|Prompt Template]] →**

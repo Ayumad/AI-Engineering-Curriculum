@@ -152,6 +152,4 @@ All links verified 2026-08-27.
 
 ---
 
----
-
 > **← [[03 Context Knowledge Memory/Skills, Tools, and Capability Management|Skills, Tools, and Capability Management]]** · **[[AI_Home|Home]]** · **[[03 Context Knowledge Memory/Vector Search and Embeddings|Vector Search and Embeddings]] →**

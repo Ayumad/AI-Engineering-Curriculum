@@ -196,6 +196,4 @@ All links verified 2026-08-27.
 
 ---
 
----
-
 > **← [[03 Context Knowledge Memory/Vector Search and Embeddings|Vector Search and Embeddings]]** · **[[AI_Home|Home]]** · **[[03 Context Knowledge Memory/Project Initialization and Instruction Files|Project Initialization and Instruction Files]] →**

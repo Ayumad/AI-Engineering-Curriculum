@@ -70,6 +70,4 @@ Primary references: [LangGraph](https://docs.langchain.com/oss/python/langgraph/
 
 ---
 
----
-
 > **← [[08 Tool Landscape/Coding Agent Profiles|Coding Agent Profiles]]** · **[[AI_Home|Home]]** · **[[08 Tool Landscape/Infrastructure and Observability Tools|Infrastructure and Observability Tools]] →**

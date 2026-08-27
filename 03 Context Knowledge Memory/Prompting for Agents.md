@@ -112,6 +112,4 @@ All links verified 2026-08-27.
 
 ---
 
----
-
 > **← [[03 Context Knowledge Memory/Context Engineering|Context Engineering]]** · **[[AI_Home|Home]]** · **[[03 Context Knowledge Memory/Memory and Skills|Memory and Skills]] →**

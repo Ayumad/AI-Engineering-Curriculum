@@ -97,6 +97,4 @@ All links verified 2026-08-27.
 
 ---
 
----
-
 > **← [[02 Agents and Harnesses/Vision and Multimodal Input Engineering|Vision and Multimodal Input Engineering]]** · **[[AI_Home|Home]]** · **[[02 Agents and Harnesses/Computer-Use and Browser Agents|Computer-Use and Browser Agents]] →**

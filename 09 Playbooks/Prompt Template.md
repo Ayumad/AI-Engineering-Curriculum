@@ -87,6 +87,4 @@ Stopping conditions:
 
 ---
 
----
-
 > **← [[09 Playbooks/Mode and Topology Selector|Mode and Topology Selector]]** · **[[AI_Home|Home]]** · **[[09 Playbooks/Context Checklist|Context Checklist]] →**

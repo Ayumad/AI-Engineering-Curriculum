@@ -46,6 +46,4 @@ Use [[06 Reliability and Security/Evaluation Engineering]] to turn acceptance cr
 
 ---
 
----
-
 > **← [[05 Protocols and Tools/Agent Protocols|Agent Protocols]]** · **[[AI_Home|Home]]** · **[[06 Reliability and Security/Evaluation Engineering|Evaluation Engineering]] →**

@@ -96,6 +96,4 @@ All links verified 2026-08-27.
 
 ---
 
----
-
 > **← [[01 Foundations/What Is an LLM|What Is an LLM]]** · **[[AI_Home|Home]]** · **[[01 Foundations/Structured Outputs and Tool Calling|Structured Outputs and Tool Calling]] →**

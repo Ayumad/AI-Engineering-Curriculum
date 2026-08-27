@@ -99,6 +99,4 @@ All links verified 2026-08-27.
 
 ---
 
----
-
 > **← [[02 Agents and Harnesses/Sandboxing Infrastructure|Sandboxing Infrastructure]]** · **[[AI_Home|Home]]** · **[[02 Agents and Harnesses/Vision and Multimodal Input Engineering|Vision and Multimodal Input Engineering]] →**

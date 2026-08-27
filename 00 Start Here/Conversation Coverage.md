@@ -95,6 +95,11 @@ The source conversation is titled “Explain AI Engineering” and has conversat
 - [x] Convention encoded in `ai-engineering-vault-update` skill v1.5.1 (verification: grep == 44 callouts, zero legacy headers, no-gist files have none); How to Use This Vault bullet updated.
 - [x] 9-writer wave: 39/44 converted by subagents; the 09 Playbooks group stalled at the header stub, so Context Checklist, Evaluation and Security Review, Learning Projects, Mode and Topology Selector, and RAG Design Worksheet were written by hand. Two gists micro-fixed for banned patterns (`not just`, `highest-leverage`); `harness` hits in Agent Harness / Coding Agent Profiles are the topic noun, kept.
 
+## The Gist of It note — 2026-08-27
+
+- [x] New note `00 Start Here/The Gist of It.md`: every content note's gist (44/44), one paragraph each, in table-of-contents order — Units 1–10 headings mirrored verbatim from Full Table of Contents, links deduped across units, plus a "The rest of the tour" appendix for the 5 notes the ToC doesn't link (AI Engineering Curriculum, Vector Search and Embeddings, Coding Agent Profiles, Agent Runtimes and Frameworks, Infrastructure and Observability Tools).
+- [x] Reference note — no gist on it, per the content-only rule. Chain 64 → 65: `add_nav.py` CHAIN updated (inserted after Full ToC), bars regenerated for all 65 notes, prev/next verified. AI_Home guided-tour count 64 → 65 + short-version pointer; How to Use This Vault nav bullet 64 → 65; ToC fast-path link. Doubled pre-nav dividers (from repeated `add_nav.py` runs) collapsed across all notes — 0 remaining. Validator: 476 / 3 / 2 / 0 — zero new issues.
+
 ---
 
 > **← [[00 Start Here/How to Use This Vault|How to Use This Vault]]** · **[[AI_Home|Home]]** · **[[01 Foundations/Foundations Hub|Foundations Hub]] →**

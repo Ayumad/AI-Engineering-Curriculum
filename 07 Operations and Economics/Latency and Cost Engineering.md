@@ -94,6 +94,4 @@ All links verified 2026-08-27.
 
 ---
 
----
-
 > **← [[07 Operations and Economics/Operations and Economics Hub|Operations and Economics Hub]]** · **[[AI_Home|Home]]** · **[[07 Operations and Economics/Local Subscription API|Local Subscription API]] →**

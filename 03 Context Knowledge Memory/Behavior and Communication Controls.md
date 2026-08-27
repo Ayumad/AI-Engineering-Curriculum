@@ -234,6 +234,4 @@ All links verified 2026-08-27.
 
 ---
 
----
-
 > **← [[03 Context Knowledge Memory/Project Initialization and Instruction Files|Project Initialization and Instruction Files]]** · **[[AI_Home|Home]]** · **[[04 Workflows and Orchestration/Orchestration Hub|Orchestration Hub]] →**

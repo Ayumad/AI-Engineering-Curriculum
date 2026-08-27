@@ -93,6 +93,4 @@ All links verified 2026-08-27.
 
 ---
 
----
-
 > **← [[02 Agents and Harnesses/Agent Harness|Agent Harness]]** · **[[AI_Home|Home]]** · **[[02 Agents and Harnesses/Sandboxing Infrastructure|Sandboxing Infrastructure]] →**

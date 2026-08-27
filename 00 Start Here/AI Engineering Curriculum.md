@@ -87,6 +87,4 @@ Build a bounded research or automation agent with evidence, structured outputs, 
 
 ---
 
----
-
 > **← [[AI_Home|AI_Home]]** · **[[AI_Home|Home]]** · **[[00 Start Here/Full Table of Contents|Full Table of Contents]] →**

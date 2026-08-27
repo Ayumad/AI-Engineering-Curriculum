@@ -113,6 +113,4 @@ All links verified 2026-08-27.
 
 ---
 
----
-
 > **← [[08 Tool Landscape/Agent Runtimes and Frameworks|Agent Runtimes and Frameworks]]** · **[[AI_Home|Home]]** · **[[09 Playbooks/Playbooks Hub|Playbooks Hub]] →**

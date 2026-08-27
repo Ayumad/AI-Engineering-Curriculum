@@ -48,6 +48,4 @@ summary: "| Acronym | Expansion | ||| | ACP | Agent Client Protocol | | A2A | Ag
 
 ---
 
----
-
 > **← [[11 Glossary and Sources/Pattern Catalog|Pattern Catalog]]** · **[[AI_Home|Home]]** · **[[11 Glossary and Sources/Tool Comparison Index|Tool Comparison Index]] →**

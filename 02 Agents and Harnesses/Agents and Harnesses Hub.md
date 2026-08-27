@@ -46,6 +46,4 @@ flowchart TB
 
 ---
 
----
-
 > **← [[01 Foundations/Fine-Tuning Decision Framework|Fine-Tuning Decision Framework]]** · **[[AI_Home|Home]]** · **[[02 Agents and Harnesses/What Is an Agent|What Is an Agent]] →**

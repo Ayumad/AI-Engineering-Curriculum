@@ -60,6 +60,4 @@ All links verified 2026-08-27.
 
 ---
 
----
-
 > **← [[04 Workflows and Orchestration/Agent Democracies|Agent Democracies]]** · **[[AI_Home|Home]]** · **[[05 Protocols and Tools/MCP|MCP]] →**

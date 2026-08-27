@@ -199,6 +199,4 @@ All links verified 2026-08-27.
 
 ---
 
----
-
 > **← [[03 Context Knowledge Memory/Large Project Navigation and Context Scaling|Large Project Navigation and Context Scaling]]** · **[[AI_Home|Home]]** · **[[03 Context Knowledge Memory/Behavior and Communication Controls|Behavior and Communication Controls]] →**
