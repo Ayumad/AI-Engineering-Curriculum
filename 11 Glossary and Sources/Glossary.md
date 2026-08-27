@@ -13,12 +13,7 @@ next: "11 Glossary and Sources/Pattern Catalog.md"
 summary: "| Term | Meaning | ||| | Agent | Modeldirected loop that observes, decides, acts, and stops under conditions | | AgentOps | Operations discipline for deploying, evalua..."
 ---
 
-
 # Glossary
-
-## Plain-English introduction
-
-AI-engineering conversations are full of specialized words that can feel like a foreign language. This glossary is your quick-reference dictionary: look up any term and get a plain-English definition. When you hear a word you do not recognize, come here first—it will save you a lot of confusion and let you focus on the ideas rather than the jargon.
 
 | Term | Meaning |
 |---|---|

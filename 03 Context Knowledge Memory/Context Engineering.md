@@ -16,12 +16,10 @@ summary: "Prompt engineering asks “what should I say?” Context engineering a
 
 # Context engineering
 
-## Plain-English introduction
+> [!summary] The gist
+> Context engineering is the practice of feeding an AI model exactly what it needs to know at the right moment — picking files, decisions, and reminders instead of dumping the entire project on the model. It turns a capable but unfocused model into one that responds as if it's been on the project for months. This note covers the hierarchy of context sources, practical controls, and budgeting.
 
-Imagine you're briefing a consultant before they meet a client. You wouldn't dump every file from every past project on their desk — you'd pick exactly the facts, documents, and decisions that matter for this meeting. Context engineering applies the same idea to AI: instead of asking what to *say*, it asks what the model should *know* right now. That means gathering the right files, reminders, tool descriptions, and prior decisions, and clearing out stale or distracting material. Done well, it turns a capable but unfocused model into one that responds as if it's been on the project for months.
-
-
-Prompt engineering asks “what should I say?” Context engineering asks “what should the model know at this exact moment?” It includes retrieval, memory, file selection, tool descriptions, summaries, plans, runtime evidence, and removal of stale material.
+---
 
 ## Context hierarchy
 

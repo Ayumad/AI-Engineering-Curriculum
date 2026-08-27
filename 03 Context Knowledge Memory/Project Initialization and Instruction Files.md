@@ -16,12 +16,10 @@ summary: "A practical method for turning an idea into a discoverable project con
 
 # Project initialization and instruction files
 
-## Plain-English introduction
+> [!summary] The gist
+> Before an agent changes a project, hand it a small, inspectable context package: a PRD for what to build, repo instructions for how to work, and verifiable facts for done. This note covers the artifact map, a safe initialization sequence, and templates for PRDs and instruction files.
 
-Before an AI agent starts working on a project, it needs a clear briefing — the same way a new team member reads the onboarding docs before touching production. This note describes how to prepare that briefing: a short specification of what to build, a set of repository-level instructions explaining how to work, and facts the agent can check to verify it's done. Done right, these files give every agent (or human) who touches the project a reliable shared starting point without requiring a long conversation first.
-
-
-Before an agent changes a project, give it a small, inspectable context package. The package should explain what outcome matters, how the repository works, which constraints apply, and how completion will be verified. Do not mistake documentation for enforcement: permissions, secrets, and destructive-action controls belong in the harness.
+---
 
 ## The artifact map
 

@@ -16,11 +16,10 @@ summary: "An LLM is a learned function that maps a sequence of tokens and other 
 
 # What is an LLM?
 
-## Plain-English introduction
+> [!summary] The gist
+> An LLM is autocomplete at scale. It predicts the next word based on patterns from training data. It doesn't look things up or take actions—those are engineering problems solved around the model. This note covers tokenization, embeddings, model families, and what isn't built in.
 
-An LLM—large language model—is like an extraordinarily well-read autocomplete. You give it a sentence and it predicts what word comes next, over and over, until it has written a full answer. It learned those patterns by studying enormous amounts of text from the internet, books, and code, so it can discuss topics from poetry to programming. But it does not "know" things the way a database does; it recognizes patterns and fills in plausible continuations. It has no built-in access to current events, private files, or the ability to take action. Understanding what an LLM actually does—and what it cannot—is the essential starting point for everything else in AI engineering.
-
-An LLM is a learned function that maps a sequence of tokens and other inputs to a probability distribution over possible next tokens or structured outputs. In practice, foundation models may also process images, audio, video, or tool results.
+---
 
 ## Mental model
 

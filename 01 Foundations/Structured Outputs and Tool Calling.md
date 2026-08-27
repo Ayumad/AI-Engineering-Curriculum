@@ -16,9 +16,10 @@ summary: "Freeform text is difficult for software to validate. Structured output
 
 # Structured outputs and tool calling
 
-## Plain-English introduction
+> [!summary] The gist
+> Models produce freeform text, but software needs structured data. Structured outputs force a model to fill out a form instead of writing an essay. Tool calling lets it request specific operations—databases, APIs, other software. Together they bridge the gap between language and code.
 
-Language models naturally produce freeform text—sentences, paragraphs, and explanations. But software often needs a precise, predictable format: a list of fields, a JSON object, a function call with specific arguments. Structured outputs solve this by forcing the model to follow a template, much like filling out a form instead of writing an essay. Tool calling takes this a step further, letting the model say "please run this program with these inputs" so it can interact with databases, APIs, and other software. Together, these techniques bridge the gap between fluid human language and the rigid rules that code requires.
+---
 
 ## Design the contract first
 

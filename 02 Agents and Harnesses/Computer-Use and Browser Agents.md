@@ -16,9 +16,11 @@ summary: "Computer-use agents operate an untrusted visual environment. Prefer se
 
 # Computer-use and browser agents
 
-## Plain-English introduction
+> [!summary] The gist
+> Computer-use agents operate an untrusted visual environment. Prefer semantic APIs, isolate sessions, ground actions in fresh UI state, and gate consequential clicks at the point of execution.
+> This note explains how these agents work, what dangers to watch for, and how to keep them from causing harm.
 
-Imagine giving someone a computer and saying, "Book me a flight on that website." They would look at the screen, move the mouse, click buttons, type information, and navigate from page to page. Computer-use agents do exactly this — they interact with software the same way a human does, by looking at what is on the screen and taking actions. This is powerful because it works with any application, but also risky because the agent might click the wrong thing or fall for a trick hidden on the page. This note explains how these agents work, what dangers to watch for, and how to keep them from causing harm.
+---
 
 Computer use lets an agent work through an application's visible interface: screenshots, accessibility trees, DOM state, mouse/keyboard events, and browser automation. It is powerful precisely because the surface is general; that also makes it a high-risk execution environment.
 

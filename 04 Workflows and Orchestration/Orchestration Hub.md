@@ -13,14 +13,7 @@ next: "04 Workflows and Orchestration/Workflow Patterns.md"
 summary: "Orchestration is the control plane for work that spans steps, agents, tools, queues, schedules, retries, and people. It turns a clever loop into a system that can be r..."
 ---
 
-
 # Workflows and orchestration
-
-## Plain-English introduction
-
-When a smart assistant needs to do something complicated — like researching a topic, writing a report, and posting it — someone (or something) has to manage the steps, hand off work between parts, and make sure nothing gets lost along the way. Orchestration is that management layer. Think of it like a conductor leading an orchestra: individual musicians are talented, but without someone coordinating tempo and transitions, the performance falls apart. This note maps out the tools and ideas that turn a single clever AI loop into a reliable, inspectable system.
-
-Orchestration is the discipline of decomposing a complex task into managed steps, routing decisions, tool calls, and human checkpoints — then making the whole pipeline inspectable, resumable, and governable. It is not a framework; it is the control plane that turns a clever agent loop into a production system.
 
 ```mermaid
 flowchart LR

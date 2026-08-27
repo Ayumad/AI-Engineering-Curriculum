@@ -17,11 +17,10 @@ summary: "These tools solve different problems. Frameworks compose model calls a
 
 # Agent runtimes and frameworks
 
-## Plain-English introduction
+> [!summary] The gist
+> Agent runtimes and frameworks provide the scaffolding for chaining model calls, managing state, and recovering from failures. Frameworks compose model calls and tools; orchestration runtimes provide durable execution; agent platforms add user-facing control planes. This guide compares LangGraph, CrewAI, AutoGen/AG2, Haystack, and direct SDK approaches across learning curve, community, and production readiness — and helps you decide when a simple SDK call beats a full framework.
 
-If a coding agent is the worker, a runtime or framework is the factory floor it operates on. These tools provide the scaffolding that lets an agent chain steps together, remember what it has done, call external tools, and recover when things go wrong. Some are lightweight libraries you import into your own code; others are full platforms that manage execution for you. This note lays out the main options, explains what each one actually contributes, and helps you figure out which kind of tool fits the project you have in mind.
-
-These tools solve different problems. Frameworks compose model calls and tools; orchestration runtimes provide durable execution; agent platforms add user-facing control planes.
+---
 
 | Tool | What to learn from it | Typical fit |
 |---|---|---|

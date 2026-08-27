@@ -13,10 +13,7 @@ next: "09 Playbooks/Context Checklist.md"
 summary: "text Goal:"
 ---
 
-
 # Agent task template
-
-## Plain-English introduction
 
 A good prompt is like a clear brief you hand a contractor: state the goal, give the relevant background, list the rules, say how to prove the work is done, and explain when to stop. This template organizes those pieces into a fill-in structure so you don't forget anything important. Copy it, fill in the blanks for your task, and let the model do its best work with full clarity.
 

@@ -13,12 +13,7 @@ next: "11 Glossary and Sources/Sources.md"
 summary: "text AI ENGINEERING ├─ Foundations: models · tokens · context · inference · structured output ├─ Agents: goals · loops · tools · state · harnesses · sandboxes ├─ Conte..."
 ---
 
-
 # AI Engineering Atlas
-
-## Plain-English introduction
-
-Think of this as a road map of the entire AI-engineering landscape. Just as a travel atlas shows you which cities exist and how they connect, this map shows you the major topic areas—models, agents, evaluation, deployment—and how they relate to each other. Use it whenever you need the big picture before zooming into a single topic.
 
 ```text
 AI ENGINEERING

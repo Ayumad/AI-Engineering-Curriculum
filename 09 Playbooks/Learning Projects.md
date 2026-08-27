@@ -16,9 +16,10 @@ summary: "1. Structured assistant: one model, one schema, no side effects. Test 
 
 # Staged learning projects
 
-## Plain-English introduction
+> [!summary] The gist
+> Nine projects, roughly in difficulty order, that build real agent skills: structured output, tool use, memory, evaluation, multi-agent coordination. Each lists the time, difficulty, and the curriculum note behind it. Do them in order and you end with a governed, production-ready system instead of a demo.
 
-Learning AI engineering is like learning to fly: you start in a simulator with no real consequences, move to a small plane with an instructor beside you, and only later take the controls of something complex in rough weather. These nine projects follow that same path. Each one adds a new capability — structured output, tool use, memory, evaluation, multi-agent coordination — on top of what you built before. Every project includes a time estimate, a difficulty level, and a pointer to the curriculum note where the underlying concept is explained. Work through them in order and you'll build from a simple helper that follows a schema all the way to a governed, production-ready system with rollback, budgets, and human oversight.
+---
 
 1. **Structured assistant** (~2 hrs, easy): one model, one schema, no side effects. Test validation and malformed output recovery. See [[01 Foundations/Structured Outputs and Tool Calling]].
 2. **Tool-calling agent** (~3 hrs, easy-moderate): add a read-only calculator or weather tool, typed arguments, timeout, and trace. See [[01 Foundations/Structured Outputs and Tool Calling]].
@@ -31,8 +32,6 @@ Learning AI engineering is like learning to fly: you start in a simulator with n
 9. **Production capstone** (~12 hrs, expert): combine routing, RAG, sandbox, approvals, telemetry, regression tests, budgets, incident response, and a documented rollback. See [[07 Operations and Economics/Deployment and AgentOps]].
 
 For every project, record the model, harness, context, tools, state, authority, stop conditions, evaluation set, traces, cost, and known failure modes.
-
----
 
 ---
 

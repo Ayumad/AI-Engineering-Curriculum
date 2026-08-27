@@ -16,9 +16,10 @@ summary: "| Mode | Use when | Expected behavior | |||| | Ask | You need understa
 
 # Mode and topology selector
 
-## Plain-English introduction
+> [!summary] The gist
+> The first decision with an agent is how to work, not what to build: ask, plan, hand over authority, or run it across sessions. Then whether that's one agent, several in parallel, or a team with roles. This guide makes those choices concrete with tables, a worked example, and cost notes.
 
-When you sit down to do real work with an AI agent, the first question isn't what to build — it's how to work. Should you ask a quick question? Lay out a full plan? Hand the agent authority to execute? Track progress across multiple sessions? And if the task is big, do you need one agent, several working in parallel, or a team with different roles? This guide helps you pick the right working mode and the right team structure for each situation. The tables make the choices concrete, the worked example shows the full decision path in a real scenario, and the cost notes keep you aware of what each level of coordination actually spends.
+---
 
 ## Interaction mode
 

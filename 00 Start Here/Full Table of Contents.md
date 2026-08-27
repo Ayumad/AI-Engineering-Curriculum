@@ -19,16 +19,7 @@ next: "00 Start Here/How to Use This Vault.md"
 summary: The course-first navigation index for the full AI Engineering vault, arranged as sequential units with linked sections and practice outcomes.
 ---
 
-
 # AI Engineering — full table of contents
-
-## Plain-English introduction
-
-This is the complete index of every note in the vault, organized by topic and learning order. Think of it as the detailed table of contents for the entire course — each section lists what you will learn, the notes to read, and the skill you will walk away with. Use it to jump to any topic or follow the full path from start to finish.
-
-> **Navigation note:** Use this Table of Contents as the index for finding any note. Use [[00 Start Here/AI Engineering Curriculum]] for the sequenced learning path with exercises and time estimates.
-
-Use this as the primary navigation path. Each unit has a question to answer, linked instructional sections, and a concrete capability to take away. The same notes remain useful as a reference wiki; the order here is the recommended learning sequence.
 
 ## Unit 1 — Models, inference, and local hardware (~8–10h)
 

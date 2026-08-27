@@ -16,12 +16,10 @@ summary: "A practical method for working in projects too large to parse manually
 
 # Large project navigation and context scaling
 
-## Plain-English introduction
+> [!summary] The gist
+> When a project exceeds one context window, don't load everything — build a map, pick the right neighborhood, and work in bounded slices. Progressive disclosure loads only the layers needed for the next decision, keeping evidence traceable and the context lean. This note covers the operating loop, navigation layers, and multi-repo patterns.
 
-Navigating a massive codebase is like exploring a city you've never visited: you don't memorize every street — you start with a map, pick a neighborhood, and move through it block by block. This note describes a disciplined approach for working on projects that are too large to hold in one context window. The key idea is progressive disclosure: build a compact map of the project first, then zoom into only the parts you need for the current task. It keeps evidence traceable and avoids drowning the model in irrelevant code.
-
-
-When a project is too large to parse manually, do not respond by placing the whole repository or document collection into one prompt. Use progressive disclosure, durable project state, and targeted retrieval. The objective is not to know everything at once; it is to make the next good decision with traceable evidence.
+---
 
 ## The operating loop
 

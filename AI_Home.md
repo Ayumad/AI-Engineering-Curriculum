@@ -13,14 +13,7 @@ next: "00 Start Here/AI Engineering Curriculum.md"
 summary: "AI engineering is the discipline of turning a probabilistic model into a useful, safe, observable system. The model supplies reasoning; the surrounding system supplies..."
 ---
 
-
 # AI Engineering
-
-## Plain-English introduction
-
-This vault is a complete course on AI engineering — the discipline of building systems that use AI models to accomplish real tasks. Think of it as a well-organized textbook with maps, glossaries, and hands-on projects. Whether you want to learn the basics or look something up, this page is your starting point. Follow the links below to begin.
-
-AI engineering is the discipline of turning a probabilistic model into a useful, safe, observable system. The model supplies reasoning; the surrounding system supplies context, tools, memory, permissions, execution, verification, and recovery.
 
 ## Start here
 

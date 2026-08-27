@@ -17,11 +17,10 @@ summary: "Local model viability is governed first by usable model memory, then b
 
 # Local AI hardware and inference
 
-## Plain-English introduction
+> [!summary] The gist
+> Running a model locally means your machine needs enough memory to hold it and enough bandwidth to read it for every word it generates. A setup that barely loads a model may still be too slow once you add context, a vision encoder, or a second user. This note walks through memory, bandwidth, and hardware trade-offs.
 
-Running an AI model locally means keeping it on your own computer instead of sending your data to a cloud service. That gives you privacy, control, and zero internet latency—but your machine has to be powerful enough to handle it. A model is essentially a giant table of numbers, and your computer needs enough memory to hold that table and enough speed to read through it quickly for every word it generates. This note walks through the practical trade-offs: how much memory different model sizes need, how fast they run on various hardware, and how to match the right setup to the task at hand.
-
-Local AI starts with three separate questions: **can the model load**, **can it run**, and **is it fast enough for the job**. A configuration that barely loads a model may still be unusable after adding a long context, a vision encoder, runtime buffers, or a second user.
+---
 
 ## Start with usable memory
 

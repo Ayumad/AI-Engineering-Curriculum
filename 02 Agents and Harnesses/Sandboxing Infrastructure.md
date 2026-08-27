@@ -16,9 +16,11 @@ summary: "Sandbox choice follows the threat model: processes suit trusted code, 
 
 # Sandboxing infrastructure
 
-## Plain-English introduction
+> [!summary] The gist
+> Sandbox choice follows the threat model: processes suit trusted code, containers provide moderate isolation, and microVMs or VMs suit generated or arbitrary untrusted execution.
+> This note compares the different types of isolation technology available: from lightweight process separation to full virtual machines. It also covers cloud services that rent you ready-made sandboxes.
 
-Not all sandboxes are equally safe. Some are like a fenced yard — good for keeping honest people honest, but a determined person could climb over. Others are like a locked room with no windows. This note compares the different types of isolation technology available: from lightweight process separation (fast but less protective) to full virtual machines (slower but very strong). It also covers cloud services that rent you ready-made sandboxes so you do not have to build one from scratch. The right choice depends on what the agent is doing — a trusted internal tool needs less protection than code written by an AI on the fly.
+---
 
 There is no universally best sandbox. Select an isolation boundary based on what executes, the data and credentials it can reach, the blast radius of compromise, compatibility requirements, and startup/operating cost. For the architectural principle of separating policy from execution, see [[02 Agents and Harnesses/Sandboxes and Execution Planes]].
 

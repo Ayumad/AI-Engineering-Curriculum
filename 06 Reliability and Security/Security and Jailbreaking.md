@@ -17,11 +17,10 @@ summary: "A jailbreak tries to make a model disregard or reinterpret its governi
 
 # Security, jailbreaks, and prompt injection
 
-## Plain-English introduction
+> [!summary] The gist
+> Jailbreaking is lock-picking for AI. Attackers try to make models ignore their rules through fake personas, hidden instructions in documents, encoded payloads, or slow trust-building across turns. No single defense holds. This note catalogs the main attack families and the layered countermeasures: input scanning, output filtering, tool allowlists, sandboxing, and taint-aware context assembly.
 
-A jailbreak is to an AI what lock-picking is to a building — a clever trick that bypasses the locks meant to keep it safe. Someone might try to convince a chatbot to ignore its rules by disguising harmful requests as harmless ones, hiding instructions inside documents the agent reads, or slowly building trust before making a dangerous ask. This note catalogs the main attack families — from fake personas to hidden commands in images — and explains how to defend against them with layered protections: input scanning, output filtering, tool permission walls, and isolated execution environments. The key takeaway is that no single defense is enough; real security comes from stacking multiple safeguards together.
-
-A jailbreak tries to make a model disregard or reinterpret its governing constraints. Prompt injection is broader: untrusted content attempts to influence instructions, tool choice, memory, or authority. The dangerous unit is an agent with tools, credentials, and side effects—not text alone.
+---
 
 ## Historical families
 

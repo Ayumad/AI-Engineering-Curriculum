@@ -16,9 +16,11 @@ summary: "Multimodal systems must preserve provenance and uncertainty across cap
 
 # Vision and multimodal input engineering
 
-## Plain-English introduction
+> [!summary] The gist
+> Multimodal systems must preserve provenance and uncertainty across capture, extraction, reasoning, and action; an image is evidence, not an instruction or authority grant.
+> This note covers how agents take in visual information, how to avoid being fooled by bad images or hidden tricks, and how to keep costs down when every image has a price tag.
 
-People do not just read words — we look at pictures, scan documents, watch videos, and glance at screens. AI agents are increasingly expected to do the same. But passing a screenshot to a model is not as simple as it sounds: the model needs to decide what matters in the image, what can be trusted, and whether the information is clear enough to act on. A blurry receipt and a crisp invoice require very different handling. This note covers how agents take in visual information, how to avoid being fooled by bad images or hidden tricks, and how to keep costs down when every image has a price tag.
+---
 
 A multimodal agent combines text with images, PDFs, screenshots, video, audio, or UI state. The hard problem is not just passing pixels to a model: it is deciding what was observed, what can be trusted, what needs extraction, and what action—if any—may follow.
 

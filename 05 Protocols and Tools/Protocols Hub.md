@@ -14,14 +14,7 @@ next: "05 Protocols and Tools/MCP.md"
 summary: "Protocols standardize boundaries; they do not create intelligence. The useful map is:"
 ---
 
-
 # Protocols and tools
-
-## Plain-English introduction
-
-When two people who speak different languages need to work together, they agree on a common set of rules for communication. Protocols play that role for AI systems: they define how agents, tools, and applications exchange information, verify identity, and stay safe. Without shared protocols, every integration becomes a one-off hand-welded connection. This note surveys the protocol families that give AI systems a common language — what each one connects, where trust boundaries live, and why composing protocols is powerful but adds real complexity.
-
-Protocols standardize boundaries; they do not create intelligence. A protocol is a contract: it defines what messages are valid, how sessions are established, and what trust guarantees exist. The useful map is:
 
 ```text
 Human ↔ application       AG-UI

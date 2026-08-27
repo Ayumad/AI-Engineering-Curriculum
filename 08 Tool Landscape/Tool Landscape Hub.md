@@ -14,14 +14,7 @@ next: "08 Tool Landscape/Coding Agent Profiles.md"
 summary: "These products are not all competitors. They occupy different layers: model, coding harness, general agent, terminal runtime, orchestration platform, protocol, sandbox..."
 ---
 
-
 # Agent tool landscape — 2026 snapshot
-
-## Plain-English introduction
-
-The AI agent world is crowded with tools that each claim to solve a piece of the puzzle. This section is your map of that landscape. It organizes the major products and projects by what they actually do — which layer of the stack they sit on, what problem they solve, and where they overlap — so you can make sense of the options without getting lost in marketing hype.
-
-These products are not all competitors. They occupy different layers: model, coding harness, general agent, terminal runtime, orchestration platform, protocol, sandbox, gateway, or observability system.
 
 ## Layer summary
 

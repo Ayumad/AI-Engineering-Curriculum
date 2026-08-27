@@ -17,9 +17,10 @@ summary: "| Category | Examples | Design question | |||| | Sandboxes | E2B, Dayt
 
 # Infrastructure and observability tools
 
-## Plain-English introduction
+> [!summary] The gist
+> Production agents need sandboxes for safe code execution, browser tools for web interaction, gateways for model routing, and observability stacks for tracing failures. This guide covers each category: execution and browser environments, model routing with LiteLLM and OpenRouter, self-hosted vs hosted observability, four-layer guardrails architectures, prompt management, and serving platforms from Replicate to Modal. Each section includes comparison tables and selection heuristics so you can pick the right pieces for your stack.
 
-Behind every AI agent that works in production, there is a web of supporting infrastructure — secure sandboxes for running code, browser tools for interacting with the web, gateways for routing requests, and dashboards for figuring out what went wrong when it did. These tools are not glamorous, but without them an agent is a fragile party trick. This note covers the essential building blocks that make agents safe, observable, and ready for real work, explaining each category in plain terms so you can decide which pieces matter most for your setup.
+---
 
 ## Execution and browser environments
 

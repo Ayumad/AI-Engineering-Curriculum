@@ -13,10 +13,7 @@ next: "09 Playbooks/Mode and Topology Selector.md"
 summary: "These are reusable operating documents, not theory. Copy them into a project and adapt the placeholders."
 ---
 
-
 # Practical playbooks
-
-## Plain-English introduction
 
 Think of a playbook as a recipe card for a kind of work — not a one-off recipe for a single dish, but a reusable method you can adapt to different ingredients. This hub collects every playbook in the course: design worksheets, decision guides, checklists, and templates. Pick the one that matches your task, copy it into your project, and fill in the blanks.
 

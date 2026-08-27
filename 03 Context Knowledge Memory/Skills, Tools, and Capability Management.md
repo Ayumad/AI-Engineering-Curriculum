@@ -16,12 +16,10 @@ summary: "Capabilities should be discoverable, minimally loaded, permission-scop
 
 # Skills, tools, and capability management
 
-## Plain-English introduction
+> [!summary] The gist
+> Tools are raw instruments. Skills are the procedures for using them well. A capability system decides which ones an agent can access and when. Keeping these three layers distinct makes it safe to add tools, update skills, and control permissions without breaking the rest. This note covers registries, selection policy, and lifecycle management.
 
-A toolbox is useful, but a skilled craftsperson knows not only *what* tools are in the box but *when* to use each one and *how* to use it safely. This note breaks that idea into layers: tools are the raw instruments, skills are the procedures for using them well, and a capability system is the management layer that decides which ones an agent can access and under what conditions. Keeping these layers distinct makes it easier to add new tools, update skills, and control permissions without breaking the whole setup.
-
-
-Tools execute a typed operation. Skills teach an agent when and how to use one or more tools, with domain procedure, examples, scripts, and safeguards. A capability system is the registry, selection policy, permissions, lifecycle, and observability that make both safe at scale.
+---
 
 ## Separate the layers
 

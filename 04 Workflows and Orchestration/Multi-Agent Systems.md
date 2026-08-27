@@ -16,11 +16,10 @@ summary: "Multiple agents are useful when specialization, isolation, parallelism
 
 # Multi-agent systems
 
-## Plain-English introduction
+> [!summary] The gist
+> Multiple agents beat a single one when specialization, parallelism, or independent critique matters more than coordination cost. A team of focused agents can outperform a solo generalist — but every handoff is a failure point. This note covers when a team helps, common structures, and the real risks.
 
-Sometimes one person can handle a task from start to finish, but sometimes the job is too big, too varied, or too risky for a single perspective. A team of specialists — each with their own expertise, tools, and constraints — can get the job done faster and more reliably, as long as someone is coordinating. Multi-agent systems apply that same idea to AI: instead of one general-purpose assistant doing everything, you deploy several focused agents that hand off work, work in parallel, or critique each other's output. The upside is specialization, speed, and independent checks; the downside is that every handoff is a chance for things to go wrong. This note explains when a team beats a solo performer, what the common team structures look like, and where the real coordination risks hide.
-
-Multiple agents are useful when specialization, isolation, parallelism, or independent critique outweighs communication and coordination cost.
+---
 
 ## Common topologies
 

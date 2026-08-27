@@ -13,14 +13,7 @@ next: "01 Foundations/What Is an LLM.md"
 summary: "The foundation layer explains the model boundary. A model predicts or generates from context; it does not inherently have current knowledge, durable memory, permission..."
 ---
 
-
 # Foundations
-
-## Plain-English introduction
-
-Think of a language model as a very powerful prediction engine. You give it some text, and it generates what comes next based on patterns it learned from reading billions of documents. But a model by itself has no live internet access, no memory of past conversations, no ability to open files or take actions. Everything else in AI engineering is about adding those missing pieces around the model. This section lays the groundwork: what a model is, how it thinks, what hardware it needs, and where the boundaries are.
-
-The foundation layer explains the model boundary. A model predicts or generates from context; it does not inherently have current knowledge, durable memory, permissions, a filesystem, or the ability to act.
 
 - [[01 Foundations/What Is an LLM]] — tokens, prediction, model families, multimodality, and limits.
 - [[01 Foundations/Context Windows and Inference]] — context as temporary working memory, sampling, reasoning, and cost.

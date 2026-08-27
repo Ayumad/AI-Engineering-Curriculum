@@ -16,20 +16,10 @@ summary: "RAG asks "what external information is relevant?" Memory asks "what sh
 
 # Memory and skills
 
-## Plain-English introduction
+> [!summary] The gist
+> An agent needs different kinds of memory: working memory for the current task, durable facts across sessions, and reusable procedures. This note maps those kinds and compares two memory architectures — Mem0 (passive extraction) and Letta (agentic self-editing) — plus backend selection and consolidation strategies.
 
-Think about how you remember things: you recall facts (names, dates), experiences (what went wrong last time), and procedures (how to safely restart a server). AI agents need the same kinds of memory, and this note maps them out. It covers everything from short-lived working memory for the current task to durable knowledge that lasts across sessions, as well as learned skills — step-by-step procedures an agent can follow reliably. Understanding these categories helps you design agents that don't start from zero every time they wake up.
-
-
-RAG asks "what external information is relevant?" Memory asks "what should this agent retain from experience?"
-
-| Memory kind | Example | Lifetime |
-|---|---|---|
-| Working | Current plan, open files, intermediate result | Current run |
-| Conversation | User rejected option B | Session or thread |
-| Semantic | Project uses PostgreSQL | Durable fact |
-| Episodic | Deployment failed because migration timed out | Durable experience |
-| Procedural | Steps for a safe deployment | Reusable method |
+---
 
 ## Architecture landscape
 

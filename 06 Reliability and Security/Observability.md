@@ -17,11 +17,10 @@ summary: "Metrics tell what changed, logs capture events, and traces reveal the 
 
 # Observability
 
-## Plain-English introduction
+> [!summary] The gist
+> Observability records everything your agent does during a request, like a black box recorder on a plane. When something goes wrong, you replay the full trajectory: model calls, tool use, retrievals, retries, and approvals. This note covers the three signals (metrics, logs, traces), how to set alerts, build dashboards, and catch drift before it reaches users.
 
-Think of an airplane's black box recorder — it captures everything that happened during a flight so investigators can understand exactly what went wrong. Observability gives your AI agent the same capability. When a user asks a question and gets a strange answer, you need a complete record of what the agent searched, which tools it called, how many times it retried, what it decided, and how long everything took. This note explains how to capture that record (using metrics, logs, and traces), how to set up alerts when things drift off course, and how to build dashboards that turn raw data into actionable understanding. Without observability, diagnosing agent failures is like fixing a car blindfolded.
-
-An agent trace represents one request as a connected operation: model calls, retrieval, tool use, subagent work, approvals, retries, and final result. It is the record needed to understand why a plausible response failed—or why a cost/latency regression appeared after a configuration change.
+---
 
 ## Three complementary signals
 

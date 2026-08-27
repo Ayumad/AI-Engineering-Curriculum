@@ -16,13 +16,10 @@ summary: "Each stage has a question, a set of notes, and a small exercise. Do no
 
 # AI Engineering from zero to production
 
-## Plain-English introduction
+> [!summary] The gist
+> This curriculum teaches AI engineering as a hands-on craft. It starts with model fundamentals and moves through agents, safety, and production systems. Each unit pairs reading with a practical exercise, because real skill comes from building. You need basic Python and an API key. No ML background required.
 
-Imagine you want to learn how to build things with AI, not just talk to it. This curriculum is your step-by-step guide, like a college course syllabus but for AI engineering. It starts with the basics — what a model is, how it thinks — and works up through building agents (programs that can act on their own), setting up safety guardrails, and shipping real systems. Each unit comes with reading and a hands-on exercise, because building with AI is more like learning a craft than studying a textbook. No prior machine learning experience is needed; just some comfort with Python and curiosity.
-
-**Prerequisites:** Basic Python, familiarity with APIs/HTTP, and access to at least one LLM API key (OpenAI, Anthropic, or a local model via Ollama). No prior ML experience required — the curriculum builds from first principles.
-
-This is the teaching path; [[00 Start Here/Full Table of Contents|the full table of contents]] is the complete clickable index. Each Unit builds a capability and includes an exercise. Do not skip the exercises: AI engineering is learned by observing trajectories and failure modes, not only by reading definitions.
+---
 
 ## Unit 1 — Models, inference, and hardware (~8–10h)
 

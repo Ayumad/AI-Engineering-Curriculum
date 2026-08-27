@@ -16,12 +16,10 @@ summary: "A practical control surface for choosing reasoning effort and specifyi
 
 # Behavior and communication controls
 
-## Plain-English introduction
+> [!summary] The gist
+> An agent has two independent jobs: reach a good decision and explain it well. Configure them separately — deep thinking doesn't require a long answer, and polished prose doesn't prove the work is correct. This note covers the control stack, effort levels, provider-specific routing, and output contracts.
 
-An AI agent has two separate jobs: figure out the right answer, and explain it in a way that's useful to the reader. This note treats those as independent dials you can turn. You might want a model to think deeply about a problem but give you a one-paragraph summary, or deliver a detailed technical report to one audience and a casual overview to another. Separating reasoning effort from communication style — along with policy, safety rules, and task contracts — gives you precise control over both what the agent does and how it talks about it.
-
-
-An agent has two different jobs: reach a good decision and communicate the result usefully. Configure them separately. More internal effort does not require a longer answer, and a polished style does not prove that the underlying work is correct.
+---
 
 ## The control stack
 

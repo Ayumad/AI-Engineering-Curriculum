@@ -17,11 +17,10 @@ summary: "Run these tests only against a toy harness or an explicitly authorized
 
 # Defensive red-team labs
 
-## Plain-English introduction
+> [!summary] The gist
+> Defensive red-team labs are fire drills for AI security. You build a harmless test agent with fake tools, then run realistic attacks against it in a sandbox. This note provides seven lab cases: authority confusion, tool-output injection, memory poisoning, confused deputy, replay attacks, multimodal boundary testing, and cross-agent trust. Only test against toy harnesses or explicitly authorized systems.
 
-A fire drill teaches people what to do when a real fire breaks out, without actually burning the building down. Defensive red-team labs do the same thing for AI security — you set up a harmless test agent with fake tools and fake data, then systematically try to trick it into doing things it should not. The labs in this note cover realistic attack scenarios: hiding malicious instructions in documents, faking system messages through tools, tricking the agent into misusing its permissions, and more. By running these attacks yourself in a safe sandbox, you discover which defenses work, which ones have gaps, and exactly where to focus your efforts before a real attacker finds the weaknesses.
-
-Run these tests only against a toy harness or an explicitly authorized system. The target should have harmless capabilities such as returning a fake weather value or writing to a temporary folder. The goal is to verify defenses, not to defeat a live service.
+---
 
 ## Lab harness
 

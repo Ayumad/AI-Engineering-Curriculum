@@ -16,9 +16,11 @@ summary: "Voice agents are real-time systems: capture, turn detection, transcrip
 
 # Voice and audio agents
 
-## Plain-English introduction
+> [!summary] The gist
+> Voice agents are real-time systems: capture, turn detection, transcription or audio reasoning, response generation, synthesis, interruption handling, and safe actions must work as one loop.
+> This note explains the machinery that makes voice interactions feel smooth and natural, from latency budgets to barge-in handling.
 
-Talking to a computer feels natural only if it responds quickly, does not talk over you, and knows when you have finished speaking. Building a voice agent is not just about adding speech recognition to a text-based AI — it requires a whole real-time system that listens, thinks, speaks, and handles interruptions without awkward pauses. Think of the difference between texting a friend and having a phone conversation: the phone call demands instant reactions, overlapping speech, and the ability to jump in mid-sentence. This note explains the behind-the-scenes machinery that makes voice interactions feel smooth and natural.
+---
 
 Voice is not simply text chat with speech-to-text and text-to-speech attached. The interface needs low perceived latency, barge-in handling, turn detection, noise tolerance, and clear confirmation before actions that would be consequential in text as well.
 

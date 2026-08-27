@@ -16,11 +16,10 @@ summary: "Agent responsiveness and unit economics improve by reducing tokens and
 
 # Latency and cost engineering
 
-## Plain-English introduction
+> [!summary] The gist
+> Latency and cost engineering treats response time and spending as explicit design constraints. An agent's wait time adds up from queueing, prompt construction, model decoding, tool calls, retries, and synthesis — and cost follows the same path. This note covers the controls that matter most: generating fewer tokens, caching stable prefixes, routing by difficulty, parallelizing independent work, and streaming. It walks through budget mechanics, a worked cost model showing 89% savings from prompt caching, gateway routing with LiteLLM and OpenRouter, batch inference discounts, and per-request token budgets that keep autonomous runs from spiraling.
 
-Every time someone talks to an AI agent, they are waiting. Sometimes for a fraction of a second, sometimes long enough to get frustrated. Latency engineering is about shrinking that wait to a tolerable level while keeping costs from spiraling. This note explains how agents spend their time and money — where the delays hide, which tricks actually help, and how to stay within a budget without turning the experience into a slog. If you have ever wondered why some AI apps feel snappy while others crawl, the answers live here.
-
-An agent's latency is the sum of queueing, prompt construction, model prefill and decoding, tool/network time, retries, subagents, and synthesis. Its cost follows the same path: context tokens, generated tokens, model tier, tool calls, and duplicated work. Treat both as explicit design constraints.
+---
 
 ## Highest-leverage controls
 

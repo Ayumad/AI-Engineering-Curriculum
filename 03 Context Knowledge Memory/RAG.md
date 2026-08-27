@@ -16,16 +16,10 @@ summary: "RAG retrieves relevant external evidence and places it into model cont
 
 # Retrieval-augmented generation (RAG)
 
-## Plain-English introduction
+> [!summary] The gist
+> RAG searches a document collection at answer time and hands the most relevant pieces to the model as evidence. It beats fine-tuning when knowledge is private, changes fast, or didn't exist at training time. This note covers the retrieval pipeline: chunking, embeddings, hybrid search, reranking, and deployment patterns.
 
-A good librarian doesn't memorize every book — they know how to find the right one and open it to the right page. RAG gives AI that same superpower. Instead of relying only on what the model learned during training, it searches a collection of documents at answer time and hands the most relevant pieces to the model as evidence. This is especially useful when knowledge is private, changes frequently, or simply didn't exist when the model was first trained. This note walks through how that search-and-supply pipeline works.
-
-
-RAG retrieves relevant external evidence and places it into model context at answer time. It is usually preferable to fine-tuning when knowledge changes or is private.
-
-```text
-documents → chunk → embed/index → retrieve → rerank → build context → generate with evidence
-```
+---
 
 ## Retrieval toolbox
 

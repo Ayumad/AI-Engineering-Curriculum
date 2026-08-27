@@ -16,9 +16,11 @@ summary: "Agents that can run code need a computer they can safely break. A sand
 
 # Sandboxes and execution planes
 
-## Plain-English introduction
+> [!summary] The gist
+> Agents that can run code need a computer they can safely break. A sandbox is a disposable or strongly isolated execution environment with bounded filesystem, CPU, memory, packages, credentials, and network access.
+> This note explains how to design that safe workspace, how to hand the agent only the secrets it needs for one task, and how to bring back only the results you trust.
 
-When an AI agent writes or runs code, you would not hand it the keys to your whole computer. Instead, you give it a disposable workspace — like a sandbox at a playground, where kids can dig and build without damaging anything outside the box. In the AI world, a sandbox is a temporary, isolated environment where the agent can run programs, access files, and use tools without risking your real data or systems. This note explains how to design that safe workspace, how to hand the agent only the secrets it needs for one task, and how to bring back only the results you trust.
+---
 
 ## Control plane versus execution plane
 

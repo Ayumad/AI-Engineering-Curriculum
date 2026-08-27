@@ -13,14 +13,7 @@ next: "01 Foundations/Foundations Hub.md"
 summary: "This checklist maps the supplied conversation to vault notes. Check each item when its note has been reviewed and refreshed."
 ---
 
-
 # Conversation coverage
-
-## Plain-English introduction
-
-This page maps the original request for this vault — the conversation that started it all — to the notes that were created in response. Think of it as a checklist showing that every topic you asked about has been covered. Use it to verify nothing was missed and to trace each idea back to its source.
-
-This checklist maps the supplied conversation to vault notes. Check each item when its note has been reviewed and refreshed.
 
 ## Original scope
 
@@ -94,6 +87,13 @@ The source conversation is titled “Explain AI Engineering” and has conversat
 - [x] Convention baked into the `ai-engineering-vault-update` skill (v1.3.0) and documented in [[00 Start Here/How to Use This Vault]].
 - [x] Verified: 64/64 intros, exactly one per note, placed after H1, nav bars intact; validator at the pre-existing baseline (476 notes / 4 invalid / 3 unresolved). AI_Home "Guided tour" count corrected 63 → 64.
 - [x] **Welcome.md removed by Ayush (2026-08-27)** — deliberate; byte-identical policy retired (skill v1.4.0). Validator baseline now 475 / 3 / 2 / 0.
+
+## The gist pass — 2026-08-27
+
+- [x] The `## Plain-English introduction` H2 is abolished. Content notes (concepts, patterns, guides, protocols, security, worksheets, checklists, playbooks — 44 notes) now open with a **`> [!summary] The gist` callout** right under the title, rewritten in Ayush's voice (STE100 × voice spec: short sentences, plain words, dry understatement, one concrete analogy max, banned AI-vocab list), followed by a `---` divider.
+- [x] Index/hub/reference notes (section hubs, AI_Home, How to Use This Vault, ToC, Coverage, Atlas, Glossary, Sources, Pattern Catalog, Acronyms, Tool Comparison Index, Prompt Template, Template Library — 20 notes) carry **no intro at all** per Ayush ("reserve the gist to content notes") — H1 goes straight to content.
+- [x] Convention encoded in `ai-engineering-vault-update` skill v1.5.1 (verification: grep == 44 callouts, zero legacy headers, no-gist files have none); How to Use This Vault bullet updated.
+- [x] 9-writer wave: 39/44 converted by subagents; the 09 Playbooks group stalled at the header stub, so Context Checklist, Evaluation and Security Review, Learning Projects, Mode and Topology Selector, and RAG Design Worksheet were written by hand. Two gists micro-fixed for banned patterns (`not just`, `highest-leverage`); `harness` hits in Agent Harness / Coding Agent Profiles are the topic noun, kept.
 
 ---
 
