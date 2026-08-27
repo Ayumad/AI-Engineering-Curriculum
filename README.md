@@ -2,7 +2,7 @@
 
 A structured, source-checked curriculum on building with LLMs and AI agents — from transformers and inference mechanics to agent harnesses, RAG, multi-agent systems, reliability, security, and the operational economics of serving them.
 
-64 notes + 5 canvas maps, organized as 12 numbered sections. Read them in order with the prev/next navigation bar at the **end** of each note.
+64 tour notes + 4 canvas maps, organized as 12 numbered sections. Read them in order with the prev/next navigation bar at the **end** of each note.
 
 ## Start here
 
@@ -40,4 +40,4 @@ This repo is a mirror of `AI-Engineering/` inside the main vault ([Ayumad/ayumad
 
 ## Open it
 
-Clone, then open the folder as an Obsidian vault (File → Open folder as vault). The 5 `.canvas` maps render natively.
+Clone, then open the folder as an **Obsidian vault** (File → Open folder as vault). This curriculum is written for Obsidian — wikilinks, canvas maps, and frontmatter are core to how it works — so reading it inside Obsidian gives the best formatting and navigation. Plain Markdown/other viewers will still render the text, but expect plaintext wikilinks and no canvas support.
