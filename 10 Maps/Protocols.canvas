@@ -1,0 +1,17 @@
+{
+  "nodes": [
+    {"id":"human","type":"text","text":"HUMAN","x":0,"y":0,"width":220,"height":100},
+    {"id":"ui","type":"text","text":"AG-UI\nagent ↔ app/user interface","x":300,"y":0,"width":260,"height":120},
+    {"id":"client","type":"text","text":"CLIENT / EDITOR","x":650,"y":0,"width":240,"height":100},
+    {"id":"acp","type":"text","text":"ACP\nclient/editor ↔ agent","x":950,"y":0,"width":260,"height":120},
+    {"id":"agent","type":"text","text":"AGENT","x":1300,"y":0,"width":220,"height":100},
+    {"id":"mcp","type":"file","file":"05 Protocols and Tools/MCP.md","x":1300,"y":260,"width":300,"height":160},
+    {"id":"tools","type":"text","text":"TOOLS + DATA\nMCP servers · resources · prompts","x":1700,"y":260,"width":300,"height":140},
+    {"id":"a2a","type":"text","text":"A2A\nagent ↔ agent","x":1300,"y":560,"width":260,"height":120},
+    {"id":"agents","type":"text","text":"OTHER AGENTS\ndiscovery · tasks · async work","x":1700,"y":560,"width":300,"height":140},
+    {"id":"a2ui","type":"text","text":"A2UI\nagent → generated UI","x":950,"y":560,"width":260,"height":120}
+  ],
+  "edges": [
+    {"id":"e1","fromNode":"human","toNode":"ui"},{"id":"e2","fromNode":"ui","toNode":"client"},{"id":"e3","fromNode":"client","toNode":"acp"},{"id":"e4","fromNode":"acp","toNode":"agent"},{"id":"e5","fromNode":"agent","toNode":"mcp"},{"id":"e6","fromNode":"mcp","toNode":"tools"},{"id":"e7","fromNode":"agent","toNode":"a2a"},{"id":"e8","fromNode":"a2a","toNode":"agents"},{"id":"e9","fromNode":"agent","toNode":"a2ui"}
+  ]
+}

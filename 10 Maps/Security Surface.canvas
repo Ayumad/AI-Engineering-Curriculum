@@ -1,0 +1,16 @@
+{
+  "nodes": [
+    {"id":"user","type":"text","text":"USER / ATTACKER\nintent · social engineering","x":0,"y":0,"width":270,"height":140},
+    {"id":"content","type":"text","text":"UNTRUSTED CONTENT\nweb · docs · email · images · tool output","x":350,"y":0,"width":320,"height":150},
+    {"id":"context","type":"file","file":"03 Context Knowledge Memory/Context Engineering.md","x":750,"y":0,"width":320,"height":170},
+    {"id":"model","type":"file","file":"06 Reliability and Security/Security and Jailbreaking.md","x":1150,"y":0,"width":320,"height":170},
+    {"id":"tools","type":"file","file":"05 Protocols and Tools/MCP.md","x":1550,"y":0,"width":320,"height":170},
+    {"id":"sandbox","type":"file","file":"02 Agents and Harnesses/Sandboxes and Execution Planes.md","x":1550,"y":300,"width":320,"height":170},
+    {"id":"memory","type":"file","file":"03 Context Knowledge Memory/Memory and Skills.md","x":750,"y":300,"width":320,"height":170},
+    {"id":"human","type":"text","text":"APPROVAL + POLICY\nleast privilege · veto · audit","x":1150,"y":300,"width":320,"height":150},
+    {"id":"labs","type":"file","file":"06 Reliability and Security/Defensive Red-Team Labs.md","x":750,"y":600,"width":320,"height":170}
+  ],
+  "edges": [
+    {"id":"e1","fromNode":"user","toNode":"content"},{"id":"e2","fromNode":"content","toNode":"context"},{"id":"e3","fromNode":"context","toNode":"model"},{"id":"e4","fromNode":"model","toNode":"tools"},{"id":"e5","fromNode":"tools","toNode":"sandbox"},{"id":"e6","fromNode":"model","toNode":"memory"},{"id":"e7","fromNode":"model","toNode":"human"},{"id":"e8","fromNode":"human","toNode":"sandbox"},{"id":"e9","fromNode":"labs","toNode":"context"},{"id":"e10","fromNode":"labs","toNode":"tools"}
+  ]
+}

@@ -1,0 +1,17 @@
+{
+  "nodes": [
+    {"id":"human","type":"text","text":"HUMAN\nintent · authority · approval","x":0,"y":-700,"width":280,"height":120},
+    {"id":"client","type":"text","text":"CLIENT / UI\nchat · IDE · CLI · dashboard","x":0,"y":-500,"width":280,"height":120},
+    {"id":"harness","type":"file","file":"02 Agents and Harnesses/Agent Harness.md","x":0,"y":-300,"width":320,"height":160},
+    {"id":"context","type":"file","file":"03 Context Knowledge Memory/Context Engineering.md","x":-450,"y":-50,"width":320,"height":160},
+    {"id":"model","type":"file","file":"01 Foundations/What Is an LLM.md","x":0,"y":-50,"width":320,"height":160},
+    {"id":"tools","type":"file","file":"05 Protocols and Tools/MCP.md","x":450,"y":-50,"width":320,"height":160},
+    {"id":"sandbox","type":"file","file":"02 Agents and Harnesses/Sandboxes and Execution Planes.md","x":450,"y":200,"width":320,"height":160},
+    {"id":"state","type":"file","file":"02 Agents and Harnesses/Planning State and Persistence.md","x":-450,"y":200,"width":320,"height":160},
+    {"id":"loop","type":"file","file":"02 Agents and Harnesses/What Is an Agent.md","x":0,"y":200,"width":320,"height":160},
+    {"id":"verify","type":"file","file":"06 Reliability and Security/Reliability Evals and Observability.md","x":0,"y":450,"width":320,"height":160}
+  ],
+  "edges": [
+    {"id":"e1","fromNode":"human","toNode":"client"},{"id":"e2","fromNode":"client","toNode":"harness"},{"id":"e3","fromNode":"harness","toNode":"context"},{"id":"e4","fromNode":"harness","toNode":"model"},{"id":"e5","fromNode":"harness","toNode":"tools"},{"id":"e6","fromNode":"context","toNode":"model"},{"id":"e7","fromNode":"model","toNode":"loop"},{"id":"e8","fromNode":"loop","toNode":"tools"},{"id":"e9","fromNode":"tools","toNode":"sandbox"},{"id":"e10","fromNode":"sandbox","toNode":"state"},{"id":"e11","fromNode":"state","toNode":"loop"},{"id":"e12","fromNode":"loop","toNode":"verify"},{"id":"e13","fromNode":"verify","toNode":"harness"}
+  ]
+}
