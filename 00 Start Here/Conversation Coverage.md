@@ -100,9 +100,11 @@ The source conversation is titled “Explain AI Engineering” and has conversat
 - [x] New note `00 Start Here/The Gist of It.md`: every content note's gist (44/44), one paragraph each, in table-of-contents order — Units 1–10 headings mirrored verbatim from Full Table of Contents, links deduped across units, plus a "The rest of the tour" appendix for the 5 notes the ToC doesn't link (AI Engineering Curriculum, Vector Search and Embeddings, Coding Agent Profiles, Agent Runtimes and Frameworks, Infrastructure and Observability Tools).
 - [x] Reference note — no gist on it, per the content-only rule. Chain 64 → 65: `add_nav.py` CHAIN updated (inserted after Full ToC), bars regenerated for all 65 notes, prev/next verified. AI_Home guided-tour count 64 → 65 + short-version pointer; How to Use This Vault nav bullet 64 → 65; ToC fast-path link. Doubled pre-nav dividers (from repeated `add_nav.py` runs) collapsed across all notes — 0 remaining. Validator: 476 / 3 / 2 / 0 — zero new issues.
 
-## Plain Reading companion — 2026-08-27
+## Devin profile — 2026-08-27
 
-- [x] Generated `00 Start Here/The Gist of It — Plain Reading.md` from the collection note: 44 link-free entries, normal paragraphs, ToC order, no nav bar, deliberately outside the 65-note tour. Regenerated after catching and fixing a one-character extraction bug; verified first paragraph begins `An LLM` and all 44 entries are present.
+- [x] `08 Tool Landscape/Coding Agent Profiles.md`: new `## Devin — autonomous cloud engineer` section (Cognition's cloud agent — parallel Devins, Interactive Planning, Devin Search/Wiki, Review, Automations, incident triage, open-source AG-UI CLI; pricing Free / $20 Pro / $200 Max verified from devin.ai/pricing on 2026-08-27) inserted after Codex. Also added to the gist player list, Category map (Delegated parallel work), context-window table, pricing/maturity table, and 5 verified sources; fixed the stale truncated frontmatter summary.
+- [x] Derived notes re-synced: the Coding Agent Profiles gist line updated in The Gist of It and The Gist of It — Plain Reading. Regenerating the Plain Reading note surfaced a latent generator bug — the 5 appendix gists were missing entirely (two-space `  > ` indent was never handled). Regenerated: 44/44 entries carry paragraphs, zero wikilinks, no nav residue.
+- [x] ayumad.me/ai publishing: PAUSED per Ayush (destination still in the works). Standing rule recorded: curriculum updates will also flow to ayumad.me/ai once it exists.
 
 ---
 

@@ -11,14 +11,14 @@ created: 2026-08-27
 updated: 2026-08-27
 prev: "08 Tool Landscape/Tool Landscape Hub.md"
 next: "08 Tool Landscape/Agent Runtimes and Frameworks.md"
-summary: "Herdr keeps existing terminal agents running across disconnects and adds workspaces, panes, agentstate detection, SSH access, and a socket/API surface for spawning, in..."
+summary: "Profiles the major coding and general-purpose agents — Herdr, Hermes, DeepSeek Harness, Codex, Devin, Cursor, Claude Code, OpenCode, Pi, OpenHands, and Kimi Code — with architecture, strengths, and trade-offs, plus category fit, context-window, and pricing comparisons."
 ---
 
 
 # Coding and general-agent profiles
 
 > [!summary] The gist
-> AI coding agents range from terminal-first harnesses to cloud-delegated workstreams. This guide profiles the major players — Herdr, Hermes, DeepSeek Harness, Codex, Cursor, Claude Code, OpenCode, Pi, OpenHands, and Kimi Code — comparing their architecture, strengths, and trade-offs. A category map helps you match needs to candidate tools, and a context window comparison shows that harness quality is about context management, not raw token count.
+> AI coding agents range from terminal-first harnesses to cloud-delegated workstreams. This guide profiles the major players — Herdr, Hermes, DeepSeek Harness, Codex, Devin, Cursor, Claude Code, OpenCode, Pi, OpenHands, and Kimi Code — comparing their architecture, strengths, and trade-offs. A category map helps you match needs to candidate tools, and a context window comparison shows that harness quality is about context management, not raw token count.
 
 ---
 
@@ -37,6 +37,14 @@ DeepSeek Harness is a developer preview built on Cordis. Model, tools, skills, s
 ## Codex — delegation-first agent command center
 
 Codex spans CLI, app, IDE surfaces, skills, automations, sandboxing, cloud execution, projects, and parallel agents. The app emphasizes assigning workstreams, isolating changes in worktrees, and reviewing results. Best when an agent should own an end-to-end work package or several agents should run in parallel. Tradeoffs include provider coupling, review responsibility, and cost/permission management. [Codex](https://openai.com/codex/) · [Codex app announcement](https://openai.com/index/introducing-the-codex-app/).
+
+## Devin — autonomous cloud engineer
+
+Devin is Cognition's autonomous AI software engineer. It works in its own cloud environment: plan the work, edit files, run commands and tests, browse the web, and open the pull request. Devin 2.0 (April 2025) added an agent-native IDE, so you can run several Devins in parallel and steer each one mid-task. Interactive Planning researches the codebase and proposes a plan you can edit before execution. Devin Search answers codebase questions with cited code, and Devin Wiki re-indexes repositories into architecture diagrams and docs.
+
+The platform now also does Review (automatic pull-request review), Automations (scheduled and event-triggered runs from Slack, Jira, or Linear), Datadog incident triage, and code scanning. Devin CLI is the open-source local half: a terminal agent built on AG-UI that works on your local files, then hands the task to a cloud Devin when it needs a full environment. Model choice is yours — frontier models like Opus and GPT, Cognition's own SWE models, or cheap minis.
+
+Best for delegating end-to-end tickets (description to pull request), migrations, incident triage, and parallel workstreams you don't want to babysit. Tradeoffs include cloud-only execution outside the CLI, review responsibility for autonomous changes, and usage-based cost that climbs with heavy or premium-model work. [Devin 2.0 announcement](https://cognition.com/blog/devin-2) · [Devin](https://devin.ai/) · [CLI repository](https://github.com/CognitionAI/devin-cli).
 
 ## Cursor — AI-native IDE and inner loop
 
@@ -67,7 +75,7 @@ Kimi Code offers CLI, web, ACP, MCP, provider configuration, session export, and
 | Need | Candidate layer |
 |---|---|
 | Interactive IDE loop | Cursor, Claude Code integrations, Kimi Code |
-| Delegated parallel work | Codex, OpenHands, Herdr |
+| Delegated parallel work | Codex, Devin, OpenHands, Herdr |
 | General persistent assistant | Hermes |
 | Harness research/customization | DeepSeek Harness, Pi, OpenCode |
 | Provider/model portability | OpenCode, OpenHands, gateways |
@@ -81,6 +89,7 @@ Context window size affects how much code, conversation history, and retrieved c
 | Claude Code | 200K tokens (Opus/Sonnet) | Extended thinking available; strong at long-context code comprehension |
 | Cursor | Model-dependent (up to 200K via Claude) | Inherits provider context limits |
 | Codex | Model-dependent (up to 200K via GPT-4o) | Inherits provider context limits |
+| Devin | Model-dependent (Opus, GPT, SWE) | Cloud VM sessions; context managed by the platform |
 | Hermes | Model-dependent (configurable) | Supports any provider's context window |
 | OpenCode | Model-dependent (provider-agnostic) | Inherits provider context limits |
 | DeepSeek Harness | 128K (DeepSeek models) | DeepSeek's native context |
@@ -100,6 +109,7 @@ Context window size affects how much code, conversation history, and retrieved c
 | Hermes | Open-source (self-hosted) | Active development, broad feature set |
 | DeepSeek Harness | Developer preview | Preview — treat stability/security as open questions |
 | Codex | Subscription (check vendor) | GA — backed by OpenAI |
+| Devin | Subscription (Free / $20 Pro / $200 Max; usage quotas) | GA — cloud platform + open-source CLI |
 | Cursor | Subscription (check vendor) | GA — widely adopted IDE |
 | Claude Code | API usage-based (Anthropic pricing) | GA — production-ready |
 | OpenCode | Open-source (self-hosted) | Active development |
@@ -113,6 +123,11 @@ Context window size affects how much code, conversation history, and retrieved c
 - Hermes docs — https://hermes-agent.nousresearch.com/docs/ — personal/general agent platform.
 - DeepSeek Harness — https://www.deepseek.com/harness/ — composable developer preview.
 - Codex — https://openai.com/codex/ — delegation-first agent command center.
+- Devin 2.0 announcement — https://cognition.com/blog/devin-2 — parallel Devins and the agent-native IDE.
+- Devin pricing — https://devin.ai/pricing — plans from free to $200/month with usage quotas.
+- Devin docs — https://docs.devin.ai — platform docs and release notes.
+- Devin CLI — https://github.com/CognitionAI/devin-cli — open-source local coding agent (AG-UI).
+- Devin for Terminal — https://cognition.com/blog/devin-for-terminal — start locally, hand off to the cloud.
 - Cursor modes — https://docs.cursor.com/en/agent/modes — AI-native IDE.
 - Claude Code docs — https://docs.anthropic.com/en/docs/claude-code/overview — terminal-first coding harness.
 - Claude Agent SDK — https://docs.anthropic.com/en/docs/agents-and-tools/agent-sdk/overview — agent SDK.

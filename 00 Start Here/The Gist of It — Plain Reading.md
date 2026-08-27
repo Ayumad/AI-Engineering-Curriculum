@@ -111,7 +111,13 @@ When a model gives weak answers, the instinct is to retrain—but training is ex
 Nine projects, roughly in difficulty order, that build real agent skills: structured output, tool use, memory, evaluation, multi-agent coordination. Each lists the time, difficulty, and the curriculum note behind it. Do them in order and you end with a governed, production-ready system instead of a demo.
 ## The rest of the tour
 - AI Engineering Curriculum
+This curriculum teaches AI engineering as a hands-on craft. It starts with model fundamentals and moves through agents, safety, and production systems. Each unit pairs reading with a practical exercise, because real skill comes from building. You need basic Python and an API key. No ML background required.
 - Vector Search and Embeddings
+Embeddings turn text into numerical coordinates where similar meanings sit close together. Vector databases search those coordinates at speed. Together they power RAG's retrieval step — but the real pitfalls lie in how embedders are trained, how ANN indexes trade recall for speed, and the gap between similarity and relevance. This note covers the machinery under the hood.
 - Coding Agent Profiles
+AI coding agents range from terminal-first harnesses to cloud-delegated workstreams. This guide profiles the major players — Herdr, Hermes, DeepSeek Harness, Codex, Devin, Cursor, Claude Code, OpenCode, Pi, OpenHands, and Kimi Code — comparing their architecture, strengths, and trade-offs. A category map helps you match needs to candidate tools, and a context window comparison shows that harness quality is about context management, not raw token count.
 - Agent Runtimes and Frameworks
+Agent runtimes and frameworks provide the scaffolding for chaining model calls, managing state, and recovering from failures. Frameworks compose model calls and tools; orchestration runtimes provide durable execution; agent platforms add user-facing control planes. This guide compares LangGraph, CrewAI, AutoGen/AG2, Haystack, and direct SDK approaches across learning curve, community, and production readiness — and helps you decide when a simple SDK call beats a full framework.
 - Infrastructure and Observability Tools
+Production agents need sandboxes for safe code execution, browser tools for web interaction, gateways for model routing, and observability stacks for tracing failures. This guide covers each category: execution and browser environments, model routing with LiteLLM and OpenRouter, self-hosted vs hosted observability, four-layer guardrails architectures, prompt management, and serving platforms from Replicate to Modal. Each section includes comparison tables and selection heuristics so you can pick the right pieces for your stack.
+
