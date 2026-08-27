@@ -16,6 +16,10 @@ summary: "1. Structured assistant: one model, one schema, no side effects. Test 
 
 # Staged learning projects
 
+## Plain-English introduction
+
+Learning AI engineering is like learning to fly: you start in a simulator with no real consequences, move to a small plane with an instructor beside you, and only later take the controls of something complex in rough weather. These nine projects follow that same path. Each one adds a new capability — structured output, tool use, memory, evaluation, multi-agent coordination — on top of what you built before. Every project includes a time estimate, a difficulty level, and a pointer to the curriculum note where the underlying concept is explained. Work through them in order and you'll build from a simple helper that follows a schema all the way to a governed, production-ready system with rollback, budgets, and human oversight.
+
 1. **Structured assistant** (~2 hrs, easy): one model, one schema, no side effects. Test validation and malformed output recovery. See [[01 Foundations/Structured Outputs and Tool Calling]].
 2. **Tool-calling agent** (~3 hrs, easy-moderate): add a read-only calculator or weather tool, typed arguments, timeout, and trace. See [[01 Foundations/Structured Outputs and Tool Calling]].
 3. **Sandboxed coding loop** (~4 hrs, moderate): add temporary files, tests, and a disposable execution plane; require approval before writes outside it. See [[02 Agents and Harnesses/Sandboxes and Execution Planes]].

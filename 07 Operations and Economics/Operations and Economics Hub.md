@@ -16,6 +16,10 @@ summary: "Production agents are software systems with variable compute, probabil
 
 # Operations and economics
 
+## Plain-English introduction
+
+Running an AI agent in the real world is a lot like managing a small factory. You have to keep the lights on, watch your spending, and make sure nothing breaks when no one is looking. This section collects the practical knowledge that separates a demo from a dependable product — covering costs, speed, deployment, and the day-to-day habits that keep agents honest.
+
 Operations and economics is the discipline of running production AI agents reliably, cost-effectively, and safely. It spans deployment mechanics (routing, queues, sandboxes, telemetry), cost engineering (caching, batching, token budgets), resource management (GPU economics, self-hosted vs API trade-offs), and operational governance (rate limiting, incident response, multi-tenancy). The goal is predictable behavior from probabilistic systems: every autonomous run must have a budget, a version, an owner, and a rollback path.
 
 Production agents are software systems with variable compute, probabilistic behavior, external dependencies, and human approval points. They compound failure modes across model calls, tool invocations, retrieval, and human approval gates — making operational discipline a first-class engineering concern, not an afterthought.

@@ -16,6 +16,10 @@ summary: "Fine-tuning is for persistent, repeatable behavioral gaps—not curren
 
 # Fine-tuning decision framework
 
+## Plain-English introduction
+
+When a language model gives weak answers, the instinct is to retrain it—but training is expensive, slow, and not always the right fix. Often the model already knows enough; it just needs better instructions, a reference document, or a tool to look things up. This note is a decision guide that helps you figure out which lever to pull. It walks through lighter options first—improved prompts, retrieval of relevant documents, connecting a tool—before recommending fine-tuning, which rewrites part of the model's internal wiring to permanently change how it behaves.
+
 Do not treat every weak answer as a training problem. Diagnose the missing layer first:
 
 ```text

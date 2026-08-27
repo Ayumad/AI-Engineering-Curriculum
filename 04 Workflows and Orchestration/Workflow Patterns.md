@@ -16,6 +16,10 @@ summary: "Choose the simplest topology that makes the work observable and correc
 
 # Workflow patterns
 
+## Plain-English introduction
+
+Imagine you are running a restaurant kitchen. Some tasks happen one after another — you chop vegetables before you sauté them. Others happen in parallel — one cook handles salads while another grills the protein. A sous-chef might route each order to the right station. And sometimes a dish goes back and forth between the cook and a taste-tester until it is right. Workflow patterns are those recurring shapes: the standard ways to arrange steps so that work flows smoothly, mistakes get caught early, and the whole system stays easy to understand. Choosing the right pattern is less about picking the fanciest option and more about matching the shape to the problem. This note walks through the main patterns, shows how to build each one, and explains where they tend to break so you can plan around it.
+
 Choose the simplest topology that makes the work observable and correct.
 
 | Pattern | Shape | Best fit | Main risk |

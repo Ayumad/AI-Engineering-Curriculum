@@ -16,6 +16,10 @@ summary: "The harness is the machinery that makes an agent useful and governable
 
 # Agent harness
 
+## Plain-English introduction
+
+An agent's brain is impressive, but it cannot do anything useful without a body. The harness is that body: the system that feeds the agent the right information, lets it use tools, remembers what happened, and steps in when things go wrong. Think of it like the difference between a talented chef and a fully equipped restaurant kitchen — the chef provides the skill, but the kitchen provides the stove, ingredients, recipe book, and cleanup crew that make the meal possible. This note walks through each part of that machinery and explains why two teams using the same AI model can get wildly different results depending on how they build the harness around it.
+
 The harness is the machinery that makes an agent useful and governable. It translates user intent into context, exposes tools, executes actions, manages state, and decides when to ask for help or stop.
 
 ## Typical components

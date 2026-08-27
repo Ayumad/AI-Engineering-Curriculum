@@ -16,6 +16,10 @@ summary: "This checklist maps the supplied conversation to vault notes. Check ea
 
 # Conversation coverage
 
+## Plain-English introduction
+
+This page maps the original request for this vault — the conversation that started it all — to the notes that were created in response. Think of it as a checklist showing that every topic you asked about has been covered. Use it to verify nothing was missed and to trace each idea back to its source.
+
 This checklist maps the supplied conversation to vault notes. Check each item when its note has been reviewed and refreshed.
 
 ## Original scope
@@ -83,6 +87,12 @@ The source conversation is titled “Explain AI Engineering” and has conversat
 - [x] New concept note [[03 Context Knowledge Memory/Vector Search and Embeddings]]: embedding training (contrastive objectives, SimCSE recipe + numbers, nomic task-prefix requirement), ANN index internals (HNSW/IVF/PQ mechanics + trade-offs), similarity ≠ relevance, local Ollama + ChromaDB field notes (model pinning, chunking > index tuning).
 - [x] Sources live-verified 2026-08-27: HNSW (arXiv 1603.09320), SimCSE (arXiv 2104.08821), ANN-Benchmarks, nomic HF model card, Chroma docs, Ollama embed API. Registered in [[11 Glossary and Sources/Sources]].
 - [x] Wired into the nav chain (RAG → Vector Search and Embeddings → Large Project Navigation), cross-linked from [[03 Context Knowledge Memory/RAG]], added to the coverage map.
+
+## Plain-English introductions pass — 2026-08-27
+
+- [x] All 64 tour notes gained a `## Plain-English introduction` as the first body section (right after the H1): analogy-first, ~8th-grade reading level, no jargon/URLs/wikilinks; 40–80 words on hubs/maps/glossaries/indexes, 60–180 on concepts/patterns/guides.
+- [x] Convention baked into the `ai-engineering-vault-update` skill (v1.3.0) and documented in [[00 Start Here/How to Use This Vault]].
+- [x] Verified: 64/64 intros, exactly one per note, placed after H1, nav bars intact; validator at the pre-existing baseline (476 notes / 4 invalid / 3 unresolved). AI_Home "Guided tour" count corrected 63 → 64.
 
 ---
 

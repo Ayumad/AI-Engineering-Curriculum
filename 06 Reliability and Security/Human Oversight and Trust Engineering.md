@@ -17,6 +17,10 @@ summary: "Autonomy should be a deliberate, risk-based allocation of decision aut
 
 # Human oversight and trust engineering
 
+## Plain-English introduction
+
+Self-driving cars have different levels of autonomy — from cruise control that just maintains speed, to fully self-driving mode that handles everything. AI agents work the same way. The question is not whether an agent can act on its own, but when it should and when it should pause and ask a human. This note explains how to design that decision ladder: which actions are safe to let the agent handle freely, which ones need a quick human click, and which ones require a person to review everything before anything happens. It also covers how to build interfaces that make it easy for humans to see what the agent is planning, approve or reject it, and learn from those decisions over time.
+
 The central question is not whether an agent is autonomous. It is: **what may it decide and execute without a person, under which evidence and policy?** Assign authority according to the likelihood and cost of error.
 
 ## Autonomy ladder

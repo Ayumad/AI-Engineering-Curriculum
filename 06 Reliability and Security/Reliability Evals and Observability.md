@@ -17,6 +17,10 @@ summary: "Agent quality is more than the final answer. Evaluate the trajectory: 
 
 # Reliability, evaluation, and observability
 
+## Plain-English introduction
+
+Think of this note as the map connecting two essential practices: testing whether your AI agent actually works well, and watching it in real time to catch problems early. Just as a factory needs both a quality-control inspector and a live dashboard showing machine health, AI systems need rigorous tests before deployment and constant monitoring afterward. This hub ties those pieces together and points you to the deeper notes on each.
+
 Agent quality is more than the final answer. Evaluate the trajectory: context selected, tools called, arguments, permissions, retries, latency, cost, evidence, and final outcome.
 
 ## Reliability controls

@@ -15,6 +15,10 @@ summary: "Copyable templates for the artifacts used throughout the AI Engineerin
 
 # AI Engineering template library
 
+## Plain-English introduction
+
+Instead of starting from a blank page every time you need to write a project plan, evaluation, or handoff document, grab one of these ready-made templates. Each template is a fill-in-the-blank structure designed to save you time and make sure you do not forget an important section. Copy it, replace the placeholders, and you have a professional document in minutes.
+
 Use this library to turn the curriculum into working project artifacts. Copy the smallest template that fits the task, delete fields that do not apply, and replace every placeholder before treating the document as authoritative.
 
 These templates are human-readable contracts. If software consumes an artifact, pair it with a schema, validator, version, owner, and migration path. Documentation can explain a boundary; the harness must enforce it.

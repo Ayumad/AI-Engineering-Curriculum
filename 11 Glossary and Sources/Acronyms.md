@@ -16,6 +16,10 @@ summary: "| Acronym | Expansion | ||| | ACP | Agent Client Protocol | | A2A | Ag
 
 # Acronyms
 
+## Plain-English introduction
+
+AI engineering is packed with three- and four-letter abbreviations that can be intimidating at first. This page is a simple lookup table: find the acronym and see what it stands for. It is the quickest way to decode a confusing sentence or unfamiliar label, and it keeps growing as new terms appear.
+
 | Acronym | Expansion |
 |---|---|
 | ACP | Agent Client Protocol |

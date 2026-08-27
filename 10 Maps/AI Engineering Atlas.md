@@ -16,6 +16,10 @@ summary: "text AI ENGINEERING ├─ Foundations: models · tokens · context ·
 
 # AI Engineering Atlas
 
+## Plain-English introduction
+
+Think of this as a road map of the entire AI-engineering landscape. Just as a travel atlas shows you which cities exist and how they connect, this map shows you the major topic areas—models, agents, evaluation, deployment—and how they relate to each other. Use it whenever you need the big picture before zooming into a single topic.
+
 ```text
 AI ENGINEERING
 ├─ Model / inference: models · tokens · context · structured output · quantization

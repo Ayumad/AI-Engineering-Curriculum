@@ -16,6 +16,10 @@ summary: "Question and users:"
 
 # RAG design worksheet
 
+## Plain-English introduction
+
+Imagine you're building a librarian that reads your entire library, memorizes where everything is, and then finds the right page the moment someone asks a question. That's what Retrieval-Augmented Generation — RAG for short — does for an AI system: it connects the model to real sources so answers come with evidence instead of guesses. This worksheet walks you through every design choice, from how documents are ingested and split into chunks to how search results are filtered, ranked, and fed to the model. Each section has a blank to fill in and a worked example showing a finished answer, so you can compare your draft against a real result and catch gaps before they become bugs.
+
 **Question and users:**
 
 **Sources and authority:**

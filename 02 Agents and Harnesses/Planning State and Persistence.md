@@ -16,6 +16,10 @@ summary: "Planning turns a broad request into observable work. State records wha
 
 # Planning, state, and persistence
 
+## Plain-English introduction
+
+When you hire a contractor for a big project, you expect them to keep notes: what is done, what is left, what went wrong, and what to try next. If they lost their notes halfway through, you would be starting over from scratch. AI agents face the same problem. Without a way to save their progress, a crash or interruption means losing everything they have figured out. This note explains how agents create plans, save their work at key moments, and recover when things go wrong — whether that means picking up where they left off, undoing a mistake, or starting fresh with everything they have learned.
+
 ## Durable work needs durable state
 
 Plans are hypotheses, not authority. Store enough state to resume safely: objective, constraints, completed and pending steps, artifact references, decisions, approvals, idempotency keys, and the last verified observation. Do not persist raw, unbounded conversation merely because it exists; compact it into state that a later run can inspect and correct.

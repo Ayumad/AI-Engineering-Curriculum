@@ -16,6 +16,10 @@ summary: "These are reusable operating documents, not theory. Copy them into a p
 
 # Practical playbooks
 
+## Plain-English introduction
+
+Think of a playbook as a recipe card for a kind of work — not a one-off recipe for a single dish, but a reusable method you can adapt to different ingredients. This hub collects every playbook in the course: design worksheets, decision guides, checklists, and templates. Pick the one that matches your task, copy it into your project, and fill in the blanks.
+
 A playbook is a reusable operating document — a decision framework or worksheet you copy into a project and adapt. Playbooks sit between theory and templates: they capture *how to decide*, while templates capture *what to fill in*. Use a playbook when the work requires judgment calls, trade-offs, or multi-step reasoning before you can fill in a template. Use a template when the structure is stable and the task is routine.
 
 **Ops playbooks** — operational playbooks for deployment, monitoring, and cost management:

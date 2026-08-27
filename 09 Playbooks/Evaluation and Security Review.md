@@ -16,6 +16,10 @@ summary: "[ ] Define userlevel success and unacceptable failure. [ ] Create repr
 
 # Evaluation and security review
 
+## Plain-English introduction
+
+Before you ship anything built on AI, you need to know it works correctly and won't cause harm — just like testing a new medication before it reaches patients. This checklist gives you a step-by-step process for checking both quality and safety. It covers defining what success and failure look like, running test scenarios from simple to adversarial, verifying that tools and data access are properly locked down, and making sure you have a clear plan for incidents. The companion table of evaluation tools shows you which software can automate these checks, and the severity classification helps you decide how fast to respond when something goes wrong.
+
 ## Before release
 
 - [ ] Define user-level success and unacceptable failure.

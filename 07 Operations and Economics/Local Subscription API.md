@@ -16,6 +16,10 @@ summary: "| Model | Strengths | Costs and limits | |||| | Local | Privacy, contr
 
 # Local models, subscriptions, APIs, and hybrid designs
 
+## Plain-English introduction
+
+Choosing how to run an AI model is a bit like choosing how to get your electricity. You can install solar panels on your roof and be self-sufficient, pay a utility company every month and never think about it, or buy power on the open market when you need it. Each option has trade-offs in cost, control, and convenience. This note walks through the practical differences between running models locally, subscribing to a hosted service, calling APIs, and mixing all three together — so you can pick the approach that fits your budget, your privacy needs, and your tolerance for maintenance.
+
 | Model | Strengths | Costs and limits |
 |---|---|---|
 | Local | Privacy, control, predictable marginal cost, offline use | Hardware, setup, maintenance, model quality, heat, upgrades |

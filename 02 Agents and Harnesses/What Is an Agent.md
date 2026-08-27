@@ -16,6 +16,10 @@ summary: "An agent is a model plus a goal, instructions, tools, state, and a loo
 
 # What is an agent?
 
+## Plain-English introduction
+
+Imagine asking someone to research a question for you. They read a few sources, think about what they found, decide they need one more piece of information, look it up, and then give you an answer. That back-and-forth cycle — look, think, act, repeat — is exactly what an AI agent does. Unlike a calculator that gives one answer to one question, an agent can break a task into steps, try different approaches, and keep going until it reaches a goal or hits a limit. This note explains how that loop works, when it is the right tool for the job, and how to tell if an agent actually performed well or just sounded convincing.
+
 ## A bounded control loop
 
 An agent repeatedly observes its environment, selects a next action, receives an observation, and stops under explicit conditions. The loop is useful when the path to an outcome is uncertain; it is not automatically better than deterministic code for a known sequence.

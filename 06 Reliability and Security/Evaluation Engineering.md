@@ -17,6 +17,10 @@ summary: "Evaluation engineering turns acceptance criteria into versioned, repre
 
 # Evaluation engineering
 
+## Plain-English introduction
+
+Imagine hiring a new employee and giving them a trial period where you watch not just whether the final report looks good, but how they gathered information, which questions they asked, and whether they followed company rules. Evaluation engineering does exactly that for AI agents. Instead of only checking the final output, you test every step the agent takes: which tools it picked, what information it searched for, how it recovered from mistakes, and whether it stayed within budget and safety limits. This note walks you through building a repeatable testing system — choosing the right test cases, picking scoring methods, and comparing open-source versus commercial tools — so you can catch problems before they reach users and track quality over time.
+
 An agent is not evaluated solely by whether its final prose sounds plausible. Test the selected context, tool choice and arguments, policy decisions, retries, evidence, state transitions, cost, latency, and final outcome.
 
 ## Build an evaluation system

@@ -16,6 +16,10 @@ summary: "An agent democracy is a multiagent governance pattern in which agents 
 
 # Agent democracies and societies
 
+## Plain-English introduction
+
+When a team needs to make an important decision, simply asking one person is risky — they might be wrong, biased, or missing context. A common solution is to have several people independently propose, critique, and vote on the best course of action. Agent democracies bring that same idea to AI: instead of trusting a single agent's answer, you let multiple agents argue, fact-check, and vote before arriving at a decision. The concept borrows from how human committees, juries, and councils work. It is powerful for high-stakes choices where being wrong is costly, but it also multiplies the effort involved. This note explains how these democratic structures work, what governance mechanics they use, and when the overhead is worth the benefit.
+
 An agent democracy is a multi-agent governance pattern in which agents propose, critique, deliberate, vote, delegate, or form a quorum before a decision. It is a design metaphor, not evidence that agents possess civic rights or independent interests. Agent democracies are a specialization of the [[04 Workflows and Orchestration/Multi-Agent Systems]] debate/jury topology — they add structured governance mechanics (quorum rules, reputation tracking, formal voting) on top of the basic pattern of independent agents producing and comparing answers.
 
 ## Lifecycle

@@ -16,6 +16,10 @@ summary: "[ ] What is the next decision the model must make? [ ] What is the min
 
 # Context checklist
 
+## Plain-English introduction
+
+Sending a message to an AI model is like walking into a meeting and speaking your first sentence: the other person immediately starts guessing what you mean based on what they already know. If you give them the right background, they respond usefully. If you leave out key facts, they fill in the blanks — sometimes wrong. This checklist helps you pause before each message and ask whether the model has the minimum information it needs to do the next step well. It works at three scales: a single message, a multi-step task, or an entire session. Use it to catch missing files, unclear authority, stale data, or forgotten stopping rules before they waste time or produce unreliable results.
+
 ## Usage guidance
 
 Use this checklist at three scales:

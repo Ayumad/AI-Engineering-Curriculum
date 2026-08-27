@@ -15,6 +15,11 @@ summary: "How retrieval embeddings are actually trained (contrastive objectives,
 
 # Vector search and embeddings
 
+## Plain-English introduction
+
+Finding a document by its meaning — not just its exact words — is like locating a song by humming a melody instead of typing a title. Embeddings turn words and sentences into lists of numbers (coordinates in a high-dimensional space) that capture meaning, while vector databases are built to search those coordinates quickly. This note explains how those number-lists are trained, what happens inside the databases under the hood, and the practical pitfalls that trip up real-world searches. It zooms in on the machinery that makes RAG's retrieval step actually work.
+
+
 Embeddings turn text into coordinates; vector databases make those coordinates searchable at scale. This note covers the machinery **between** the two: what embedders learn, how ANN indexes work, and the field-level gotchas. The end-to-end retrieval pipeline lives in [[03 Context Knowledge Memory/RAG]], and embedding/cosine fundamentals live in [[01 Foundations/What Is an LLM]].
 
 ## What an embedding model actually learns

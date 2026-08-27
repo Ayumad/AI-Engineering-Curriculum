@@ -17,6 +17,10 @@ summary: "MCP is an open protocol for connecting an AI application to external d
 
 # Model Context Protocol (MCP)
 
+## Plain-English introduction
+
+Think of an AI assistant like a very capable person sitting in a room with no windows. The person can think and talk, but to actually get things done — look up a file, query a database, create a task — they need a way to reach out and use tools in the world outside. MCP is the standard plug that connects an AI application to those external tools and data sources. It defines how the AI discovers what tools are available, what each tool can do, how to call it safely, and how to get results back. Without a shared standard like this, every tool integration would be custom-built, and connecting an AI to ten different services would mean ten different wiring jobs. MCP turns that into one universal adapter.
+
 MCP is an open protocol for connecting an AI application to external data sources and tools. Its primitives are:
 
 - **Tools:** model-controlled actions such as `query_database` or `create_issue`.

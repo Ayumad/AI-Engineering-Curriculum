@@ -17,6 +17,10 @@ summary: "Herdr keeps existing terminal agents running across disconnects and ad
 
 # Coding and general-agent profiles
 
+## Plain-English introduction
+
+AI coding assistants have gone from simple autocomplete to full-fledged teammates that can plan, write, test, and refactor code with surprisingly little guidance. But not all coding agents are built the same. Some live in your terminal, some run in the cloud, and some are designed to hand off work to other agents. This note surveys the major players in the space, comparing how they work, what they are good at, and what you should watch out for. It is less a buyer's guide and more a field guide to the agents you are most likely to encounter.
+
 > **Snapshot date:** 2026-08-27. Pricing and feature claims marked "check vendor" lack verified figures from research-D — verify with official documentation before adoption.
 
 ## Herdr — persistent agent runtime and control plane

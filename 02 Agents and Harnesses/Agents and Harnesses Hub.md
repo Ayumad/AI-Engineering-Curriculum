@@ -16,6 +16,10 @@ summary: "An agent is a modeldirected loop. A harness is the runtime around that
 
 # Agents and harnesses
 
+## Plain-English introduction
+
+Think of an AI agent like a smart employee: the model is their brain, but everything around it — tools, memory, safety rules, planning — is the desk, computer, and office policies that let them actually do their job. This section maps out how that workplace is designed, from the agent's thinking loop to the infrastructure that keeps it safe and reliable.
+
 An agent is a model-directed loop. A harness is the runtime around that loop: it manages context, tools, state, planning, permissions, retries, checkpoints, and verification.
 
 ## Why the distinction matters

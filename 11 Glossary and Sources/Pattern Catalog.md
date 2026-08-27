@@ -16,6 +16,10 @@ summary: "02 Agents and Harnesses/What Is an Agent · 02 Agents and Harnesses/Ag
 
 # Agent pattern catalog
 
+## Plain-English introduction
+
+When you build an AI agent, you face a design choice: how should it think, plan, and act? A pattern is a proven recipe for arranging those pieces. This catalog collects the most useful ones—like having a toolbox of blueprints—and helps you pick the right recipe based on your task's complexity, how much verification you need, and your budget.
+
 Choose a pattern from the task's uncertainty, decomposability, verification method, and cost—not from novelty. Every pattern needs a stop condition, failure behavior, ownership of state, and an evaluation strategy.
 
 | Pattern | Shape | Use when | Primary failure mode |

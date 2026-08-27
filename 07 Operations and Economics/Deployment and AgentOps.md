@@ -16,6 +16,10 @@ summary: "Separate a control plane from disposable execution workers. Put policy
 
 # Deployment and AgentOps
 
+## Plain-English introduction
+
+Getting an AI agent to work on your laptop is one thing. Getting it to work reliably for hundreds of users, every day, without surprises — that is a different challenge entirely. Deployment and AgentOps covers the practices borrowed from traditional software operations and adapted for the unique quirks of AI systems: versioning not just code but prompts and configurations, rolling out changes safely, and keeping an eye on things when they go sideways. Think of it as the owner's manual for keeping your agent factory running after it opens for business.
+
 AgentOps is DevOps for probabilistic, tool-using systems. Version and deploy more than code: the agent configuration, model and provider, prompts, skills, tool schemas, retrieval/index configuration, policies, and evaluation datasets can each change real behavior.
 
 ## Delivery loop

@@ -17,6 +17,10 @@ summary: "Current product and protocol claims in this vault were checked on 2026
 
 # Sources and verification policy
 
+## Plain-English introduction
+
+Every claim in this vault is backed by a source, and this page keeps track of them all. Think of it as a bibliography on steroids—each entry says not just where information came from, but what specific claim it supports and when it was last checked. If something here feels outdated, this page tells you what to re-verify before trusting it.
+
 Current product and protocol claims in this vault were checked on 2026-08-27. Updated 2026-08-27 (research wave). Re-check dated notes before acting on pricing, availability, feature support, security posture, or maturity. Add new sources here when a note's "Sources and further reading" section grows; keep one bullet per source with the claim it grounds.
 
 ## Foundational papers

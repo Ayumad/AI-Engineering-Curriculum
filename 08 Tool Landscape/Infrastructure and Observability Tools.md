@@ -17,6 +17,10 @@ summary: "| Category | Examples | Design question | |||| | Sandboxes | E2B, Dayt
 
 # Infrastructure and observability tools
 
+## Plain-English introduction
+
+Behind every AI agent that works in production, there is a web of supporting infrastructure — secure sandboxes for running code, browser tools for interacting with the web, gateways for routing requests, and dashboards for figuring out what went wrong when it did. These tools are not glamorous, but without them an agent is a fragile party trick. This note covers the essential building blocks that make agents safe, observable, and ready for real work, explaining each category in plain terms so you can decide which pieces matter most for your setup.
+
 ## Execution and browser environments
 
 | Category | Examples | Design question |

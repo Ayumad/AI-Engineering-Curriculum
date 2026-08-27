@@ -17,6 +17,10 @@ summary: "This is a selection aid, not a universal ranking. Compare products by 
 
 # Tool comparison index
 
+## Plain-English introduction
+
+There are hundreds of AI tools out there, and choosing the wrong one can waste weeks of work. This index lets you compare options side by side so you can pick the best fit for your specific job. Think of it as a product-aisle guide in a hardware store—same category, different strengths, and this page helps you decide which shelf to pull from.
+
 This is a selection aid, not a universal ranking. Compare products by layer and job.
 
 > **Snapshot date:** 2026-08-27. Prices, maturity, and feature support change frequently — verify vendor claims before adoption.

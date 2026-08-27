@@ -16,6 +16,10 @@ summary: "The context window is the model's temporary working set: instructions,
 
 # Context windows and inference
 
+## Plain-English introduction
+
+Imagine handing a friend a stack of papers and asking them to answer a question using only what is in those papers. The stack is your context window—everything the model can "see" at once: your instructions, the conversation so far, any documents or search results you provided, and descriptions of tools it can use. The stack has a fixed size, and once it is full, older material must be dropped or summarized. This note explains how that temporary workspace works, how the model generates responses from it, and why stuffing more information into the window does not always produce better answers.
+
 ## The inference budget
 
 The context window is the model's temporary working set: system instructions, conversation, retrieved evidence, tool descriptions/results, and generated tokens all compete for it. It is finite, transient, and not equivalent to long-term storage. Larger context is useful only when the included material is relevant, ordered well, and small enough to preserve headroom for the answer and tool loop.

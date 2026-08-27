@@ -17,6 +17,10 @@ summary: "| Protocol | Boundary | Typical concern | |||| | ACP | Editor/client �
 
 # Agent protocol family
 
+## Plain-English introduction
+
+As AI systems grow more complex, they need to talk to many different things: user interfaces, coding editors, other agents, and external tools. No single communication standard handles all of those connections well, so the industry has developed a family of specialized protocols — each designed for a particular boundary. One handles how an editor talks to an agent; another handles how agents talk to each other; a third streams live updates to a user's screen. Think of them like the different types of plugs and cables inside a computer — USB for peripherals, HDMI for displays, Ethernet for networking. Each serves a specific purpose, and understanding which protocol fits which boundary is the key to building systems that are secure and composable.
+
 | Protocol | Boundary | Typical concern |
 |---|---|---|
 | ACP | Editor/client ↔ agent | Sessions, updates, permissions, cancellation |

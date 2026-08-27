@@ -16,6 +16,11 @@ summary: "The most reliable agent prompts specify outcomes and invariants, not a
 
 # Prompting for agents
 
+## Plain-English introduction
+
+Writing a prompt for an AI agent is like handing a task to a new hire. If you give them a rigid step-by-step script, they'll follow it — but break the moment something unexpected happens. A better approach is to describe the outcome you want, the guardrails to stay within, and how to prove the job is done. That's the essence of this note: move away from micromanaging every action and toward specifying goals, constraints, and verification. The result is prompts that produce reliable work even when the agent takes different paths to get there.
+
+
 The most reliable agent prompts specify outcomes and invariants, not a screenplay of implementation steps.
 
 ## G-C-C-D-V
