@@ -100,6 +100,10 @@ The source conversation is titled “Explain AI Engineering” and has conversat
 - [x] New note `00 Start Here/The Gist of It.md`: every content note's gist (44/44), one paragraph each, in table-of-contents order — Units 1–10 headings mirrored verbatim from Full Table of Contents, links deduped across units, plus a "The rest of the tour" appendix for the 5 notes the ToC doesn't link (AI Engineering Curriculum, Vector Search and Embeddings, Coding Agent Profiles, Agent Runtimes and Frameworks, Infrastructure and Observability Tools).
 - [x] Reference note — no gist on it, per the content-only rule. Chain 64 → 65: `add_nav.py` CHAIN updated (inserted after Full ToC), bars regenerated for all 65 notes, prev/next verified. AI_Home guided-tour count 64 → 65 + short-version pointer; How to Use This Vault nav bullet 64 → 65; ToC fast-path link. Doubled pre-nav dividers (from repeated `add_nav.py` runs) collapsed across all notes — 0 remaining. Validator: 476 / 3 / 2 / 0 — zero new issues.
 
+## Plain Reading companion — 2026-08-27
+
+- [x] Generated `00 Start Here/The Gist of It — Plain Reading.md` from the collection note: 44 link-free entries, normal paragraphs, ToC order, no nav bar, deliberately outside the 65-note tour. Regenerated after catching and fixing a one-character extraction bug; verified first paragraph begins `An LLM` and all 44 entries are present.
+
 ---
 
 > **← [[00 Start Here/How to Use This Vault|How to Use This Vault]]** · **[[AI_Home|Home]]** · **[[01 Foundations/Foundations Hub|Foundations Hub]] →**
