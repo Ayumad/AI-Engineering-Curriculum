@@ -8,7 +8,7 @@ tags: [ai-engineering, tools, coding-agents]
 last_verified: 2026-08-27
 visibility: personal
 created: 2026-08-27
-updated: 2026-08-27
+updated: 2026-09-09
 prev: "08 Tool Landscape/Tool Landscape Hub.md"
 next: "08 Tool Landscape/Agent Runtimes and Frameworks.md"
 summary: "Profiles the major coding and general-purpose agents — Herdr, Hermes, DeepSeek Harness, Codex, Devin, Cursor, Claude Code, OpenCode, Pi, OpenHands, and Kimi Code — with architecture, strengths, and trade-offs, plus category fit, context-window, and pricing comparisons."
@@ -138,6 +138,8 @@ Context window size affects how much code, conversation history, and retrieved c
 - Kimi ACP/IDE integration — https://www.kimi.com/en/help/kimi-code/cli-ides — protocol integration.
 
 All links verified 2026-08-27.
+
+---
 
 ---
 

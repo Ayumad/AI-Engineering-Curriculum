@@ -7,7 +7,7 @@ aliases: [AI Engineering Templates, Agent Engineering Templates, Project Templat
 tags: [ai-engineering, templates, prd, agents-md, handoff, prompting, agents, workflows, evals, operations]
 visibility: personal
 created: 2026-08-27
-updated: 2026-08-27
+updated: 2026-09-09
 prev: "11 Glossary and Sources/Tool Comparison Index.md"
 summary: "Copyable templates for the artifacts used throughout the AI Engineering curriculum, from project initialization and agent prompts to workflows, handoffs, evaluations, security reviews, and operations."
 ---
@@ -1623,6 +1623,8 @@ Artifacts to retain:
 ## Related curriculum notes
 
 [[00 Start Here/Full Table of Contents]] · [[03 Context Knowledge Memory/Project Initialization and Instruction Files]] · [[03 Context Knowledge Memory/Behavior and Communication Controls]] · [[09 Playbooks/Playbooks Hub]] · [[09 Playbooks/Prompt Template]] · [[09 Playbooks/Context Checklist]] · [[09 Playbooks/RAG Design Worksheet]] · [[09 Playbooks/Evaluation and Security Review]] · [[09 Playbooks/Mode and Topology Selector]]
+
+---
 
 ---
 

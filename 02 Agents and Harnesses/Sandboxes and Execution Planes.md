@@ -7,7 +7,7 @@ aliases: [Agent Sandbox, Execution Plane]
 tags: [ai-engineering, security, sandbox, infrastructure]
 visibility: personal
 created: 2026-08-27
-updated: 2026-08-27
+updated: 2026-09-09
 prev: "02 Agents and Harnesses/Agent Harness.md"
 next: "02 Agents and Harnesses/Sandboxing Infrastructure.md"
 summary: "Agents that can run code need a computer they can safely break. A sandbox is a disposable or strongly isolated execution environment with bounded filesystem, CPU, memo..."
@@ -90,6 +90,8 @@ Related infrastructure appears in [[08 Tool Landscape/Infrastructure and Observa
 - Anthropic, "Effective context engineering for AI agents," Sep 2025 — https://www.anthropic.com/engineering/effective-context-engineering-for-ai-agents — context management, tool injection patterns.
 
 All links verified 2026-08-27.
+
+---
 
 ---
 

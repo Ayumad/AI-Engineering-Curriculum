@@ -8,7 +8,7 @@ tags: [ai-engineering, sandboxes, browsers, gateways, observability]
 last_verified: 2026-08-27
 visibility: personal
 created: 2026-08-27
-updated: 2026-08-27
+updated: 2026-09-09
 prev: "08 Tool Landscape/Agent Runtimes and Frameworks.md"
 next: "09 Playbooks/Playbooks Hub.md"
 summary: "| Category | Examples | Design question | |||| | Sandboxes | E2B, Daytona, Modal, Docker, microVMs | What can an agent destroy or reach? | | Browser automation | Playw..."
@@ -110,6 +110,8 @@ Prompt management belongs in the control plane alongside model selection and too
 - Modal alternatives — https://futureagi.com/blog/best-modal-llm-serving-alternatives-2026/ — serving platform comparison.
 
 All links verified 2026-08-27.
+
+---
 
 ---
 

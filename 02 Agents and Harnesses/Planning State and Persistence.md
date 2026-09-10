@@ -7,7 +7,7 @@ aliases: [Agent State, Checkpoints]
 tags: [ai-engineering, planning, state, persistence]
 visibility: personal
 created: 2026-08-27
-updated: 2026-08-27
+updated: 2026-09-09
 prev: "02 Agents and Harnesses/Sandboxing Infrastructure.md"
 next: "02 Agents and Harnesses/Vision and Multimodal Input Engineering.md"
 summary: "Planning turns a broad request into observable work. State records what is known, what is complete, what failed, and what must happen next."
@@ -96,6 +96,8 @@ All links verified 2026-08-27.
 ## Related
 
 [[04 Workflows and Orchestration/Orchestration Hub]] · [[06 Reliability and Security/Reliability Evals and Observability]] · [[09 Playbooks/Mode and Topology Selector]]
+
+---
 
 ---
 

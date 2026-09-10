@@ -7,7 +7,7 @@ aliases: [Function Calling, Tool Use]
 tags: [ai-engineering, structured-output, tools]
 visibility: personal
 created: 2026-08-27
-updated: 2026-08-27
+updated: 2026-09-09
 prev: "01 Foundations/Context Windows and Inference.md"
 next: "01 Foundations/Local AI Hardware and Inference.md"
 summary: "Freeform text is difficult for software to validate. Structured output constrains a response to a schema, while tool calling lets a model request an operation with typ..."
@@ -116,6 +116,8 @@ All links verified 2026-08-27.
 ## Related
 
 [[02 Agents and Harnesses/What Is an Agent]] · [[05 Protocols and Tools/MCP]] · [[06 Reliability and Security/Reliability Evals and Observability]]
+
+---
 
 ---
 

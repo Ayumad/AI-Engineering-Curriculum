@@ -7,7 +7,7 @@ aliases: [AI Engineering Course, Zero to Production]
 tags: [ai-engineering, curriculum, learning-path]
 visibility: personal
 created: 2026-08-27
-updated: 2026-08-27
+updated: 2026-09-09
 prev: "AI_Home.md"
 next: "00 Start Here/Full Table of Contents.md"
 summary: "Each stage has a question, a set of notes, and a small exercise. Do not skip the exercises: agent engineering is learned by observing loops and failure modes, not only..."
@@ -28,62 +28,77 @@ Read [[01 Foundations/What Is an LLM]], [[01 Foundations/Context Windows and Inf
 Exercise: estimate the memory needs of a 14B and 32B model at two quantizations, then compare free-text output with a strict JSON schema.
 > **Skip if:** You already know VRAM math and quantization trade-offs well; jump to Unit 2.
 
-## Unit 2 — Instructions and capabilities (~10–12h)
+## Unit 2 — Inference engineering and serving (~8–10h)
+
+Read [[01 Foundations/Inference Engines and Serving]], [[01 Foundations/KV Cache and Long-Context Costs]], [[01 Foundations/Test-Time Compute and Reasoning Models]], and revisit [[01 Foundations/Local AI Hardware and Inference]].
+
+Exercise: size the KV cache for a 70B model at 128K context and for a quantized 8B model at 32K on a 12 GB GPU. Then run one prompt through a local engine (llama.cpp or Ollama) and one hosted API; record time to first token, tokens per second, and cost per 100K tokens. Add an easy and a hard question and route them to different effort levels.
+> **Skip if:** You only consume hosted APIs and never serve models; revisit when you pick a serving stack or budget long-context costs.
+
+## Unit 3 — Instructions and capabilities (~10–12h)
 
 Read [[03 Context Knowledge Memory/Prompting for Agents]], [[03 Context Knowledge Memory/Project Initialization and Instruction Files]], [[03 Context Knowledge Memory/Behavior and Communication Controls]], [[03 Context Knowledge Memory/Skills, Tools, and Capability Management]], and [[05 Protocols and Tools/MCP]]. Use [[09 Playbooks/Prompt Template]].
 
 Exercise: initialize a small project with a PRD, repository instruction file, and behavior/style profile; then design one typed read-only tool and one skill that teaches when to use it, stating permissions, effort level, output contract, and stop conditions.
 
-## Unit 3 — Context, retrieval, and memory (~10–12h)
+## Unit 4 — Context, retrieval, and memory (~10–12h)
 
 Read [[03 Context Knowledge Memory/Context Engineering]], [[03 Context Knowledge Memory/Large Project Navigation and Context Scaling]], [[03 Context Knowledge Memory/RAG]], and [[03 Context Knowledge Memory/Memory and Skills]]. Use [[09 Playbooks/Context Checklist]] and [[09 Playbooks/RAG Design Worksheet]].
 
 Exercise: build a one-page project map and targeted context packet, then create a tiny retrieval set, inspect source coverage and a wrong chunk, and decide whether each durable item belongs in RAG, memory, or a skill.
 
-## Unit 4 — Agents and execution (~10–12h)
+## Unit 5 — Agents and execution (~10–12h)
 
 Read [[02 Agents and Harnesses/What Is an Agent]], [[02 Agents and Harnesses/Agent Harness]], [[02 Agents and Harnesses/Planning State and Persistence]], [[02 Agents and Harnesses/Sandboxing Infrastructure]], and [[02 Agents and Harnesses/Computer-Use and Browser Agents]].
 
 Exercise: implement or diagram `observe → decide → act → observe` around a read-only calculator, then add an approval gate and a disposable execution boundary.
 
-## Unit 5 — Multimodality (~8–10h)
+## Unit 6 — Multimodality (~8–10h)
 
 Read [[02 Agents and Harnesses/Voice and Audio Agents]] and [[02 Agents and Harnesses/Vision and Multimodal Input Engineering]].
 
 Exercise: map a voice or screenshot task into capture, interpretation, verification, and action; mark where noisy input must become a confirmation.
 > **Skip if:** Your agents are text-only and will remain so; voice and vision can be deferred.
 
-## Unit 6 — Workflows and agent teams (~10–12h)
+## Unit 7 — Workflows and agent teams (~10–12h)
 
 Read [[04 Workflows and Orchestration/Workflow Patterns]], [[04 Workflows and Orchestration/Orchestration Hub]], [[04 Workflows and Orchestration/Multi-Agent Systems]], and [[04 Workflows and Orchestration/Agent Democracies]]. Use [[09 Playbooks/Mode and Topology Selector]].
 
 Exercise: express one task as a deterministic workflow, one bounded agent loop, and a supervisor-plus-specialists team; explain why the simplest adequate version wins.
 
-## Unit 7 — Protocols and ecosystem (~8–10h)
+## Unit 8 — Protocols and ecosystem (~8–10h)
 
 Read [[05 Protocols and Tools/Agent Protocols]] and [[08 Tool Landscape/Tool Landscape Hub]].
 
 Exercise: classify an integration as model, tool, skill, MCP server, agent, client, protocol, or orchestration runtime; identify the identity and permission boundary.
 > **Skip if:** You are building a single-agent system without external tool servers; revisit when adding integrations.
 
-## Unit 8 — Resource engineering (~8–10h)
+## Unit 9 — Resource engineering (~8–10h)
 
 Read [[07 Operations and Economics/Local Subscription API]] and [[07 Operations and Economics/Latency and Cost Engineering]].
 
 Exercise: give an agent a token, tool-call, runtime, subagent, and dollar budget; make a routing rule that sends easy work to cheaper execution.
 > **Skip if:** You are prototyping on a single API key with no cost concerns yet; return before going to production.
 
-## Unit 9 — Evaluation, operations, and governance (~10–12h)
+## Unit 10 — Evaluation, operations, and governance (~10–12h)
 
 Read [[06 Reliability and Security/Evaluation Engineering]], [[06 Reliability and Security/Observability]], [[07 Operations and Economics/Deployment and AgentOps]], [[06 Reliability and Security/Security and Jailbreaking]], and [[06 Reliability and Security/Human Oversight and Trust Engineering]].
 
 Exercise: create five trajectory tests, one prompt-injection test, a trace schema, a staged rollout, and a human approval policy for one consequential action.
 
-## Unit 10 — Adaptation and capstone (~12–15h)
+## Unit 11 — Long-horizon tasks and reliability (~10–12h)
+
+Read [[02 Agents and Harnesses/Long-Horizon Tasks and Failure Modes]], [[06 Reliability and Security/Long-Horizon Evaluation and Benchmarks]], [[02 Agents and Harnesses/Planning State and Persistence]], [[04 Workflows and Orchestration/Orchestration Hub]], and [[09 Playbooks/Long-Horizon Task Review]].
+
+Exercise: plan a 20-step task with a written goal, success criteria, checkpoint state, and a compaction schedule. Run it with verification gates, grade the trajectory rather than only the final answer, and attribute any failure to planning, memory, tooling, or environment.
+
+## Unit 12 — Adaptation and capstone (~12–15h)
 
 Read [[01 Foundations/Fine-Tuning Decision Framework]], then use [[09 Playbooks/Learning Projects]], [[11 Glossary and Sources/Pattern Catalog]], and [[12 Templates/Template Library]].
 
 Build a bounded research or automation agent with evidence, structured outputs, capability scoping, a disposable sandbox, approvals, traces, evaluation cases, cost limits, and a written rollback/incident response plan. Use the template library to document each artifact.
+
+---
 
 ---
 

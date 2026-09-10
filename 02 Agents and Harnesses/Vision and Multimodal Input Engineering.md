@@ -7,7 +7,7 @@ aliases: [Multimodal Agents, Vision Agents]
 tags: [ai-engineering, vision, multimodal, images, video]
 visibility: personal
 created: 2026-08-27
-updated: 2026-08-27
+updated: 2026-09-09
 prev: "02 Agents and Harnesses/Planning State and Persistence.md"
 next: "02 Agents and Harnesses/Voice and Audio Agents.md"
 summary: "Multimodal systems must preserve provenance and uncertainty across capture, extraction, reasoning, and action; an image is evidence, not an instruction or authority grant."
@@ -103,6 +103,8 @@ Every image token consumed is a cost event. Manage it proactively:
 All links verified 2026-08-27.
 
 [[02 Agents and Harnesses/Computer-Use and Browser Agents]] · [[06 Reliability and Security/Security and Jailbreaking]] · [[06 Reliability and Security/Evaluation Engineering]]
+
+---
 
 ---
 

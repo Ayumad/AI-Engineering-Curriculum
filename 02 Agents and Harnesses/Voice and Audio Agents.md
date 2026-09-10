@@ -7,7 +7,7 @@ aliases: [Voice Agents, Audio Agents]
 tags: [ai-engineering, voice, audio, realtime, multimodal]
 visibility: personal
 created: 2026-08-27
-updated: 2026-08-27
+updated: 2026-09-09
 prev: "02 Agents and Harnesses/Vision and Multimodal Input Engineering.md"
 next: "02 Agents and Harnesses/Computer-Use and Browser Agents.md"
 summary: "Voice agents are real-time systems: capture, turn detection, transcription or audio reasoning, response generation, synthesis, interruption handling, and safe actions must work as one loop."
@@ -94,6 +94,8 @@ Without barge-in handling, the agent continues speaking after the user has alrea
 All links verified 2026-08-27.
 
 [[02 Agents and Harnesses/Vision and Multimodal Input Engineering]] · [[07 Operations and Economics/Latency and Cost Engineering]] · [[06 Reliability and Security/Human Oversight and Trust Engineering]]
+
+---
 
 ---
 

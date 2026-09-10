@@ -7,7 +7,7 @@ aliases: [AgentOps, Production Agents]
 tags: [ai-engineering, deployment, agentops, operations]
 visibility: personal
 created: 2026-08-27
-updated: 2026-08-27
+updated: 2026-09-09
 prev: "07 Operations and Economics/Local Subscription API.md"
 next: "08 Tool Landscape/Tool Landscape Hub.md"
 summary: "Separate a control plane from disposable execution workers. Put policy, identity, queues, durable state, model routing, and telemetry in the control plane; run code an..."
@@ -91,6 +91,8 @@ Separate a control plane (policy, identity, queues, durable state, model routing
 - Gravity Fast, "How to Handle Agent Rate Limits" — https://gravity.fast/blog/how-to-handle-agent-rate-limits/ — backoff patterns and jitter.
 
 All links verified 2026-08-27.
+
+---
 
 ---
 

@@ -14,7 +14,7 @@ tags:
 visibility: personal
 created: 2026-08-27
 updated: 2026-08-27
-summary: Link-free, print-friendly reading version of the 44 plain-English curriculum gists.
+summary: Link-free, print-friendly reading version of the 51 plain-English curriculum gists.
 ---
 
 # The gist of it — plain reading
@@ -30,7 +30,14 @@ The context window is a fixed-size stack of papers the model can read at once. O
 Running a model locally means your machine needs enough memory to hold it and enough bandwidth to read it for every word it generates. A setup that barely loads a model may still be too slow once you add context, a vision encoder, or a second user. This note walks through memory, bandwidth, and hardware trade-offs.
 4. Structured outputs and function calling
 Models produce freeform text, but software needs structured data. Structured outputs force a model to fill out a form instead of writing an essay. Tool calling lets it request specific operations—databases, APIs, other software. Together they bridge the gap between language and code.
-## Unit 2 — Instructions and capabilities (~10–12h)
+## Unit 2 — Inference engineering and long-context serving (~8–10h)
+1. Serving engines: prefill, decode, batching, and paged attention
+A trained model is just weights. An inference engine turns it into a service. Prefill is compute-bound, decode is memory-bandwidth-bound. That split drives everything. Batching, paging, caching, and quantization are the throughput and cost levers. TTFT is how long you wait for token one. TPOT is the gap between the rest.
+2. KV cache and long-context memory economics
+Long context costs memory, and the memory is the bill you actually pay. Every token you feed a model adds a fixed chunk of cache. It stays put until the request ends. Llama-3-70B at 128K tokens wants about 40GB of cache. The weights are a separate 140GB. Your GPU holds both, so the cache is what decides how many users you can serve. Architecture and precision fixes shrink it 4-40x. But a bigger window never meant better recall.
+3. Test-time compute and reasoning models
+Training compute is not the only knob. Reasoning models spend extra tokens thinking before they answer. That buys accuracy on hard problems and adds latency to every problem. You set a budget, route by difficulty, and pay for thinking only where it helps. Like a contractor who inspects before quoting: great for a rewire, silly for a lightbulb swap.
+## Unit 3 — Instructions and capabilities (~10–12h)
 1. Prompting for agents
 The best agent prompts describe the outcome and the guardrails, not every step. A rigid script breaks the moment something unexpected happens. This note lays out a goal-constraint-definition-verification framework for writing prompts that work even when the agent takes a different path.
 2. Project initialization: PRDs, repository instructions, and project context files
@@ -43,7 +50,7 @@ Tools are raw instruments. Skills are the procedures for using them well. A capa
 MCP is the standard plug that connects an AI application to external tools and data. It defines three primitives — tools, resources, and prompts — and handles discovery, invocation, and results. Without it, every tool integration is custom-built. This note covers the architecture, transports, auth flow, and error handling.
 6. ACP, A2A, AG-UI, and A2UI
 AI systems talk to editors, other agents, user interfaces, and tools — each boundary needs its own protocol. The industry has built a family of five: ACP, A2A, AG-UI, A2UI, and MCP. Understanding which protocol fits which boundary is key to building secure, composable systems.
-## Unit 3 — Knowledge, retrieval, memory, and context (~10–12h)
+## Unit 4 — Knowledge, retrieval, memory, and context (~10–12h)
 1. Context engineering
 Context engineering is the practice of feeding an AI model exactly what it needs to know at the right moment — picking files, decisions, and reminders instead of dumping the entire project on the model. It turns a capable but unfocused model into one that responds as if it's been on the project for months. This note covers the hierarchy of context sources, practical controls, and budgeting.
 2. Large-project navigation and context scaling
@@ -56,7 +63,7 @@ RAG searches a document collection at answer time and hands the most relevant pi
 RAG bolts real sources onto a model so answers come with evidence instead of guesses. This worksheet walks every design decision — ingestion, chunking, indexing, retrieval, evaluation — with blanks to fill in and a worked example to check against. Catch the gaps before they become bugs.
 6. Memory types and safeguards
 An agent needs different kinds of memory: working memory for the current task, durable facts across sessions, and reusable procedures. This note maps those kinds and compares two memory architectures — Mem0 (passive extraction) and Letta (agentic self-editing) — plus backend selection and consolidation strategies.
-## Unit 4 — Single agents and safe execution (~10–12h)
+## Unit 5 — Single agents and safe execution (~10–12h)
 1. Agent loops and stopping conditions
 An agent can break a task into steps, try different approaches, and keep going until it reaches a goal or hits a limit. Unlike a calculator, it can decide its own path. This note explains how that loop works, when it is the right tool for the job, and how to tell if an agent actually performed well or just sounded convincing.
 2. Harness design
@@ -69,12 +76,12 @@ Agents that can run code need a computer they can safely break. A sandbox is a d
 Sandbox choice follows the threat model: processes suit trusted code, containers provide moderate isolation, and microVMs or VMs suit generated or arbitrary untrusted execution. This note compares the different types of isolation technology available: from lightweight process separation to full virtual machines. It also covers cloud services that rent you ready-made sandboxes.
 6. Computer-use and browser agents
 Computer-use agents operate an untrusted visual environment. Prefer semantic APIs, isolate sessions, ground actions in fresh UI state, and gate consequential clicks at the point of execution. This note explains how these agents work, what dangers to watch for, and how to keep them from causing harm.
-## Unit 5 — Voice and multimodal agents (~8–10h)
+## Unit 6 — Voice and multimodal agents (~8–10h)
 1. Voice and audio agents
 Voice agents are real-time systems: capture, turn detection, transcription or audio reasoning, response generation, synthesis, interruption handling, and safe actions must work as one loop. This note explains the machinery that makes voice interactions feel smooth and natural, from latency budgets to barge-in handling.
 2. Vision and multimodal input
 Multimodal systems must preserve provenance and uncertainty across capture, extraction, reasoning, and action; an image is evidence, not an instruction or authority grant. This note covers how agents take in visual information, how to avoid being fooled by bad images or hidden tricks, and how to keep costs down when every image has a price tag.
-## Unit 6 — Workflows, orchestration, and teams (~10–12h)
+## Unit 7 — Workflows, orchestration, and teams (~10–12h)
 1. Workflow patterns
 Workflow patterns are the standard shapes for arranging AI steps — sequential, parallel, routed, looping, and so on. Pick the simplest one that makes the work visible and correct. This note covers the main patterns, how to build each one, and where they break.
 2. Multi-agent systems
@@ -83,12 +90,12 @@ Multiple agents beat a single one when specialization, parallelism, or independe
 Agent democracies let multiple AI agents independently propose, critique, and vote on a decision before acting — borrowing the structure of human committees and juries. Powerful for high-stakes choices where a single agent's answer is too risky. This note covers the governance mechanics and when the overhead pays off.
 4. Mode and topology selector
 The first decision with an agent is how to work, not what to build: ask, plan, hand over authority, or run it across sessions. Then whether that's one agent, several in parallel, or a team with roles. This guide makes those choices concrete with tables, a worked example, and cost notes.
-## Unit 7 — Resource engineering (~8–10h)
+## Unit 8 — Resource engineering (~8–10h)
 1. Local, subscription, API, and hybrid deployment
 Running AI models has three main paths: self-host for privacy and control, subscribe for simplicity, or use APIs for scale. Each has different trade-offs in cost, control, and convenience. This guide walks through a decision sequence — from data sensitivity and concurrency needs to pricing and exit plans — with a comparison table covering local, subscription, API, and hybrid approaches. It includes a 2026 pricing snapshot, self-hosting crossover estimates, GDPR considerations for data residency, and a hybrid routing pattern that balances privacy, latency, and cost across providers.
 2. Latency, caching, routing, and cost budgets
 Latency and cost engineering treats response time and spending as explicit design constraints. An agent's wait time adds up from queueing, prompt construction, model decoding, tool calls, retries, and synthesis — and cost follows the same path. This note covers the controls that matter most: generating fewer tokens, caching stable prefixes, routing by difficulty, parallelizing independent work, and streaming. It walks through budget mechanics, a worked cost model showing 89% savings from prompt caching, gateway routing with LiteLLM and OpenRouter, batch inference discounts, and per-request token budgets that keep autonomous runs from spiraling.
-## Unit 8 — Evaluation, observability, and AgentOps (~10–12h)
+## Unit 9 — Evaluation, observability, and AgentOps (~10–12h)
 1. Evaluation engineering
 Evaluation engineering tests the full agent trajectory instead of only the final answer. Like a trial period where you watch how an employee works, you check tool choices, context selection, error recovery, cost, and policy compliance. This note covers building versioned test suites, scoring at different layers, using LLM judges safely, and choosing between open-source and commercial eval frameworks.
 2. Logs, metrics, traces, and replay
@@ -97,7 +104,7 @@ Observability records everything your agent does during a request, like a black 
 Deployment and AgentOps is DevOps adapted for probabilistic, tool-using systems. You version and deploy more than code: prompts, skills, tool schemas, retrieval indexes, and evaluation datasets each change real behavior. This guide covers the delivery loop from change to production, operational contracts that assign every run an owner and version, serving stacks compared by throughput, rate limiting patterns for five distinct 429 error types, incident response and rollback procedures, and multi-tenancy isolation with separate control planes and execution workers.
 4. Evaluation and security review
 Before an AI system ships, it has to be checked for quality and for harm. This is that checklist: define success and failure, run test scenarios from easy to adversarial, verify tools and data access are locked down, and have an incident plan ready. The tool table says what you can automate, and the severity ratings say how fast to respond.
-## Unit 9 — Security, oversight, and adaptation (~10–12h)
+## Unit 10 — Security, oversight, and adaptation (~10–12h)
 1. Security and jailbreak resistance
 Jailbreaking is lock-picking for AI. Attackers try to make models ignore their rules through fake personas, hidden instructions in documents, encoded payloads, or slow trust-building across turns. No single defense holds. This note catalogs the main attack families and the layered countermeasures: input scanning, output filtering, tool allowlists, sandboxing, and taint-aware context assembly.
 2. AI fingerprints and generated-text detection
@@ -108,7 +115,14 @@ Defensive red-team labs are fire drills for AI security. You build a harmless te
 AI agents need an autonomy ladder, like self-driving cars. The real question is what the agent may decide and execute without a person. Authority depends on error cost and evidence quality. This note covers the seven-level autonomy scale, how to separate proposal from execution, and how to build interfaces that keep human judgment at consequential boundaries.
 5. Prompting vs RAG vs tools vs fine-tuning
 When a model gives weak answers, the instinct is to retrain—but training is expensive and often unnecessary. Better prompts, retrieval, or a tool call usually solve it. This note walks through lighter options first, then fine-tuning as a last resort.
-## Unit 10 — Capstone and continuing reference (~12–15h)
+## Unit 11 — Long-horizon tasks and reliability (~10–12h)
+1. Long-horizon failure modes: compounding error, planning, and forgetting
+Agents break when tasks stretch past a few linked steps. Errors compound: a small per-step failure rate multiplies across dependent steps. HORIZON shows the failure mix itself shifts as horizons grow. Planning and memory break first. LongCLI-Bench is brutal: per-step scores above 98%, end-to-end pass rates of 70-88%. The fix is engineering, not bigger models. Durable state, checkpoints, summarization, verification gates.
+2. Long-horizon evaluation and benchmarks
+Long-horizon benchmarks grade agents over hours and hundreds of steps, not one prompt and reply. Every one trades realism for verifiability, and the score leaks at whichever side got shortchanged. Two leaks: the harness exposes the answer, or the model sandbags because it knows it's being graded. A leaderboard is a first cycle with no second cycle. Grade the grader, instrument trajectories, and don't trust the average.
+3. Long-horizon task review playbook
+Long runs fail quietly. You can't watch every tool call, so you watch the shape instead. Contract before the run, checkpoints during, trajectory review after. Errors compound: a small per-step mistake turns into systematic failure by step 40. Like a road trip — you check the map at rest stops, not at every mile marker.
+## Unit 12 — Capstone and continuing reference (~12–15h)
 1. Learning projects and capstone
 Nine projects, roughly in difficulty order, that build real agent skills: structured output, tool use, memory, evaluation, multi-agent coordination. Each lists the time, difficulty, and the curriculum note behind it. Do them in order and you end with a governed, production-ready system instead of a demo.
 ## The rest of the tour

@@ -7,7 +7,7 @@ aliases: [Agent Sandbox Architecture]
 tags: [ai-engineering, sandbox, containers, microvms, execution]
 visibility: personal
 created: 2026-08-27
-updated: 2026-08-27
+updated: 2026-09-09
 prev: "02 Agents and Harnesses/Sandboxes and Execution Planes.md"
 next: "02 Agents and Harnesses/Planning State and Persistence.md"
 summary: "Sandbox choice follows the threat model: processes suit trusted code, containers provide moderate isolation, and microVMs or VMs suit generated or arbitrary untrusted execution."
@@ -93,6 +93,8 @@ All links verified 2026-08-27.
 ## Related
 
 [[02 Agents and Harnesses/Sandboxes and Execution Planes]] · [[02 Agents and Harnesses/Computer-Use and Browser Agents]] · [[06 Reliability and Security/Security and Jailbreaking]]
+
+---
 
 ---
 

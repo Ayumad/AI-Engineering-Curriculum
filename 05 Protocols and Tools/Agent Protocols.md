@@ -8,7 +8,7 @@ tags: [ai-engineering, protocols, interoperability]
 last_verified: 2026-08-27
 visibility: personal
 created: 2026-08-27
-updated: 2026-08-27
+updated: 2026-09-09
 prev: "05 Protocols and Tools/MCP.md"
 next: "06 Reliability and Security/Reliability Evals and Observability.md"
 summary: "| Protocol | Boundary | Typical concern | |||| | ACP | Editor/client ↔ agent | Sessions, updates, permissions, cancellation | | A2A | Agent ↔ agent | Discovery, messag..."
@@ -92,6 +92,8 @@ Every composition boundary adds latency, failure modes, and trust questions. Doc
 - MCP Transports — https://modelcontextprotocol.io/specification/2025-06-18/basic/transports — stdio and Streamable HTTP.
 
 All links verified 2026-08-27.
+
+---
 
 ---
 

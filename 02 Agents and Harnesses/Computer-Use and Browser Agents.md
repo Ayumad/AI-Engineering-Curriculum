@@ -7,9 +7,9 @@ aliases: [Computer Use, Browser Agents]
 tags: [ai-engineering, computer-use, browser, sandbox, permissions]
 visibility: personal
 created: 2026-08-27
-updated: 2026-08-27
+updated: 2026-09-09
 prev: "02 Agents and Harnesses/Voice and Audio Agents.md"
-next: "03 Context Knowledge Memory/Context Engineering.md"
+next: "02 Agents and Harnesses/Long-Horizon Tasks and Failure Modes.md"
 summary: "Computer-use agents operate an untrusted visual environment. Prefer semantic APIs, isolate sessions, ground actions in fresh UI state, and gate consequential clicks at the point of execution."
 ---
 
@@ -93,4 +93,6 @@ All links verified 2026-08-27.
 
 ---
 
-> **← [[02 Agents and Harnesses/Voice and Audio Agents|Voice and Audio Agents]]** · **[[AI_Home|Home]]** · **[[03 Context Knowledge Memory/Context Engineering|Context Engineering]] →**
+---
+
+> **← [[02 Agents and Harnesses/Voice and Audio Agents|Voice and Audio Agents]]** · **[[AI_Home|Home]]** · **[[02 Agents and Harnesses/Long-Horizon Tasks and Failure Modes|Long-Horizon Tasks and Failure Modes]] →**

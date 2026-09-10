@@ -7,8 +7,8 @@ aliases: [Agent Engineering Projects]
 tags: [ai-engineering, projects, practice]
 visibility: personal
 created: 2026-08-27
-updated: 2026-08-27
-prev: "09 Playbooks/Evaluation and Security Review.md"
+updated: 2026-09-09
+prev: "09 Playbooks/Long-Horizon Task Review.md"
 next: "10 Maps/AI Engineering Atlas.md"
 summary: "1. Structured assistant: one model, one schema, no side effects. Test validation and malformed output recovery. 2. Toolcalling agent: add a readonly calculator or weat..."
 ---
@@ -35,4 +35,6 @@ For every project, record the model, harness, context, tools, state, authority, 
 
 ---
 
-> **← [[09 Playbooks/Evaluation and Security Review|Evaluation and Security Review]]** · **[[AI_Home|Home]]** · **[[10 Maps/AI Engineering Atlas|AI Engineering Atlas]] →**
+---
+
+> **← [[09 Playbooks/Long-Horizon Task Review|Long-Horizon Task Review]]** · **[[AI_Home|Home]]** · **[[10 Maps/AI Engineering Atlas|AI Engineering Atlas]] →**

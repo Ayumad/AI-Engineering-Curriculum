@@ -7,7 +7,7 @@ aliases: [Agent Security Labs]
 tags: [ai-engineering, security, red-team, testing]
 visibility: personal
 created: 2026-08-27
-updated: 2026-08-27
+updated: 2026-09-09
 prev: "06 Reliability and Security/Human Oversight and Trust Engineering.md"
 next: "07 Operations and Economics/Operations and Economics Hub.md"
 last_verified: 2026-08-27
@@ -92,6 +92,8 @@ Each of the 7 lab test cases maps to one or more OWASP categories. Ensure your l
 - OWASP — https://genai.owasp.org/ — LLM Top 10 2025 and Agentic Top 10 (Dec 2025) risk categories.
 
 All links verified 2026-08-27.
+
+---
 
 ---
 

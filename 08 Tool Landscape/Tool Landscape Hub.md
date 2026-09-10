@@ -8,7 +8,7 @@ tags: [ai-engineering, tools, agents, landscape]
 last_verified: 2026-08-27
 visibility: personal
 created: 2026-08-27
-updated: 2026-08-27
+updated: 2026-09-09
 prev: "07 Operations and Economics/Deployment and AgentOps.md"
 next: "08 Tool Landscape/Coding Agent Profiles.md"
 summary: "These products are not all competitors. They occupy different layers: model, coding harness, general agent, terminal runtime, orchestration platform, protocol, sandbox..."
@@ -42,6 +42,8 @@ summary: "These products are not all competitors. They occupy different layers: 
 ## How to read a profile
 
 Ask: Which layer does it occupy? What boundary does it standardize? What does it make easier? What new authority, cost, lock-in, or operational burden does it introduce? Re-check current documentation before adoption.
+
+---
 
 ---
 

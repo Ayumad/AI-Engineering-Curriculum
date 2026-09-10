@@ -7,7 +7,7 @@ aliases: [Agent Prompting]
 tags: [ai-engineering, prompting, task-specification]
 visibility: personal
 created: 2026-08-27
-updated: 2026-08-27
+updated: 2026-09-09
 prev: "03 Context Knowledge Memory/Context Engineering.md"
 next: "03 Context Knowledge Memory/Memory and Skills.md"
 summary: "The most reliable agent prompts specify outcomes and invariants, not a screenplay of implementation steps."
@@ -109,6 +109,8 @@ See [[06 Reliability and Security/Evaluation Engineering]] for the full evaluati
 - Weng, "LLM Powered Autonomous Agents," Jun 2023 — https://lilianweng.github.io/posts/2023-06-23-agent/
 
 All links verified 2026-08-27.
+
+---
 
 ---
 

@@ -7,7 +7,7 @@ aliases: [Context Window, Inference]
 tags: [ai-engineering, context, inference]
 visibility: personal
 created: 2026-08-27
-updated: 2026-08-27
+updated: 2026-09-09
 prev: "01 Foundations/What Is an LLM.md"
 next: "01 Foundations/Structured Outputs and Tool Calling.md"
 summary: "The context window is the model's temporary working set: instructions, conversation, files, retrieved evidence, tool descriptions, tool results, plans, and memory. It..."
@@ -93,6 +93,8 @@ All links verified 2026-08-27.
 ## Related
 
 [[03 Context Knowledge Memory/Context Engineering]] · [[03 Context Knowledge Memory/Memory and Skills]] · [[07 Operations and Economics/Local Subscription API]]
+
+---
 
 ---
 

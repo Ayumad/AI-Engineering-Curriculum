@@ -7,7 +7,7 @@ aliases: [Agent Engineering Playbooks]
 tags: [ai-engineering, playbooks, practice]
 visibility: personal
 created: 2026-08-27
-updated: 2026-08-27
+updated: 2026-09-09
 prev: "08 Tool Landscape/Infrastructure and Observability Tools.md"
 next: "09 Playbooks/Mode and Topology Selector.md"
 summary: "These are reusable operating documents, not theory. Copy them into a project and adapt the placeholders."
@@ -35,7 +35,10 @@ For the complete cross-curriculum collection, use [[12 Templates/Template Librar
 - [[09 Playbooks/Mode and Topology Selector]] — choose Ask/Plan/Agent/Debug/Goal and single/multi-agent topology.
 - [[09 Playbooks/RAG Design Worksheet]] — design retrieval and evidence handling.
 - [[09 Playbooks/Evaluation and Security Review]] — define acceptance, traces, and safety gates.
+- [[09 Playbooks/Long-Horizon Task Review]] — run and review long agent tasks with checkpoints, compaction, and a release gate.
 - [[09 Playbooks/Learning Projects]] — staged path from a tool call to governed multi-agent work.
+
+---
 
 ---
 

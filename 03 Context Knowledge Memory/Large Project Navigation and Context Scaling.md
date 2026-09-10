@@ -7,7 +7,7 @@ aliases: [Large Project Context, Progressive Disclosure, Context Scaling]
 tags: [ai-engineering, context-engineering, large-projects, navigation, retrieval, progressive-disclosure, project-maps]
 visibility: personal
 created: 2026-08-27
-updated: 2026-08-27
+updated: 2026-09-09
 prev: "03 Context Knowledge Memory/Vector Search and Embeddings.md"
 next: "03 Context Knowledge Memory/Project Initialization and Instruction Files.md"
 summary: "A practical method for working in projects too large to parse manually: build a navigation layer, select context progressively, work in bounded slices, and preserve durable state."
@@ -193,6 +193,8 @@ All links verified 2026-08-27.
 ## Related
 
 [[03 Context Knowledge Memory/Context Engineering]] · [[03 Context Knowledge Memory/RAG]] · [[03 Context Knowledge Memory/Memory and Skills]] · [[03 Context Knowledge Memory/Project Initialization and Instruction Files]] · [[02 Agents and Harnesses/Planning State and Persistence]] · [[02 Agents and Harnesses/Agent Harness]] · [[12 Templates/Template Library]]
+
+---
 
 ---
 

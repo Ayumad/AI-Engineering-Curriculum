@@ -8,7 +8,7 @@ tags: [ai-engineering, tools, comparison]
 last_verified: 2026-08-27
 visibility: personal
 created: 2026-08-27
-updated: 2026-08-27
+updated: 2026-09-09
 prev: "11 Glossary and Sources/Acronyms.md"
 next: "12 Templates/Template Library.md"
 summary: "This is a selection aid, not a universal ranking. Compare products by layer and job."
@@ -46,6 +46,8 @@ summary: "This is a selection aid, not a universal ranking. Compare products by 
 | Ollama | Local dev serving | How do I run GGUF models on a single machine for dev and demos? |
 
 Detailed profiles: [[08 Tool Landscape/Coding Agent Profiles]], [[08 Tool Landscape/Agent Runtimes and Frameworks]], and [[08 Tool Landscape/Infrastructure and Observability Tools]].
+
+---
 
 ---
 

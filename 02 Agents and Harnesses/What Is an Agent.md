@@ -7,7 +7,7 @@ aliases: [Agent Loop, ReAct]
 tags: [ai-engineering, agents, react, loop]
 visibility: personal
 created: 2026-08-27
-updated: 2026-08-27
+updated: 2026-09-09
 prev: "02 Agents and Harnesses/Agents and Harnesses Hub.md"
 next: "02 Agents and Harnesses/Agent Harness.md"
 summary: "An agent is a model plus a goal, instructions, tools, state, and a loop that continues until a stopping condition."
@@ -101,6 +101,8 @@ All links verified 2026-08-27.
 ## Related
 
 [[02 Agents and Harnesses/Agent Harness]] · [[04 Workflows and Orchestration/Workflow Patterns]] · [[06 Reliability and Security/Reliability Evals and Observability]]
+
+---
 
 ---
 

@@ -7,7 +7,7 @@ aliases: [Effort Levels, Writing Style, Response Contracts]
 tags: [ai-engineering, reasoning, effort, writing-style, tone, verbosity, output-contracts]
 visibility: personal
 created: 2026-08-27
-updated: 2026-08-27
+updated: 2026-09-09
 prev: "03 Context Knowledge Memory/Project Initialization and Instruction Files.md"
 next: "04 Workflows and Orchestration/Orchestration Hub.md"
 summary: "A practical control surface for choosing reasoning effort and specifying how an agent communicates: audience, tone, voice, verbosity, structure, format, and evidence."
@@ -231,6 +231,8 @@ All links verified 2026-08-27.
 ## Related
 
 [[01 Foundations/Context Windows and Inference]] · [[01 Foundations/What Is an LLM]] · [[03 Context Knowledge Memory/Prompting for Agents]] · [[07 Operations and Economics/Latency and Cost Engineering]] · [[01 Foundations/Fine-Tuning Decision Framework]] · [[09 Playbooks/Prompt Template]] · [[12 Templates/Template Library]]
+
+---
 
 ---
 

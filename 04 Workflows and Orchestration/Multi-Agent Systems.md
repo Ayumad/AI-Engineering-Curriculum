@@ -7,7 +7,7 @@ aliases: [Multi-Agent Architecture]
 tags: [ai-engineering, multi-agent, orchestration]
 visibility: personal
 created: 2026-08-27
-updated: 2026-08-27
+updated: 2026-09-09
 prev: "04 Workflows and Orchestration/Workflow Patterns.md"
 next: "04 Workflows and Orchestration/Agent Democracies.md"
 summary: "Multiple agents are useful when specialization, isolation, parallelism, or independent critique outweighs communication and coordination cost."
@@ -80,6 +80,8 @@ The debate or jury topology (independent answers compared, criticized, or voted 
 - OpenAI, "A practical guide to building agents," 2025 — https://cdn.openai.com/business-guides-and-resources/a-practical-guide-to-building-agents.pdf
 
 All links verified 2026-08-27.
+
+---
 
 ---
 

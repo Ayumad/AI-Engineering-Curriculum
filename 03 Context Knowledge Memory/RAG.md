@@ -7,7 +7,7 @@ aliases: [Retrieval-Augmented Generation]
 tags: [ai-engineering, rag, retrieval, embeddings]
 visibility: personal
 created: 2026-08-27
-updated: 2026-08-27
+updated: 2026-09-09
 prev: "03 Context Knowledge Memory/Skills, Tools, and Capability Management.md"
 next: "03 Context Knowledge Memory/Vector Search and Embeddings.md"
 summary: "RAG retrieves relevant external evidence and places it into model context at answer time. It is usually preferable to finetuning when knowledge changes or is private."
@@ -149,6 +149,8 @@ For the machinery under this pipeline — how embedding models are trained, ANN 
 - "RAG vs Fine-tuning" (The Agent Ecosystem, Jul 2026) — https://www.theagentecosystem.com/blog/rag-chunking-strategies — chunking benchmark caveats.
 
 All links verified 2026-08-27.
+
+---
 
 ---
 

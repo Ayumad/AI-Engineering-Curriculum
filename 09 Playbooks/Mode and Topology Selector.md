@@ -7,7 +7,7 @@ aliases: [Agent Mode Selector]
 tags: [ai-engineering, planning, multi-agent, decision]
 visibility: personal
 created: 2026-08-27
-updated: 2026-08-27
+updated: 2026-09-09
 prev: "09 Playbooks/Playbooks Hub.md"
 next: "09 Playbooks/Prompt Template.md"
 summary: "| Mode | Use when | Expected behavior | |||| | Ask | You need understanding | Explore and explain; do not change state | | Plan | The work is ambiguous or broad | Insp..."
@@ -62,6 +62,8 @@ You can switch modes mid-task. Common pattern: Ask → Plan → Agent. If an Age
 Default: Ask/Plan first for uncertainty; Agent for a bounded task; Goal for durable work; one agent until a concrete reason justifies more coordination.
 
 For deeper agent harness and topology guidance, see [[04 Workflows and Orchestration/Orchestration Hub]] and [[02 Agents and Harnesses/Agent Harness]].
+
+---
 
 ---
 

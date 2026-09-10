@@ -8,7 +8,7 @@ tags: [ai-engineering, protocols, mcp, a2a, acp]
 last_verified: 2026-08-27
 visibility: personal
 created: 2026-08-27
-updated: 2026-08-27
+updated: 2026-09-09
 prev: "04 Workflows and Orchestration/Agent Democracies.md"
 next: "05 Protocols and Tools/MCP.md"
 summary: "Protocols standardize boundaries; they do not create intelligence. The useful map is:"
@@ -57,6 +57,8 @@ Every additional protocol boundary adds latency (serialization/deserialization),
 - OWASP Top 10 for LLM Applications 2025 — https://genai.owasp.org/resource/owasp-top-10-for-llm-applications-2025/ — security framework for AI systems.
 
 All links verified 2026-08-27.
+
+---
 
 ---
 

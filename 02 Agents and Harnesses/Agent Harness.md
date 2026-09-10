@@ -7,7 +7,7 @@ aliases: [Agent Runtime, Harness]
 tags: [ai-engineering, harness, runtime]
 visibility: personal
 created: 2026-08-27
-updated: 2026-08-27
+updated: 2026-09-09
 prev: "02 Agents and Harnesses/What Is an Agent.md"
 next: "02 Agents and Harnesses/Sandboxes and Execution Planes.md"
 summary: "The harness is the machinery that makes an agent useful and governable. It translates user intent into context, exposes tools, executes actions, manages state, and dec..."
@@ -117,6 +117,8 @@ All links verified 2026-08-27.
 ## Related
 
 [[02 Agents and Harnesses/What Is an Agent]] · [[02 Agents and Harnesses/Planning State and Persistence]] · [[02 Agents and Harnesses/Sandboxes and Execution Planes]]
+
+---
 
 ---
 

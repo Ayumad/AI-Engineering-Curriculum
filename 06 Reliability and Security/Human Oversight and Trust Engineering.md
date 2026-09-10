@@ -7,8 +7,8 @@ aliases: [Agent Oversight, Trust Engineering, Autonomy Ladder]
 tags: [ai-engineering, oversight, approvals, autonomy, governance]
 visibility: personal
 created: 2026-08-27
-updated: 2026-08-27
-prev: "06 Reliability and Security/Security and Jailbreaking.md"
+updated: 2026-09-09
+prev: "06 Reliability and Security/AI Fingerprints and Detection.md"
 next: "06 Reliability and Security/Defensive Red-Team Labs.md"
 last_verified: 2026-08-27
 summary: "Autonomy should be a deliberate, risk-based allocation of decision authority; agents should propose, explain uncertainty, and request approval before consequential execution."
@@ -95,4 +95,6 @@ All links verified 2026-08-27.
 
 ---
 
-> **← [[06 Reliability and Security/Security and Jailbreaking|Security and Jailbreaking]]** · **[[AI_Home|Home]]** · **[[06 Reliability and Security/Defensive Red-Team Labs|Defensive Red-Team Labs]] →**
+---
+
+> **← [[06 Reliability and Security/AI Fingerprints and Detection|AI Fingerprints and Detection]]** · **[[AI_Home|Home]]** · **[[06 Reliability and Security/Defensive Red-Team Labs|Defensive Red-Team Labs]] →**

@@ -7,9 +7,9 @@ aliases: [Agent Evals, Evaluation Engineering]
 tags: [ai-engineering, evals, testing, reliability]
 visibility: personal
 created: 2026-08-27
-updated: 2026-08-27
+updated: 2026-09-09
 prev: "06 Reliability and Security/Reliability Evals and Observability.md"
-next: "06 Reliability and Security/Observability.md"
+next: "06 Reliability and Security/Long-Horizon Evaluation and Benchmarks.md"
 last_verified: 2026-08-27
 summary: "Evaluation engineering turns acceptance criteria into versioned, representative tests of final results and trajectories, then uses failures to improve the system safely."
 ---
@@ -103,4 +103,6 @@ All links verified 2026-08-27.
 
 ---
 
-> **← [[06 Reliability and Security/Reliability Evals and Observability|Reliability Evals and Observability]]** · **[[AI_Home|Home]]** · **[[06 Reliability and Security/Observability|Observability]] →**
+---
+
+> **← [[06 Reliability and Security/Reliability Evals and Observability|Reliability Evals and Observability]]** · **[[AI_Home|Home]]** · **[[06 Reliability and Security/Long-Horizon Evaluation and Benchmarks|Long-Horizon Evaluation and Benchmarks]] →**

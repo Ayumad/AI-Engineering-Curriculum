@@ -7,7 +7,7 @@ aliases: [Large Language Model]
 tags: [ai-engineering, models, llm]
 visibility: personal
 created: 2026-08-27
-updated: 2026-08-27
+updated: 2026-09-09
 prev: "01 Foundations/Foundations Hub.md"
 next: "01 Foundations/Context Windows and Inference.md"
 summary: "An LLM is a learned function that maps a sequence of tokens and other inputs to a probability distribution over possible next tokens or structured outputs. In practice..."
@@ -150,6 +150,8 @@ All links verified 2026-08-27.
 ## Related
 
 [[01 Foundations/Context Windows and Inference]] · [[01 Foundations/Structured Outputs and Tool Calling]] · [[02 Agents and Harnesses/What Is an Agent]]
+
+---
 
 ---
 

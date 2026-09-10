@@ -7,9 +7,9 @@ aliases: [Prompt Security, Jailbreaks]
 tags: [ai-engineering, security, prompt-injection, jailbreak]
 visibility: personal
 created: 2026-08-27
-updated: 2026-08-27
+updated: 2026-09-09
 prev: "06 Reliability and Security/Observability.md"
-next: "06 Reliability and Security/Human Oversight and Trust Engineering.md"
+next: "06 Reliability and Security/AI Fingerprints and Detection.md"
 last_verified: 2026-08-27
 summary: "A jailbreak tries to make a model disregard or reinterpret its governing constraints. Prompt injection is broader: untrusted content attempts to influence instructions..."
 ---
@@ -122,4 +122,6 @@ All links verified 2026-08-27.
 
 ---
 
-> **← [[06 Reliability and Security/Observability|Observability]]** · **[[AI_Home|Home]]** · **[[06 Reliability and Security/Human Oversight and Trust Engineering|Human Oversight and Trust Engineering]] →**
+---
+
+> **← [[06 Reliability and Security/Observability|Observability]]** · **[[AI_Home|Home]]** · **[[06 Reliability and Security/AI Fingerprints and Detection|AI Fingerprints and Detection]] →**

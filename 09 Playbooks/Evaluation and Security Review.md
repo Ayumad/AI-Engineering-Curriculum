@@ -7,9 +7,9 @@ aliases: [Agent Review Checklist]
 tags: [ai-engineering, evals, security, release]
 visibility: personal
 created: 2026-08-27
-updated: 2026-08-27
+updated: 2026-09-09
 prev: "09 Playbooks/RAG Design Worksheet.md"
-next: "09 Playbooks/Learning Projects.md"
+next: "09 Playbooks/Long-Horizon Task Review.md"
 summary: "[ ] Define userlevel success and unacceptable failure. [ ] Create representative happypath, edge, adversarial, and recovery cases. [ ] Test tool schemas, authorization..."
 ---
 
@@ -62,4 +62,6 @@ See [[06 Reliability and Security/Evaluation Engineering]] for the eval framewor
 
 ---
 
-> **← [[09 Playbooks/RAG Design Worksheet|RAG Design Worksheet]]** · **[[AI_Home|Home]]** · **[[09 Playbooks/Learning Projects|Learning Projects]] →**
+---
+
+> **← [[09 Playbooks/RAG Design Worksheet|RAG Design Worksheet]]** · **[[AI_Home|Home]]** · **[[09 Playbooks/Long-Horizon Task Review|Long-Horizon Task Review]] →**

@@ -7,7 +7,7 @@ aliases: [Project Bootstrap, Repository Instructions, PRD and AGENTS.md]
 tags: [ai-engineering, project-initialization, prd, instruction-files, agents-md, specifications]
 visibility: personal
 created: 2026-08-27
-updated: 2026-08-27
+updated: 2026-09-09
 prev: "03 Context Knowledge Memory/Large Project Navigation and Context Scaling.md"
 next: "03 Context Knowledge Memory/Behavior and Communication Controls.md"
 summary: "A practical method for turning an idea into a discoverable project context package: a PRD for what to build, repository instructions for how to work, and executable project facts for verification."
@@ -196,6 +196,8 @@ All links verified 2026-08-27.
 ## Related
 
 [[03 Context Knowledge Memory/Context Engineering]] · [[03 Context Knowledge Memory/Large Project Navigation and Context Scaling]] · [[03 Context Knowledge Memory/Prompting for Agents]] · [[02 Agents and Harnesses/Planning State and Persistence]] · [[02 Agents and Harnesses/Agent Harness]] · [[09 Playbooks/Prompt Template]] · [[12 Templates/Template Library]]
+
+---
 
 ---
 

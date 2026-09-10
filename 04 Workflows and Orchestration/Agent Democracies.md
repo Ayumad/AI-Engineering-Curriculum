@@ -7,7 +7,7 @@ aliases: [Agent Society, Agent Governance]
 tags: [ai-engineering, multi-agent, governance, consensus]
 visibility: personal
 created: 2026-08-27
-updated: 2026-08-27
+updated: 2026-09-09
 prev: "04 Workflows and Orchestration/Multi-Agent Systems.md"
 next: "05 Protocols and Tools/Protocols Hub.md"
 summary: "An agent democracy is a multiagent governance pattern in which agents propose, critique, deliberate, vote, delegate, or form a quorum before a decision. It is a design..."
@@ -86,6 +86,8 @@ Use debate or voting for bounded exploration and adjudication, never as a substi
 - Weng, "LLM Powered Autonomous Agents," Jun 2023 — https://lilianweng.github.io/posts/2023-06-23-agent/ — planning, reflection, and multi-agent patterns.
 
 All links verified 2026-08-27.
+
+---
 
 ---
 

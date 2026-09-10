@@ -7,7 +7,7 @@ aliases: [Agent Architecture Hub]
 tags: [ai-engineering, agents, harnesses, map-of-content]
 visibility: personal
 created: 2026-08-27
-updated: 2026-08-27
+updated: 2026-09-09
 prev: "01 Foundations/Fine-Tuning Decision Framework.md"
 next: "02 Agents and Harnesses/What Is an Agent.md"
 summary: "An agent is a modeldirected loop. A harness is the runtime around that loop: it manages context, tools, state, planning, permissions, retries, checkpoints, and verific..."
@@ -26,6 +26,7 @@ The child notes below explore the trade-offs at each layer of this stack.
 - [[02 Agents and Harnesses/Sandboxes and Execution Planes]] — The policy/execution split: secret brokering, artifact promotion, and why policy must stay separate from execution.
 - [[02 Agents and Harnesses/Planning State and Persistence]] — Durable execution: state schemas, checkpoint/replay/compensate recovery, idempotency keys, and backend choices (Temporal, Redis, DynamoDB).
 - [[02 Agents and Harnesses/Computer-Use and Browser Agents]] — Grounded UI actions: Anthropic Computer Use, OpenAI CUA, DOM vs. screenshot pipelines, and why vision-driven browsing is expensive and fragile.
+- [[02 Agents and Harnesses/Long-Horizon Tasks and Failure Modes]] — Sustained multi-step work: compounding error, planning failure, forgetting, and the mitigation stack.
 - [[02 Agents and Harnesses/Vision and Multimodal Input Engineering]] — Multimodal input: model capabilities, resolution/tiling strategies, OCR pipelines, video frame sampling, and cost management.
 - [[02 Agents and Harnesses/Voice and Audio Agents]] — Real-time audio: OpenAI Realtime API, Deepgram STT, ElevenLabs TTS, Silero VAD, barge-in, and the ~300ms conversational latency budget.
 - [[02 Agents and Harnesses/Sandboxing Infrastructure]] — Isolation technology choice: gVisor vs. Kata vs. Firecracker, cloud sandboxes (E2B, Modal), and escape-risk trade-offs.
@@ -43,6 +44,8 @@ flowchart TB
   Sandbox --> Observation[Validated observation]
   Observation --> Context
 ```
+
+---
 
 ---
 

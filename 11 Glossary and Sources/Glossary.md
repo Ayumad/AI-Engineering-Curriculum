@@ -7,7 +7,7 @@ aliases: [AI Engineering Glossary]
 tags: [ai-engineering, glossary, reference]
 visibility: personal
 created: 2026-08-27
-updated: 2026-08-27
+updated: 2026-09-09
 prev: "11 Glossary and Sources/Sources.md"
 next: "11 Glossary and Sources/Pattern Catalog.md"
 summary: "| Term | Meaning | ||| | Agent | Modeldirected loop that observes, decides, acts, and stops under conditions | | AgentOps | Operations discipline for deploying, evalua..."
@@ -38,21 +38,30 @@ summary: "| Term | Meaning | ||| | Agent | Modeldirected loop that observes, dec
 | ReAct | Reason-and-act loop pattern |
 | Reranker | Model or algorithm that reorders retrieved candidates |
 | Sandbox | Bounded execution environment for generated or untrusted work |
+| Sandbagging | A model knowingly underperforming on an evaluation it recognizes, reacting to being measured rather than showing its ceiling |
 | Skill | Loadable package of procedural instructions, examples, scripts, and tools |
 | Style profile | Explicit audience, tone, voice, terminology, structure, and length guidance for communication |
 | Structured output | Model response constrained to a machine-validated schema |
 | Tool calling | Model request to invoke a typed external operation |
+| Test-time compute | Computation spent at inference time (extra reasoning tokens, search, verification) instead of training time; the second axis of scaling |
+| TPOT | Time per output token; per-token decode latency in generated output |
+| TTFT | Time to first token; latency from request to the first output token, dominated by prefill |
 | Autoregressive | Model that emits one token at a time, conditioning each on all previous tokens |
 | Chain-of-thought (CoT) | Prompting technique that elicits intermediate reasoning steps before the answer |
 | Constrained decoding | Sampling restricted to tokens valid under a grammar or regex, e.g., for structured output |
 | Context rot | Degradation of recall and reasoning as the context window fills (Anthropic 2025) |
+| Compounding error | Per-step failure rates multiply across dependent steps; why long tasks break even when short ones pass |
+| Continuous batching | Serving engine runs many requests through the model together, packing new work into freed decode slots instead of waiting for whole batches to finish |
 | Decoding | Output-generation phase; greedy vs. sampling (temperature, top-p) trade determinism for diversity |
 | Golden set | Fixed, versioned evaluation cases used for regression testing of prompts and agents |
 | KV cache | Cached key/value vectors for prompt tokens; grows with context length and drives long-context cost |
 | LLM-as-judge | Using a model to grade outputs; scalable but biased (position, verbosity, self-preference) |
+| Long-horizon task | Sustained work needing dozens of interdependent tool-calling turns, where per-step errors compound (typically 25-40+ turns, 80K-100K tokens) |
 | Mixture of experts (MoE) | Architecture with sparse active parameters per token; storage ≠ per-token compute |
+| PagedAttention | vLLM's virtualized KV-cache memory management; cuts fragmentation waste from 60-80% to under 4% |
 | Prefill | Processing the input prompt before output generation |
 | Prompt caching | Reusing processed stable prefixes (system prompt, tool schemas) across calls |
+| Prefix caching | Reusing the computed KV cache of a stable prefix across requests at the serving layer; the high-leverage caching optimization for repeated workloads |
 | Quantization | Reducing numeric precision of weights to cut memory and bandwidth |
 || Speculative decoding | Small-model draft + target-model parallel verification; same output distribution, higher throughput |
 || Compensating action | A transaction that undoes a previous step when a later step in a multi-step workflow fails; in agent workflows, sagas pair each tool call with a compensating action so partial failures roll back cleanly ||
@@ -74,6 +83,8 @@ summary: "| Term | Meaning | ||| | Agent | Modeldirected loop that observes, dec
 Definitions follow the primary references in their topic notes; aggregated, verified links live in [[11 Glossary and Sources/Sources]].
 
 See [[11 Glossary and Sources/Acronyms]] and [[11 Glossary and Sources/Pattern Catalog]].
+
+---
 
 ---
 

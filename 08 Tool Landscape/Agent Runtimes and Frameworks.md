@@ -8,7 +8,7 @@ tags: [ai-engineering, frameworks, orchestration]
 last_verified: 2026-08-27
 visibility: personal
 created: 2026-08-27
-updated: 2026-08-27
+updated: 2026-09-09
 prev: "08 Tool Landscape/Coding Agent Profiles.md"
 next: "08 Tool Landscape/Infrastructure and Observability Tools.md"
 summary: "These tools solve different problems. Frameworks compose model calls and tools; orchestration runtimes provide durable execution; agent platforms add userfacing contro..."
@@ -67,6 +67,8 @@ Do not choose a framework before deciding whether the problem is a workflow, an 
 All links verified 2026-08-27.
 
 Primary references: [LangGraph](https://docs.langchain.com/oss/python/langgraph/overview), [OpenAI Agents SDK](https://openai.github.io/openai-agents-python/), [LangChain](https://docs.langchain.com/oss/python/langchain/overview), [PydanticAI](https://ai.pydantic.dev/), [Mastra](https://mastra.ai/docs), [Temporal](https://docs.temporal.io/), and [OpenHands SDK](https://docs.openhands.dev/sdk/index).
+
+---
 
 ---
 

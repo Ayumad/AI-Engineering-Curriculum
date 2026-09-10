@@ -7,7 +7,7 @@ aliases: [GCCDV Prompt]
 tags: [ai-engineering, prompting, template]
 visibility: personal
 created: 2026-08-27
-updated: 2026-08-27
+updated: 2026-09-09
 prev: "09 Playbooks/Mode and Topology Selector.md"
 next: "09 Playbooks/Context Checklist.md"
 summary: "text Goal:"
@@ -84,6 +84,8 @@ Stopping conditions:
 ```
 
 > **Canonical source:** The fill-in version of this template lives in [[12 Templates/Template Library]]. This note is the explanation and worked example. Keep both in sync to prevent drift — do not duplicate the template body here.
+
+---
 
 ---
 

@@ -5,10 +5,10 @@ status: current-snapshot
 maturity: established
 aliases: [AI Engineering Sources]
 tags: [ai-engineering, sources, citations]
-last_verified: 2026-08-27
+last_verified: 2026-09-09
 visibility: personal
 created: 2026-08-27
-updated: 2026-08-27
+updated: 2026-09-09
 prev: "10 Maps/AI Engineering Atlas.md"
 next: "11 Glossary and Sources/Glossary.md"
 summary: "Current product and protocol claims in this vault were checked on 20260827. Recheck dated notes before acting on pricing, availability, feature support, security postu..."
@@ -37,6 +37,16 @@ summary: "Current product and protocol claims in this vault were checked on 2026
 - [Gao et al., "SimCSE: Simple Contrastive Learning of Sentence Embeddings," 2021](https://arxiv.org/abs/2104.08821) — contrastive sentence-embedding training; dropout-as-noise; anisotropy regularization.
 - [Aumüller, Bernhardsson & Faithfull, "ANN-Benchmarks," Information Systems 2019](https://github.com/erikbern/ann-benchmarks) — empirical recall/latency comparison of approximate-nearest-neighbor libraries.
 - [Nussbaum et al., "Nomic Embed: Training a Reproducible Long Context Text Embedder," 2024](https://arxiv.org/abs/2402.01613) — two-stage contrastive 8K-context embedder; see the [official model card](https://huggingface.co/nomic-ai/nomic-embed-text-v1) for task-prefix usage.
+- [Kwon et al., "Efficient Memory Management for Large Language Model Serving with PagedAttention," 2023](https://arxiv.org/abs/2309.06180) — PagedAttention; KV-memory waste 60-80% → under 4%, 2-4x throughput over FasterTransformer/Orca.
+- [Zheng et al., "SGLang: Efficient Execution of Structured Language Model Programs," 2023](https://arxiv.org/abs/2312.07104) — RadixAttention prefix reuse; up to 6.4x throughput on branching workloads.
+- [DeepSeek-AI, "DeepSeek-V2: A Strong, Economical, and Efficient Mixture-of-Experts Language Model," 2024](https://arxiv.org/abs/2405.04434) — MLA cuts KV cache 93.3% with 5.76x throughput.
+- [Snell et al., "Scaling LLM Test-Time Compute Optimally can be More Effective than Scaling Model Parameters," 2024](https://arxiv.org/abs/2408.03314) — compute-optimal inference scaling; 4x over best-of-N, beats 14x-larger models per FLOP.
+- [DeepSeek-AI, "DeepSeek-R1: Incentivizing Reasoning Capability in LLMs via Reinforcement Learning," 2025](https://arxiv.org/abs/2501.12948) — reasoning patterns emerge from pure RL, distillable into smaller models.
+- [HORIZON, "The Long-Horizon Task Mirage? Diagnosing Where and Why Agentic Systems Break," 2026](https://arxiv.org/html/2604.11978v1) — cross-domain long-horizon failure diagnosis; failure mix shifts to planning + memory as horizons grow.
+- [LongCLI-Bench, "A Preliminary Benchmark and Study for Long-horizon Agentic Programming in Command-Line Interfaces," 2026](https://arxiv.org/html/2602.14337v1) — P2P step scores >98% but pass rates 70-88%; regressions in 12-30% of complex edits.
+- [Long-Horizon-Terminal-Bench, 2026](https://arxiv.org/html/2607.08964v1) — 46 long terminal tasks, dense reward grading; best model 15.2% at 0.95 reward threshold, mean 4.3%.
+- [LongRCA Bench, 2026](https://arxiv.org/html/2608.15242) — 1,140 observed failed trajectories; responsible-role and root-step labels; root step median 48 steps before trajectory end.
+- ["KV Cache Optimization Strategies for Scalable and Efficient LLM Inference," 2026](https://arxiv.org/abs/2603.20397) — systematic survey of eviction, compression, hybrid memory, and attention approaches.
 
 ## Protocols and standards
 
@@ -77,6 +87,15 @@ summary: "Current product and protocol claims in this vault were checked on 2026
 - [Willison's prompt-injection series](https://simonwillison.net/series/prompt-injection/) — coined the term (Sep 2022); the practitioner archive of real-world injection and defense.
 - [Anthropic engineering blog](https://www.anthropic.com/engineering) — "Building effective agents" (Dec 2024), "Introducing Contextual Retrieval" (Sep 2024), "How we built our multi-agent research system" (Jun 2025), "Effective context engineering for AI agents" (Sep 2025).
 - [OpenAI, "A practical guide to building agents" (2025)](https://cdn.openai.com/business-guides-and-resources/a-practical-guide-to-building-agents.pdf) — tooling, orchestration, guardrails, and evaluation patterns from deployed agents.
+- [IntuitionLabs, "KV Cache Memory: The Real Cost of Long-Context Inference" (2026)](https://intuitionlabs.ai/articles/kv-cache-memory-long-context-inference-cost) — KV cache formula, Llama-3-70B ≈40GB at 128K, GPU pricing, RULER finding.
+- [Digital Applied, "KV Cache Optimization for LLMs 2026: Engineering Guide"](https://www.digitalapplied.com/blog/kv-cache-optimization-techniques-2026-engineering-guide) — paged attention as substrate, prefix caching, FP8 KV, 4-40x compounding.
+- [Arize AI, "Long-horizon agent benchmarks are fragmenting: a field guide" (2026)](https://arize.com/blog/long-horizon-agent-benchmarks-field-guide/) — realism/verifiability axis, harness leaks and sandbagging, trajectory vs outcome grading (44% missed violations).
+- [Surge AI, "Training on Long-Horizon Agent Tasks" (2026)](https://surgehq.ai/blog/cross-benchmark-generalization-for-long-horizon-agentic-tasks) — long-horizon RL environments; 25-40+ turns / 80K-100K tokens; per-criterion dense graders.
+- [Berkeley RDI, "How We Broke Top AI Agent Benchmarks" (2025)](https://rdi.berkeley.edu/blog/trustworthy-benchmarks-cont/) — exploit scorecard across eight agent benchmarks; seven harness-leak vulnerability patterns.
+- [Anyscale, "How continuous batching enables 23x throughput in LLM inference" (2023)](https://www.anyscale.com/blog/continuous-batching-llm-inference) — static vs continuous batching, ~1MB KV per token on a 13B model.
+- [NVIDIA, "Mastering LLM Techniques: Inference Optimization"](https://developer.nvidia.com/blog/mastering-llm-techniques-inference-optimization/) — prefill vs decode bottlenecks, KV formula, speculative decoding mechanics.
+- [OpenAI, "Reasoning models" API guide](https://developers.openai.com/api/docs/guides/reasoning) — reasoning tokens, `reasoning.effort`, the 25k-token reservation, incomplete-response billing trap.
+- [Anthropic, "Extended thinking" platform docs](https://docs.claude.com/en/docs/build-with-claude/extended-thinking) — `budget_tokens` rules, tuning guidance, adaptive thinking, cache invalidation.
 
 ## Security and risk frameworks
 
@@ -111,6 +130,8 @@ summary: "Current product and protocol claims in this vault were checked on 2026
 ## Research and security reading
 
 Use original papers, model/system cards, and provider security documentation for jailbreak, prompt-injection, RAG, agent-evaluation, and multi-agent claims. The vault records forecasts as forecasts and does not present them as established findings.
+
+---
 
 ---
 

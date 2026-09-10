@@ -8,7 +8,7 @@ tags: [ai-engineering, mcp, tools, protocols]
 last_verified: 2026-08-27
 visibility: personal
 created: 2026-08-27
-updated: 2026-08-27
+updated: 2026-09-09
 prev: "05 Protocols and Tools/Protocols Hub.md"
 next: "05 Protocols and Tools/Agent Protocols.md"
 summary: "MCP is an open protocol for connecting an AI application to external data sources and tools. Its primitives are:"
@@ -110,6 +110,8 @@ Servers should also implement timeouts (per-tool and global), rate limiting, and
 - For protocol boundaries and comparisons: [[05 Protocols and Tools/Agent Protocols]] and the [Protocols canvas](10 Maps/Protocols.canvas).
 
 All links verified 2026-08-27.
+
+---
 
 ---
 

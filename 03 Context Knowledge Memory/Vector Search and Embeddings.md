@@ -7,7 +7,7 @@ aliases: [Vector Databases, Embeddings for Retrieval, ANN Search, Vector Search]
 tags: [ai-engineering, retrieval, embeddings, vector-search, ann]
 visibility: personal
 created: 2026-08-27
-updated: 2026-08-27
+updated: 2026-09-09
 prev: "03 Context Knowledge Memory/RAG.md"
 next: "03 Context Knowledge Memory/Large Project Navigation and Context Scaling.md"
 summary: "How retrieval embeddings are actually trained (contrastive objectives, SimCSE, task-prefix conditioning), what ANN indexes do under the hood (HNSW/IVF/PQ mechanics and trade-offs), why similarity is not relevance, and field notes for local Ollama + ChromaDB stacks."
@@ -77,6 +77,8 @@ All links verified 2026-08-27.
 - [[03 Context Knowledge Memory/Memory and Skills]] — embeddings as agent archival recall.
 - [[03 Context Knowledge Memory/Context Engineering]] — what to do with retrieved context once you have it.
 - [[09 Playbooks/RAG Design Worksheet]] — worked embedding-model and vector-store decisions.
+
+---
 
 ---
 

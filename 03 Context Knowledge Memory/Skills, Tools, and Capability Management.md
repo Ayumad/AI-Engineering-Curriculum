@@ -7,7 +7,7 @@ aliases: [Skill Management, Capability Management]
 tags: [ai-engineering, skills, tools, permissions, context]
 visibility: personal
 created: 2026-08-27
-updated: 2026-08-27
+updated: 2026-09-09
 prev: "03 Context Knowledge Memory/Memory and Skills.md"
 next: "03 Context Knowledge Memory/RAG.md"
 summary: "Capabilities should be discoverable, minimally loaded, permission-scoped, versioned, tested, and observable rather than placed wholesale in every model context."
@@ -129,6 +129,8 @@ All links verified 2026-08-27.
 ## Related
 
 [[03 Context Knowledge Memory/Memory and Skills]] · [[05 Protocols and Tools/MCP]] · [[02 Agents and Harnesses/Agent Harness]] · [[06 Reliability and Security/Evaluation Engineering]]
+
+---
 
 ---
 

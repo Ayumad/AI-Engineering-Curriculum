@@ -7,8 +7,8 @@ aliases: [When to Fine-Tune]
 tags: [ai-engineering, fine-tuning, lora, rag, prompting]
 visibility: personal
 created: 2026-08-27
-updated: 2026-08-27
-prev: "01 Foundations/Local AI Hardware and Inference.md"
+updated: 2026-09-09
+prev: "01 Foundations/Test-Time Compute and Reasoning Models.md"
 next: "02 Agents and Harnesses/Agents and Harnesses Hub.md"
 summary: "Fine-tuning is for persistent, repeatable behavioral gaps—not current knowledge, missing capabilities, or instructions that can be supplied at runtime."
 ---
@@ -84,4 +84,6 @@ All links verified 2026-08-27.
 
 ---
 
-> **← [[01 Foundations/Local AI Hardware and Inference|Local AI Hardware and Inference]]** · **[[AI_Home|Home]]** · **[[02 Agents and Harnesses/Agents and Harnesses Hub|Agents and Harnesses Hub]] →**
+---
+
+> **← [[01 Foundations/Test-Time Compute and Reasoning Models|Test-Time Compute and Reasoning Models]]** · **[[AI_Home|Home]]** · **[[02 Agents and Harnesses/Agents and Harnesses Hub|Agents and Harnesses Hub]] →**

@@ -7,7 +7,7 @@ aliases: [Local vs Subscription vs API]
 tags: [ai-engineering, economics, deployment, models]
 visibility: personal
 created: 2026-08-27
-updated: 2026-08-27
+updated: 2026-09-09
 prev: "07 Operations and Economics/Latency and Cost Engineering.md"
 next: "07 Operations and Economics/Deployment and AgentOps.md"
 summary: "| Model | Strengths | Costs and limits | |||| | Local | Privacy, control, predictable marginal cost, offline use | Hardware, setup, maintenance, model quality, heat, u..."
@@ -82,6 +82,8 @@ All links verified 2026-08-27.
 ## Related
 
 [[08 Tool Landscape/Tool Landscape Hub|Tool landscape]] · [[07 Operations and Economics/Latency and Cost Engineering]]
+
+---
 
 ---
 

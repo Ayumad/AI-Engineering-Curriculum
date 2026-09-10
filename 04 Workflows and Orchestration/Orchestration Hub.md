@@ -7,7 +7,7 @@ aliases: [Agent Orchestration]
 tags: [ai-engineering, orchestration, workflows, map-of-content]
 visibility: personal
 created: 2026-08-27
-updated: 2026-08-27
+updated: 2026-09-09
 prev: "03 Context Knowledge Memory/Behavior and Communication Controls.md"
 next: "04 Workflows and Orchestration/Workflow Patterns.md"
 summary: "Orchestration is the control plane for work that spans steps, agents, tools, queues, schedules, retries, and people. It turns a clever loop into a system that can be r..."
@@ -62,6 +62,8 @@ Agent workflows fail non-deterministically. Orchestration must handle: transient
 - AI Agents Blog, "5 Patterns for Production Reliability," 2026 — https://aiagentsblog.com/blog/agent-error-recovery-patterns/ — error recovery patterns.
 
 All links verified 2026-08-27.
+
+---
 
 ---
 

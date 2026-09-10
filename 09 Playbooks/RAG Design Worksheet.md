@@ -7,7 +7,7 @@ aliases: [RAG Worksheet]
 tags: [ai-engineering, rag, retrieval, design]
 visibility: personal
 created: 2026-08-27
-updated: 2026-08-27
+updated: 2026-09-09
 prev: "09 Playbooks/Context Checklist.md"
 next: "09 Playbooks/Evaluation and Security Review.md"
 summary: "Question and users:"
@@ -68,6 +68,8 @@ summary: "Question and users:"
 **Operations:** Re-index Confluence hourly. Jira on close. Weekly retrieval drift benchmark. Schema hashing on MCP tools. Rollback: revert to previous index snapshot.
 
 > **Canonical source:** The fill-in version of this worksheet lives in [[12 Templates/Template Library]]. This note is the explanation and worked example.
+
+---
 
 ---
 

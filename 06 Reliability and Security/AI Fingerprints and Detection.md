@@ -8,7 +8,7 @@ tags: [ai-engineering, security, detection, watermarking]
 last_verified: 2026-08-27
 visibility: personal
 created: 2026-08-27
-updated: 2026-08-27
+updated: 2026-09-09
 prev: "06 Reliability and Security/Security and Jailbreaking.md"
 next: "06 Reliability and Security/Human Oversight and Trust Engineering.md"
 summary: "Detectable traces of AI-generated text: statistical fingerprints (perplexity, burstiness) and embedded watermarks, their failure modes, and why signed provenance metadata beats forensic scoring."
@@ -63,3 +63,7 @@ All links verified 2026-08-27.
 
 - [[06 Reliability and Security/Security and Jailbreaking]] — the adversarial view of what models can be made to emit
 - [[06 Reliability and Security/Human Oversight and Trust Engineering]] — calibrating trust when the evidence is weak
+
+---
+
+> **← [[06 Reliability and Security/Security and Jailbreaking|Security and Jailbreaking]]** · **[[AI_Home|Home]]** · **[[06 Reliability and Security/Human Oversight and Trust Engineering|Human Oversight and Trust Engineering]] →**

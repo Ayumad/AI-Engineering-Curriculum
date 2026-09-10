@@ -7,7 +7,7 @@ aliases: [Workflow Topologies]
 tags: [ai-engineering, workflows, patterns]
 visibility: personal
 created: 2026-08-27
-updated: 2026-08-27
+updated: 2026-09-09
 prev: "04 Workflows and Orchestration/Orchestration Hub.md"
 next: "04 Workflows and Orchestration/Multi-Agent Systems.md"
 summary: "Choose the simplest topology that makes the work observable and correct."
@@ -107,6 +107,8 @@ Start deterministic when steps are known. Add model decisions only where interpr
 - LangChain, LangGraph Overview — https://docs.langchain.com/oss/python/langgraph/overview — checkpointing, MemorySaver/PostgresSaver.
 
 All links verified 2026-08-27.
+
+---
 
 ---
 

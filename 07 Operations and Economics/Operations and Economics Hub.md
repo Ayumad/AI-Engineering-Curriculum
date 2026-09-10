@@ -7,7 +7,7 @@ aliases: [Agent Operations and Economics]
 tags: [ai-engineering, operations, economics, agentops]
 visibility: personal
 created: 2026-08-27
-updated: 2026-08-27
+updated: 2026-09-09
 prev: "06 Reliability and Security/Defensive Red-Team Labs.md"
 next: "07 Operations and Economics/Latency and Cost Engineering.md"
 summary: "Production agents are software systems with variable compute, probabilistic behavior, external dependencies, and human approval points."
@@ -30,6 +30,8 @@ This section covers the full lifecycle of production agent operations:
 - [[07 Operations and Economics/Deployment and AgentOps]] — routing, queues, sandboxes, telemetry, and continuous evaluation.
 - [[07 Operations and Economics/Latency and Cost Engineering]] — budgets, caching, routing, streaming, and resource-aware topology.
 - [[06 Reliability and Security/Reliability Evals and Observability]] — the signals operations must measure.
+
+---
 
 ---
 

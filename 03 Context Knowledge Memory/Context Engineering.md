@@ -7,8 +7,8 @@ aliases: [Context Management]
 tags: [ai-engineering, context-engineering, prompting]
 visibility: personal
 created: 2026-08-27
-updated: 2026-08-27
-prev: "02 Agents and Harnesses/Computer-Use and Browser Agents.md"
+updated: 2026-09-09
+prev: "02 Agents and Harnesses/Long-Horizon Tasks and Failure Modes.md"
 next: "03 Context Knowledge Memory/Prompting for Agents.md"
 summary: "Prompt engineering asks “what should I say?” Context engineering asks “what should the model know at this exact moment?” It includes retrieval, memory, file selection,..."
 ---
@@ -111,4 +111,6 @@ All links verified 2026-08-27.
 
 ---
 
-> **← [[02 Agents and Harnesses/Computer-Use and Browser Agents|Computer-Use and Browser Agents]]** · **[[AI_Home|Home]]** · **[[03 Context Knowledge Memory/Prompting for Agents|Prompting for Agents]] →**
+---
+
+> **← [[02 Agents and Harnesses/Long-Horizon Tasks and Failure Modes|Long-Horizon Tasks and Failure Modes]]** · **[[AI_Home|Home]]** · **[[03 Context Knowledge Memory/Prompting for Agents|Prompting for Agents]] →**

@@ -8,9 +8,9 @@ tags: [ai-engineering, hardware, inference, local-ai, quantization]
 last_verified: 2026-08-27
 visibility: personal
 created: 2026-08-27
-updated: 2026-08-27
+updated: 2026-09-09
 prev: "01 Foundations/Structured Outputs and Tool Calling.md"
-next: "01 Foundations/Fine-Tuning Decision Framework.md"
+next: "01 Foundations/Inference Engines and Serving.md"
 summary: "Local model viability is governed first by usable model memory, then by memory bandwidth, runtime support, context/KV-cache headroom, and only then by headline compute."
 ---
 
@@ -97,4 +97,6 @@ All links verified 2026-08-27.
 
 ---
 
-> **← [[01 Foundations/Structured Outputs and Tool Calling|Structured Outputs and Tool Calling]]** · **[[AI_Home|Home]]** · **[[01 Foundations/Fine-Tuning Decision Framework|Fine-Tuning Decision Framework]] →**
+---
+
+> **← [[01 Foundations/Structured Outputs and Tool Calling|Structured Outputs and Tool Calling]]** · **[[AI_Home|Home]]** · **[[01 Foundations/Inference Engines and Serving|Inference Engines and Serving]] →**

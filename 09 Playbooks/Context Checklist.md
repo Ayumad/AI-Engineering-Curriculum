@@ -7,7 +7,7 @@ aliases: [Context Engineering Checklist]
 tags: [ai-engineering, context-engineering, checklist]
 visibility: personal
 created: 2026-08-27
-updated: 2026-08-27
+updated: 2026-09-09
 prev: "09 Playbooks/Prompt Template.md"
 next: "09 Playbooks/RAG Design Worksheet.md"
 summary: "[ ] What is the next decision the model must make? [ ] What is the minimum evidence needed for that decision? [ ] Which instructions are authoritative, and which conte..."
@@ -53,6 +53,8 @@ Use this checklist at three scales:
 The difference: the good version names the decision (fix the bug), provides minimum evidence (file, line, error, repro), scopes authority (parsing only), and states a stopping condition (test passes).
 
 For deeper context-engineering theory, see [[03 Context Knowledge Memory/Context Engineering]].
+
+---
 
 ---
 

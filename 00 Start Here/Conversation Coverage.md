@@ -7,7 +7,7 @@ aliases: [Conversation Coverage Checklist]
 tags: [ai-engineering, coverage, provenance]
 visibility: personal
 created: 2026-08-27
-updated: 2026-08-27
+updated: 2026-09-09
 prev: "00 Start Here/How to Use This Vault.md"
 next: "01 Foundations/Foundations Hub.md"
 summary: "This checklist maps the supplied conversation to vault notes. Check each item when its note has been reviewed and refreshed."
@@ -54,6 +54,8 @@ summary: "This checklist maps the supplied conversation to vault notes. Check ea
 | Agent pattern catalog | [[11 Glossary and Sources/Pattern Catalog]] |
 | Tool landscape | [[08 Tool Landscape/Coding Agent Profiles]] · [[08 Tool Landscape/Agent Runtimes and Frameworks]] · [[08 Tool Landscape/Infrastructure and Observability Tools]] |
 | Prompt and architecture playbooks | [[09 Playbooks/Playbooks Hub]] |
+| Inference engines, KV cache, and long-context cost | [[01 Foundations/Inference Engines and Serving]] · [[01 Foundations/KV Cache and Long-Context Costs]] · [[01 Foundations/Test-Time Compute and Reasoning Models]] |
+| Long-horizon tasks and reliability | [[02 Agents and Harnesses/Long-Horizon Tasks and Failure Modes]] · [[06 Reliability and Security/Long-Horizon Evaluation and Benchmarks]] · [[09 Playbooks/Long-Horizon Task Review]] |
 
 ## Provenance
 
@@ -110,6 +112,19 @@ The source conversation is titled “Explain AI Engineering” and has conversat
 
 - [x] New content note `06 Reliability and Security/AI Fingerprints and Detection.md` (type concept, current-snapshot, last_verified today): statistical fingerprints (GLTR: top-k/rank/perplexity cues, human detection 54%→72%), watermarking mechanics (Kirchenbauer green/red-list + z-test; SynthID in Gemini/Veo), fragility (distribution shift, paraphrase evasion, ~61% TOEFL false positives on non-native writers, vendor hedging), and provenance-over-forensics as the durable answer. 6 sources, all link-verified today; OpenAI C2PA URL dropped (404s).
 - [x] Full wiring: `add_nav.py` CHAIN 65 → 66 (inserted after Security and Jailbreaking), nav regenerated + verified against disk (only the by-design nav-less Plain Reading copy is excluded); ToC Unit 9 renumbered 2–5 with the new note at slot 2; The Gist of It + Plain Reading gained the entry (45 gists in the collection now, 45 Plain Reading items); gist passes the voice spec. Validator: 478 / 3 / 2 / 0 — zero new issues.
+
+## ayumad.me/ai LIVE — 2026-08-27
+
+- [x] Unpaused per Ayush. Site: encrypted SPA built with `VAULT_SITE_SCOPE=AI-Engineering` (build-vault-site.mjs gained the scope env, backward compatible), hosted on the mirror repo's orphan `site` branch (Pages: https://ayumad.github.io/AI-Engineering-Curriculum/), Vercel rewrites `/ai` → it. Verified end-to-end: 67 notes in index.json, live e2e decrypt through `/ai/content/*.enc` with the site password, deployed bundle hash matches local.
+- [x] Standing pipeline now: vault commit → `aiec_sync.sh` (mirror main) → `aiec_site_sync.sh` (`~/workspace/AI-Engineering-Curriculum-site` worktree, site branch, idempotent) → ayumad.me/ai. Skill v1.5.4 documents step 6. ayumad.me deploy note: workspace lint is red on sibling renderer-v2 WIP (RendererPage/adapters/useScope — NOT the vercel.json change); Vercel's buildCommand is `tsc -b && vite build`, verified green, so deploys are unaffected.
+
+## Inference and long-horizon units — 2026-09-09
+
+- [x] Two new curriculum units (course is now 12 units): Unit 2 — Inference engineering and long-context serving (01 Foundations: Inference Engines and Serving, KV Cache and Long-Context Costs, Test-Time Compute and Reasoning Models); Unit 11 — Long-horizon tasks and reliability (Long-Horizon Tasks and Failure Modes, Long-Horizon Evaluation and Benchmarks, Long-Horizon Task Review playbook). AI Engineering Curriculum + Full ToC renumbered 10 → 12 units.
+- [x] 6 new notes written by qwen3.8-max subagents (delegation pinned for this pass), every cited link fetch-verified 2026-09-09: PagedAttention, SGLang, DeepSeek-V2 MLA, Snell test-time compute, DeepSeek-R1, HORIZON, LongCLI-Bench, Long-Horizon-Terminal-Bench, LongRCA Bench, KV-cache survey; practitioner sources IntuitionLabs, Digital Applied, Arize, Surge AI, Berkeley RDI, Anyscale, NVIDIA, OpenAI reasoning guide, Anthropic extended thinking — all registered in [[11 Glossary and Sources/Sources]].
+- [x] Full wiring: nav chain 66 → 72 (add_nav.py re-run with TODAY 2026-09-09), hubs (Foundations +3, Agents, Playbooks, Reliability), Atlas tree (Serving and Long-horizon branches), Glossary +10 terms, Acronyms +6, coverage map +2 rows, tour counts 65 → 71 (AI_Home, How-to-Use), gist collection 45 → 51 in both derived Gist files.
+
+---
 
 ---
 

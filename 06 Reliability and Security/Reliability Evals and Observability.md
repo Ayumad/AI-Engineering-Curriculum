@@ -7,7 +7,7 @@ aliases: [Agent Reliability, Agent Evaluation]
 tags: [ai-engineering, reliability, evals, observability, agentops]
 visibility: personal
 created: 2026-08-27
-updated: 2026-08-27
+updated: 2026-09-09
 prev: "05 Protocols and Tools/Agent Protocols.md"
 next: "06 Reliability and Security/Evaluation Engineering.md"
 last_verified: 2026-08-27
@@ -42,7 +42,9 @@ All links verified 2026-08-27.
 
 ## Study sequence
 
-Use [[06 Reliability and Security/Evaluation Engineering]] to turn acceptance criteria into versioned tests, [[06 Reliability and Security/Observability]] to make trajectories diagnosable, and [[06 Reliability and Security/Human Oversight and Trust Engineering]] to place human authority at consequential boundaries.
+Use [[06 Reliability and Security/Evaluation Engineering]] to turn acceptance criteria into versioned tests, [[06 Reliability and Security/Observability]] to make trajectories diagnosable, and [[06 Reliability and Security/Human Oversight and Trust Engineering]] to place human authority at consequential boundaries. For sustained multi-step work, see [[06 Reliability and Security/Long-Horizon Evaluation and Benchmarks]] and [[02 Agents and Harnesses/Long-Horizon Tasks and Failure Modes]].
+
+---
 
 ---
 

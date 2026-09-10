@@ -7,7 +7,7 @@ aliases: [Agent Latency, Agent Cost Engineering]
 tags: [ai-engineering, latency, cost, caching, routing]
 visibility: personal
 created: 2026-08-27
-updated: 2026-08-27
+updated: 2026-09-09
 prev: "07 Operations and Economics/Operations and Economics Hub.md"
 next: "07 Operations and Economics/Local Subscription API.md"
 summary: "Agent responsiveness and unit economics improve by reducing tokens and calls, caching stable prefixes, routing work to the cheapest adequate model, parallelizing independent work, and enforcing budgets."
@@ -91,6 +91,8 @@ Every autonomous run needs explicit limits: max input tokens, max output tokens,
 All links verified 2026-08-27.
 
 [[01 Foundations/Local AI Hardware and Inference]] · [[02 Agents and Harnesses/Agent Harness]] · [[06 Reliability and Security/Observability]]
+
+---
 
 ---
 

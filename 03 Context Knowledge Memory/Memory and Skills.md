@@ -7,7 +7,7 @@ aliases: [Agent Memory, Procedural Memory, Skills]
 tags: [ai-engineering, memory, skills, context-engineering]
 visibility: personal
 created: 2026-08-27
-updated: 2026-08-27
+updated: 2026-09-09
 prev: "03 Context Knowledge Memory/Prompting for Agents.md"
 next: "03 Context Knowledge Memory/Skills, Tools, and Capability Management.md"
 summary: "RAG asks "what external information is relevant?" Memory asks "what should this agent retain from experience?""
@@ -106,6 +106,8 @@ All links verified 2026-08-27.
 ## Related
 
 [[03 Context Knowledge Memory/Skills, Tools, and Capability Management]] · [[03 Context Knowledge Memory/Context Engineering]] · [[03 Context Knowledge Memory/RAG]] · [[03 Context Knowledge Memory/Large Project Navigation and Context Scaling]]
+
+---
 
 ---
 

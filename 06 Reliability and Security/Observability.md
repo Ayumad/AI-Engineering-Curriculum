@@ -7,8 +7,8 @@ aliases: [Agent Observability, Agent Tracing]
 tags: [ai-engineering, observability, tracing, logs, metrics]
 visibility: personal
 created: 2026-08-27
-updated: 2026-08-27
-prev: "06 Reliability and Security/Evaluation Engineering.md"
+updated: 2026-09-09
+prev: "06 Reliability and Security/Long-Horizon Evaluation and Benchmarks.md"
 next: "06 Reliability and Security/Security and Jailbreaking.md"
 last_verified: 2026-08-27
 summary: "Metrics tell what changed, logs capture events, and traces reveal the full agent trajectory; together they make probabilistic systems diagnosable and replayable."
@@ -106,4 +106,6 @@ All links verified 2026-08-27.
 
 ---
 
-> **← [[06 Reliability and Security/Evaluation Engineering|Evaluation Engineering]]** · **[[AI_Home|Home]]** · **[[06 Reliability and Security/Security and Jailbreaking|Security and Jailbreaking]] →**
+---
+
+> **← [[06 Reliability and Security/Long-Horizon Evaluation and Benchmarks|Long-Horizon Evaluation and Benchmarks]]** · **[[AI_Home|Home]]** · **[[06 Reliability and Security/Security and Jailbreaking|Security and Jailbreaking]] →**

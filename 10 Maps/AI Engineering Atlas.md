@@ -7,7 +7,7 @@ aliases: [AI Engineering Mind Map]
 tags: [ai-engineering, map, atlas]
 visibility: personal
 created: 2026-08-27
-updated: 2026-08-27
+updated: 2026-09-09
 prev: "09 Playbooks/Learning Projects.md"
 next: "11 Glossary and Sources/Sources.md"
 summary: "text AI ENGINEERING ├─ Foundations: models · tokens · context · inference · structured output ├─ Agents: goals · loops · tools · state · harnesses · sandboxes ├─ Conte..."
@@ -18,11 +18,13 @@ summary: "text AI ENGINEERING ├─ Foundations: models · tokens · context ·
 ```text
 AI ENGINEERING
 ├─ Model / inference: models · tokens · context · structured output · quantization
+│  ├─ Serving: engines · batching · KV cache · long-context costs · test-time compute
 │  └─ Hardware: VRAM · unified memory · bandwidth · GPU · CPU · NPU · local/cloud
 ├─ Agent: loop · harness · planning · state · skills · permissions
 │  ├─ Knowledge: prompting · context · RAG · memory
 │  ├─ Tools: function calling · MCP · APIs · capability discovery
 │  ├─ Execution: sandbox · browser/computer use · voice · vision
+│  ├─ Long-horizon: failure modes · benchmarks · checkpointing · review gates
 │  └─ Teams: workflow · orchestration · multi-agent · debate · consensus
 ├─ Protocols: ACP · A2A · AG-UI · A2UI · identity boundaries
 └─ Production / governance: evals · traces · AgentOps · security · oversight · cost
@@ -41,6 +43,8 @@ Read top-to-bottom for the dependency chain: **Model → Agent → Protocols →
 For sequential study, see [[00 Start Here/Full Table of Contents|the full table of contents]]. The canvas below emphasizes semantic dependencies: hardware constrains inference, skills invoke tools, RAG supplies context, the harness enforces policies and budgets, and evaluation/observability govern production behavior.
 
 Visual version: [full atlas](10 Maps/AI Engineering Atlas.canvas).
+
+---
 
 ---
 

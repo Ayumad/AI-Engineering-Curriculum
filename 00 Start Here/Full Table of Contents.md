@@ -13,7 +13,7 @@ tags:
   - map-of-content
 visibility: personal
 created: 2026-08-27
-updated: 2026-08-27
+updated: 2026-09-09
 prev: "00 Start Here/AI Engineering Curriculum.md"
 next: "00 Start Here/The Gist of It.md"
 summary: The course-first navigation index for the full AI Engineering vault, arranged as sequential units with linked sections and practice outcomes.
@@ -34,7 +34,18 @@ summary: The course-first navigation index for the full AI Engineering vault, ar
 
 Outcome: estimate whether a workload fits a machine, and turn uncertain model output into validated program input.
 
-## Unit 2 — Instructions and capabilities (~10–12h)
+## Unit 2 — Inference engineering and long-context serving (~8–10h)
+
+**Question:** What happens between your request and a model's tokens, and what does long context actually cost?
+
+1. [[01 Foundations/Inference Engines and Serving|Serving engines: prefill, decode, batching, and paged attention]]
+2. [[01 Foundations/KV Cache and Long-Context Costs|KV cache and long-context memory economics]]
+3. [[01 Foundations/Test-Time Compute and Reasoning Models|Test-time compute and reasoning models]]
+4. [[01 Foundations/Local AI Hardware and Inference|Hardware and inference constraints]]
+
+Outcome: size memory for a serving workload, explain where latency goes, and route easy work to cheap/fast models and hard work to high-effort reasoning.
+
+## Unit 3 — Instructions and capabilities (~10–12h)
 
 **Question:** How does a model receive a task and gain controlled ways to act?
 
@@ -49,7 +60,7 @@ Outcome: estimate whether a workload fits a machine, and turn uncertain model ou
 
 Outcome: design a minimal, typed, permission-aware capability surface rather than a giant prompt with every tool preloaded.
 
-## Unit 3 — Knowledge, retrieval, memory, and context (~10–12h)
+## Unit 4 — Knowledge, retrieval, memory, and context (~10–12h)
 
 **Question:** What should the system know now, remember later, or retrieve on demand?
 
@@ -62,7 +73,7 @@ Outcome: design a minimal, typed, permission-aware capability surface rather tha
 
 Outcome: distinguish current facts (retrieval), durable facts (memory), and procedures (skills), while defending against stale or unsafe context.
 
-## Unit 4 — Single agents and safe execution (~10–12h)
+## Unit 5 — Single agents and safe execution (~10–12h)
 
 **Question:** What turns a model call into a bounded, recoverable agent?
 
@@ -75,7 +86,7 @@ Outcome: distinguish current facts (retrieval), durable facts (memory), and proc
 
 Outcome: build an agent that can observe, act, recover, and stop without granting it ambient authority.
 
-## Unit 5 — Voice and multimodal agents (~8–10h)
+## Unit 6 — Voice and multimodal agents (~8–10h)
 
 **Question:** How do audio, images, and interfaces change the agent architecture?
 
@@ -85,7 +96,7 @@ Outcome: build an agent that can observe, act, recover, and stop without grantin
 
 Outcome: separate capture, interpretation, interaction, and action; select the right confirmation and isolation boundary for each.
 
-## Unit 6 — Workflows, orchestration, and teams (~10–12h)
+## Unit 7 — Workflows, orchestration, and teams (~10–12h)
 
 **Question:** When should work be deterministic, agentic, parallel, or delegated?
 
@@ -98,7 +109,7 @@ Outcome: separate capture, interpretation, interaction, and action; select the r
 
 Outcome: choose the simplest topology that has measurable upside over one well-instrumented agent.
 
-## Unit 7 — Resource engineering (~8–10h)
+## Unit 8 — Resource engineering (~8–10h)
 
 **Question:** How do you make an agent responsive and economically bounded?
 
@@ -108,7 +119,7 @@ Outcome: choose the simplest topology that has measurable upside over one well-i
 
 Outcome: reason from a task’s quality target to model tier, tokens, calls, cacheable context, and resource budget.
 
-## Unit 8 — Evaluation, observability, and AgentOps (~10–12h)
+## Unit 9 — Evaluation, observability, and AgentOps (~10–12h)
 
 **Question:** How do you prove an agent works, diagnose failures, and ship safer changes?
 
@@ -120,7 +131,7 @@ Outcome: reason from a task’s quality target to model tier, tokens, calls, cac
 
 Outcome: version the agent’s model, prompt, skills, tools, retrieval, policy, and tests; measure trajectories as well as final answers.
 
-## Unit 9 — Security, oversight, and adaptation (~10–12h)
+## Unit 10 — Security, oversight, and adaptation (~10–12h)
 
 **Question:** Who has authority, what can fail, and when should the model itself be adapted?
 
@@ -132,7 +143,18 @@ Outcome: version the agent’s model, prompt, skills, tools, retrieval, policy, 
 
 Outcome: place approvals where errors are consequential and choose fine-tuning only for stable behavioral gaps.
 
-## Unit 10 — Capstone and continuing reference (~12–15h)
+## Unit 11 — Long-horizon tasks and reliability (~10–12h)
+
+**Question:** Why do agents fall apart on long tasks, and how do you keep a 50-step run honest?
+
+1. [[02 Agents and Harnesses/Long-Horizon Tasks and Failure Modes|Long-horizon failure modes: compounding error, planning, and forgetting]]
+2. [[06 Reliability and Security/Long-Horizon Evaluation and Benchmarks|Long-horizon evaluation and benchmarks]]
+3. [[02 Agents and Harnesses/Planning State and Persistence|Planning, checkpoints, and durable state]]
+4. [[09 Playbooks/Long-Horizon Task Review|Long-horizon task review playbook]]
+
+Outcome: run a long task with checkpoints, compaction, trajectory evals, and a release gate; diagnose failures by category.
+
+## Unit 12 — Capstone and continuing reference (~12–15h)
 
 1. [[09 Playbooks/Learning Projects|Learning projects and capstone]]
 2. [[08 Tool Landscape/Tool Landscape Hub|Tool landscape]]
@@ -145,6 +167,8 @@ Outcome: deliver a bounded research or automation agent with evidence, sandboxin
 ## Templates
 
 The [[12 Templates/Template Library|AI Engineering template library]] collects copyable templates for PRDs, repository instructions, plans, handoffs, style profiles, prompts, context packets, skills, tools, agents, workflows, evaluations, security reviews, operations, and adaptation decisions.
+
+---
 
 ---
 

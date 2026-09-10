@@ -7,7 +7,7 @@ aliases: [Agent Pattern Catalog]
 tags: [ai-engineering, patterns, reference]
 visibility: personal
 created: 2026-08-27
-updated: 2026-08-27
+updated: 2026-09-09
 prev: "11 Glossary and Sources/Glossary.md"
 next: "11 Glossary and Sources/Acronyms.md"
 summary: "02 Agents and Harnesses/What Is an Agent · 02 Agents and Harnesses/Agent Harness · ReAct · plannerexecutor · criticreviewer · humaninloop · skill loading · checkpoint/..."
@@ -70,6 +70,8 @@ For each selected pattern, document: the problem, topology, input/output contrac
 | Skill/tool search | Anthropic, "Effective context engineering for AI agents" (2025) — https://www.anthropic.com/engineering/effective-context-engineering-for-ai-agents — minimal viable tool sets |
 
 All links verified 2026-08-27.
+
+---
 
 ---
 
