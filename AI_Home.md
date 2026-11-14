@@ -8,7 +8,7 @@ tags: [ai-engineering, map-of-content, start-here]
 last_verified: 2026-08-27
 visibility: personal
 created: 2026-08-27
-updated: 2026-09-09
+updated: 2026-11-14
 next: "00 Start Here/AI Engineering Curriculum.md"
 summary: "AI engineering is the discipline of turning a probabilistic model into a useful, safe, observable system. The model supplies reasoning; the surrounding system supplies..."
 ---
@@ -24,6 +24,8 @@ summary: "AI engineering is the discipline of turning a probabilistic model into
 - [[10 Maps/AI Engineering Atlas|Open the atlas]] for the whole field at a glance.
 - [[00 Start Here/Conversation Coverage|Check conversation coverage]] against the original request.
 - [[11 Glossary and Sources/Sources|Consult the source registry]] for verified papers, guides, and practitioner references.
+- [[AI-Engineering/index|Wiki catalog]] — every note in one place with a one-line summary and its verification date; generated, so it never drifts.
+- [[AI-Engineering/log|Wiki log]] — append-only record of every lint pass, index rebuild, and verification stamp.
 
 ## The stack in one sentence
 

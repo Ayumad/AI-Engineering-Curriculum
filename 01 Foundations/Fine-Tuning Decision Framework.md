@@ -1,5 +1,5 @@
 ---
-type: decision-framework
+type: decision
 layer: foundations
 status: evergreen
 maturity: established

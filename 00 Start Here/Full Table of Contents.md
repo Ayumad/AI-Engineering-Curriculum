@@ -1,5 +1,5 @@
 ---
-type: curriculum-index
+type: index
 layer: start-here
 status: evergreen
 maturity: established
