@@ -31,6 +31,19 @@ summary: "Machine catalog of the AI-Engineering wiki: 73 notes across 13 section
 - Broken outward links: **0**
 - Navigation chain defects: **0**
 
+## Review queue
+
+Next passes take these first — content notes before navigation notes, unstamped before stamped, oldest first.
+
+1. `01 Foundations/Context Windows and Inference.md` — never stamped
+2. `01 Foundations/Inference Engines and Serving.md` — never stamped
+3. `01 Foundations/KV Cache and Long-Context Costs.md` — never stamped
+4. `01 Foundations/Structured Outputs and Tool Calling.md` — never stamped
+5. `01 Foundations/Test-Time Compute and Reasoning Models.md` — never stamped
+6. `01 Foundations/What Is an LLM.md` — never stamped
+7. `02 Agents and Harnesses/Agent Harness.md` — never stamped
+8. `02 Agents and Harnesses/Computer-Use and Browser Agents.md` — never stamped
+
 ## Catalog
 
 ### 00 Start Here
@@ -146,7 +159,7 @@ summary: "Machine catalog of the AI-Engineering wiki: 73 notes across 13 section
 
 ### Root
 
-- [[AI-Engineering/AI_Home|AI Engineering]] — AI engineering is the discipline of turning a probabilistic model into a useful, safe, observable system. The model supplies reasoning; the surroundin…
+- [[AI-Engineering/AI_Home|AI Engineering]] — AI engineering is the discipline of turning a probabilistic model into a useful, safe, observable system. The model supplies reasoning; the surroundin… _(verified 2026-08-27)_
 
 ## Notes
 
