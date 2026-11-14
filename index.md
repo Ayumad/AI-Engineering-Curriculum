@@ -22,7 +22,7 @@ summary: "Machine catalog of the AI-Engineering wiki: 73 notes across 13 section
 
 ## State
 
-- Notes: **73** across **13** sections
+- Notes: **73** across **13** sections plus root entry points
 - Verification range: `2026-08-27` → `2026-09-09`
 - Unverified (no `last_verified`): **55**
 - Stale (older than 90 days): **0**
